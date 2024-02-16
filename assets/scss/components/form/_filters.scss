@@ -1,0 +1,31 @@
+.filters {
+  margin-bottom: 2rem;
+  .first {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 1rem;
+    .title {
+      font-size: 1rem;
+      color: var(--muted);
+      font-weight: 600;
+    }
+    .options {
+      padding-bottom: 2rem;
+      display: flex;
+      .filter {
+        margin-left: 1rem;
+      }
+    
+    }
+  }
+  .last {
+    margin-bottom: 1rem;
+    .chip-dark {
+      cursor: pointer;
+      &:last-child {
+        margin-left: 1rem;
+      }
+    }
+  }
+}

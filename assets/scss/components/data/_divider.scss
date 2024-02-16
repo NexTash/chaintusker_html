@@ -1,0 +1,26 @@
+.divider {
+  color: var(--text);
+  font-size: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.divider::before,
+.divider::after {
+  content: "";
+  display: inline-block;
+  width: 100px;
+  height: 1px;
+  background-color: var(--border);
+  position: relative;
+  transform: translateY(-3px);
+}
+
+.divider::before {
+  margin-right: 0.5rem;
+}
+.divider::after {
+  margin-left: 0.5rem;
+}
+

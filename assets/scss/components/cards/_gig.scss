@@ -1,0 +1,18 @@
+.gig-card {
+  .c-head {
+    padding: 0;
+    width: 100%;
+    height: 150px;
+    border-radius: var(--rounded) var(--rounded) 0 0;
+    .c-image {
+      width: 100%;
+    }
+  }
+  .media {
+    margin-bottom: 1rem;
+  }
+  .v-badge {
+    position: relative;
+    top: 4px;
+  }
+}

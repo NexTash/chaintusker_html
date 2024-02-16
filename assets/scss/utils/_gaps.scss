@@ -1,0 +1,83 @@
+.gap-x {
+  padding-left: var(--gap);
+  padding-right: var(--gap);
+
+  @media (max-width: screen-size(xl)) {
+    padding-left: calc(var(--gap) - 1rem);
+    padding-right: calc(var(--gap) - 1rem);
+  }
+
+  @media (max-width: screen-size(xl)) {
+    padding-left: calc(var(--gap) - 1.5rem);
+    padding-right: calc(var(--gap) - 1.5rem);
+  }
+
+  @media (max-width: screen-size(lg)) {
+    padding-left: calc(var(--gap) - 2.5rem);
+    padding-right: calc(var(--gap) - 2.5rem);
+  }
+  @media (max-width: screen-size(md)) {
+    padding-left: calc(var(--gap) - 3.5rem);
+    padding-right: calc(var(--gap) - 3.5rem);
+  }
+
+  @media (max-width: screen-size(sm)) {
+    padding-left: calc(var(--gap) - 7.5rem);
+    padding-right: calc(var(--gap) - 7.5rem);
+  }
+}
+
+.gap-y {
+  padding-top: var(--gap);
+  padding-bottom: var(--gap);
+
+  @media (max-width: screen-size(xxl)) {
+    padding-top: calc(var(--gap) - 1rem);
+    padding-bottom: calc(var(--gap) - 1rem);
+  }
+
+  @media (max-width: screen-size(xl)) {
+    padding-top: calc(var(--gap) - 1.5rem);
+    padding-bottom: calc(var(--gap) - 1.5rem);
+  }
+
+  @media (max-width: screen-size(lg)) {
+    padding-top: calc(var(--gap) - 2rem);
+    padding-bottom: calc(var(--gap) - 2rem);
+  }
+  @media (max-width: screen-size(md)) {
+    padding-top: calc(var(--gap) - 3rem);
+    padding-bottom: calc(var(--gap) - 3rem);
+  }
+  @media (max-width: screen-size(sm)) {
+    padding-top: calc(var(--gap) - 4rem);
+    padding-bottom: calc(var(--gap) - 4rem);
+  }
+}
+
+.gap-bottom {
+  padding-bottom: var(--gap);
+  @media (max-width: screen-size(lg)) {
+    padding-bottom: calc(var(--gap) - 2rem);
+  }
+  @media (max-width: screen-size(md)) {
+    padding-bottom: calc(var(--gap) - 3rem);
+  }
+  @media (max-width: screen-size(sm)) {
+    padding-bottom: calc(var(--gap) - 4rem);
+  }
+}
+
+.gap-top {
+  padding-top: var(--gap);
+
+  @media (max-width: screen-size(lg)) {
+    padding-top: calc(var(--gap) - 2rem);
+  }
+  @media (max-width: screen-size(md)) {
+    padding-top: calc(var(--gap) - 3rem);
+  }
+  @media (max-width: screen-size(sm)) {
+    padding-top: calc(var(--gap) - 4rem);
+  }
+}

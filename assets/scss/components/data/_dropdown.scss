@@ -1,0 +1,115 @@
+.dropdown {
+  position: relative;
+  display: inline-block;
+  z-index: 99;
+
+  .dropdown-toggle {
+    display: flex;
+    align-items: center;
+    &::after {
+      font-family: "icons";
+      content: "\ea4a";
+      font-size: 1rem;
+    }
+  }
+  .btn-icon {
+    margin-right: 0.5rem;
+  }
+  .dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: var(--body);
+    min-width: 200px;
+    width: 100%;
+    height: auto;
+    right: 0;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
+      rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+    z-index: inherit;
+    border-radius: var(--rounded);
+
+    .dropdown-item {
+      text-decoration: none;
+      padding: 0.5rem 1rem;
+      display: block;
+      color: var(--text);
+      &:first-child {
+        margin-top: 0.8rem;
+      }
+      &:last-child {
+        margin-bottom: 0.8rem;
+      }
+      &:hover {
+        color: var(--primary);
+        background-color: var(--primary-subtle);
+      }
+    }
+    &.dropmenu-right {
+      right: 0;
+    }
+    &.dropmenu-left {
+      left: 0;
+    }
+  }
+
+  .d-head {
+    padding: 0.5rem 1rem;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .d-body {
+    padding: 0.5rem 1rem;
+    max-height: 200px;
+    min-height: 100px;
+    overflow: auto;
+
+    &::-webkit-scrollbar {
+      width: 5px;
+      height: 5px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: var(--primary-subtle);
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: var(--primary);
+      border-radius: 50px;
+    }
+
+    &::-webkit-scrollbar-thumb:hover {
+      background: var(--primary-hover);
+    }
+  }
+
+  .d-foot {
+    border-top: 1px solid var(--border);
+    padding: 0.5rem 1rem;
+    display: flex;
+    align-items: center;
+    border-radius: 0 0 var(--rounded) var(--rounded);
+    .btn {
+      &:first-child {
+        margin-right: 0.1rem;
+      }
+      &:last-child {
+        margin-left: 0.1rem;
+      }
+    }
+  }
+
+  &.active {
+    .dropdown-toggle {
+      &::after {
+        content: "\ea57";
+      }
+    }
+
+    [data-toggle="dropdown"] {
+      color: var(--primary) !important;
+    }
+    .dropdown-menu {
+      display: block;
+    }
+  }
+}

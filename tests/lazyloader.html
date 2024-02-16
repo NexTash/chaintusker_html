@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lazy Loading with Loader</title>
+    <style>
+        .lazy-load {
+            position: relative;
+        }
+
+        .lazy-load::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border: 2px solid #f3f3f3;
+            border-top: 2px solid #3498db;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            animation: spin 1s linear infinite;
+        }
+
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+
+        .lazy-load.fade-in {
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <img data-src="png-5mb-1.png" class="lazy-load" alt="Lazy-loaded Image">
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var lazyImages = document.querySelectorAll('.lazy-load');
+
+            var options = {
+                threshold: 0.5 // Adjust threshold as needed
+            };
+
+            var lazyLoad = function (entries, observer) {
+                entries.forEach(function (entry) {
+                    if (entry.isIntersecting) {
+                        var img = entry.target;
+                        img.src = img.dataset.src;
+                        img.classList.add('fade-in');
+                        img.classList.remove('lazy-load');
+                        observer.unobserve(img);
+                    }
+                });
+            };
+
+            var observer = new IntersectionObserver(lazyLoad, options);
+
+            lazyImages.forEach(function (img) {
+                observer.observe(img);
+            });
+        });
+    </script>
+</body>
+
+</html>

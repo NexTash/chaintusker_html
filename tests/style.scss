@@ -1,0 +1,81 @@
+.lightbox {
+  --lb-bg: rgba(0, 0, 0, 0.7);
+  --lb-thumb-size: 50px;
+  --lb-thumb-active: var(--primary);
+  --lb-rounded: var(--rounded);
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--lb-bg);
+  backdrop-filter: blur(10px);
+  justify-content: center;
+  z-index: 9999;
+  .lb-controls {
+    position: fixed;
+    top: 0.2rem;
+    right: 0.2rem;
+    display: flex;
+    color: #fff;
+    background: var(--lb-bg);
+    z-index: 999;
+    padding: 0.5rem;
+    border-radius: var(--lb-rounded);
+    .lb-btn {
+      background: none;
+      border: none;
+      font-size: 1.2rem;
+      cursor: pointer;
+      color: #fff;
+    }
+  }
+
+  .lb-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .lb-image {
+      max-width: 80%;
+      max-height: 80%;
+      transform: rotate(0deg);
+      transition: transform 0.5s ease-in-out;
+      border-radius: var(--lb-rounded);
+    }
+    .lb-caption {
+      color: white;
+      padding: 1rem;
+      font-size: 1rem;
+    }
+
+    .lb-thumbnails {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      bottom: 0;
+      background: var(--lb-bg);
+      width: 100%;
+      padding: 0.5rem;
+      .lb-thumbnail {
+        width: var(--lb-thumb-size);
+        height: var(--lb-thumb-size);
+        border: 2px solid transparent;
+        border-radius: var(--lb-rounded);
+        img {
+          width: 100%;
+          height: 100%;
+          border-radius: inherit;
+          object-fit: cover;
+          object-position: top;
+        }
+        &.active {
+          border: 2px solid var(--lb-thumb-active);
+        }
+      }
+    }
+  }
+}

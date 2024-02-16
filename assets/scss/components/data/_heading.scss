@@ -1,0 +1,30 @@
+.heading {
+  .title {
+    display: block;
+    text-decoration: none;
+    color: var(--text);
+    font-size: 2.8rem;
+    font-weight: bold;
+    margin-bottom: 12px;
+
+    @media (max-width: screen-size(sm)) {
+      font-size: 2.4rem;
+    }
+  }
+
+  .subtitle {
+    color: var(--text);
+    font-size: 16px;
+    font-weight: bold;
+    margin: 15px 0;
+  }
+
+  .description {
+    color: var(--muted);
+    margin-bottom: 14px;
+    font-size: 1.2rem;
+    @media (max-width: screen-size(sm)) {
+      font-size: 1rem;
+    }
+  }
+}

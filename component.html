@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Component</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <style>
+        .tooltip {
+            display: none;
+            position: absolute;
+            background-color: #333;
+            color: #fff;
+            padding: 5px;
+            border-radius: 3px;
+            animation: fadeInOut 0.3s ease-in-out forwards;
+        }
+
+        .tooltip::before {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-style: solid;
+        }
+
+        @keyframes fadeInOut {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body class="container">
+    <span data-toggle="tooltip" data-content="Hello World" data-position="top">text</span>
+    <br><br><br><br><br>
+    <span data-toggle="tooltip" data-content="Hello World" data-position="bottom">text</span>
+    <br><br><br><br><br>
+    <span data-toggle="tooltip" data-content="Hello World" data-position="right">text</span>
+    <br><br><br><br><br>
+    <span data-toggle="tooltip" data-content="Hello World" data-position="left">text</span>
+
+    <script>
+        document.addEventListener("mouseover", function (e) {
+            const target = e.target;
+            if (target.matches("[data-toggle='tooltip']")) {
+                const text = target.getAttribute("data-content");
+                const position = target.getAttribute("data-position") || "top";
+                let tooltip = document.querySelector(".tooltip");
+                if (!tooltip) {
+                    tooltip = document.createElement("div");
+                    tooltip.classList.add("tooltip");
+                    document.body.appendChild(tooltip);
+                }
+                tooltip.textContent = text;
+
+                // Calculate position relative to the target element
+                const rect = target.getBoundingClientRect();
+                switch (position) {
+                    case "top":
+                        tooltip.style.top = rect.top + window.scrollY - tooltip.offsetHeight + "px";
+                        tooltip.style.left = rect.left + window.scrollX + "px";
+                        tooltip.style.transformOrigin = "50% 100%";
+                        tooltip.style.transform = "translateX(-50%)";
+                        tooltip.style.setProperty('--caret-border', '0 5px 5px');
+                        tooltip.style.setProperty('--caret-border-color', 'transparent transparent #333 transparent');
+                        break;
+                    case "bottom":
+                        tooltip.style.top = rect.bottom + window.scrollY + "px";
+                        tooltip.style.left = rect.left + window.scrollX + "px";
+                        tooltip.style.transformOrigin = "50% 0%";
+                        tooltip.style.transform = "translateX(-50%)";
+                        tooltip.style.setProperty('--caret-border', '5px 5px 0');
+                        tooltip.style.setProperty('--caret-border-color', '#333 transparent transparent transparent');
+                        break;
+                    case "left":
+                        tooltip.style.top = rect.top + window.scrollY + "px";
+                        tooltip.style.left = rect.left + window.scrollX - tooltip.offsetWidth + "px";
+                        tooltip.style.transformOrigin = "100% 50%";
+                        tooltip.style.transform = "translateY(-50%)";
+                        tooltip.style.setProperty('--caret-border', '5px 0 5px 5px');
+                        tooltip.style.setProperty('--caret-border-color', 'transparent transparent transparent #333');
+                        break;
+                    case "right":
+                        tooltip.style.top = rect.top + window.scrollY + "px";
+                        tooltip.style.left = rect.right + window.scrollX + "px";
+                        tooltip.style.transformOrigin = "0% 50%";
+                        tooltip.style.transform = "translateY(-50%)";
+                        tooltip.style.setProperty('--caret-border', '5px 5px 5px 0');
+                        tooltip.style.setProperty('--caret-border-color', 'transparent #333 transparent transparent');
+                        break;
+                    default:
+                        break;
+                }
+                tooltip.style.display = "block";
+            }
+
+
+            else if (!target.matches("[data-toggle='tooltip']")) {
+                document.querySelectorAll(".tooltip").forEach((item) => {
+                    item.style.animation = "fadeOut 0.3s ease-in-out forwards";
+                    setTimeout(() => {
+                        item.style.display = "none";
+                    }, 300);
+                });
+            }
+        });
+
+        document.addEventListener('mouseout', function (e) {
+            const target = e.target;
+
+        });
+    </script>
+
+</body>
+
+</html>

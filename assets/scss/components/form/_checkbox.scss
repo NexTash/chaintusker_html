@@ -1,0 +1,75 @@
+.checkbox {
+  --checkbox-active-bg: var(--primary);
+  --checkbox-active-color: white;
+  --checkbox-rounded: var(--rounded);
+  --checkbox-border: var(--dark);
+  --checkbox-bg: transparent;
+  --checkbox-bg-hover: var(--light);
+  display: block;
+  position: relative;
+  cursor: pointer;
+  padding-left: 2.5rem;
+  margin: 1rem 0;
+
+  input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 28px;
+    width: 28px;
+    background-color: var(--checkbox-bg);
+    border-radius: var(--checkbox-rounded);
+    box-shadow: inset var(--checkbox-border) 0px 0px 0px 2px;
+
+    &:after {
+      content: "";
+      position: absolute;
+      display: none;
+      left: 10px;
+      top: 4px;
+      width: 8px;
+      height: 15px;
+      border: solid var(--checkbox-active-color);
+      border-width: 0 2px 2px 0;
+      transform: rotate(45deg);
+    }
+  }
+  .text {
+    font-size: var(--font-size);
+    position: relative;
+    top: 5px;
+    color: var(--text);
+  }
+  .count {
+    float: right;
+  }
+
+  &:hover input ~ .checkmark {
+    background-color: var(--checkbox-bg-hover);
+  }
+
+  & input:checked ~ .checkmark {
+    background-color: var(--checkbox-active-bg);
+    box-shadow: inset var(--checkbox-active-bg) 0px 0px 0px 2px;
+  }
+
+  & input:focus ~ .checkmark {
+    box-shadow: inset var(--checkbox-active-bg) 0px 0px 0px 2px;
+  }
+
+  & input:checked ~ .checkmark:after {
+    display: block;
+  }
+}
+
+.radio {
+  --checkbox-rounded: 50px;
+}

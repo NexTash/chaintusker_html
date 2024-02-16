@@ -1,0 +1,13 @@
+.vacancy-card {
+  .breadcrumb {
+    margin: 0;
+    .b-item {
+      &:not(:first-child)::before {
+        content: ".";
+        position: relative;
+        top: -4px;
+        color: var(--primary);
+      }
+    }
+  }
+}

@@ -1,0 +1,53 @@
+.accordion {
+  margin-bottom: 2rem;
+  .item {
+    border-bottom: 1px solid var(--border);
+    position: relative;
+    user-select: none;
+    &.active {
+      .head {
+        color: var(--primary);
+      }
+
+      .body {
+        display: block;
+      }
+      &::after {
+        content: "\ebc1";
+        transform: rotate(90deg);
+        color: var(--primary);
+      }
+    }
+
+    &:last-child {
+      border: none;
+    }
+    &::after {
+      content: "\eb8d";
+      font-family: "icons";
+      font-size: 1.8rem;
+      transition: 0.5s transform;
+      position: absolute;
+      right: 10px;
+      top: 10px;
+    }
+
+    .head {
+      padding: 1rem 0;
+      cursor: pointer;
+      font-weight: bold;
+      color: var(--text);
+      font-size: 1rem;
+      padding-right: 3rem;
+      line-height: 1.8rem;
+    }
+
+    .body {
+      padding: 1rem 0;
+      display: none;
+      color: var(--text);
+      font-size: 1rem;
+      line-height: 1.8rem;
+    }
+  }
+}

@@ -1,0 +1,76 @@
+.lazy-load {
+  position: relative;
+  border: none;
+  outline: none;
+  backdrop-filter: var(--blur);
+  background-color: var(--muted);
+}
+
+.lazy-load::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 2px solid var(--light);
+  border-top: 2px solid red;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.lazy-load.fade-in {
+  opacity: 1;
+}
+
+.loading-page {
+  background: var(--body);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  transition: opacity 0.5s ease-out;
+}
+
+.loading-page .counter {
+  text-align: center;
+  width: 100%;
+  position: relative;
+}
+
+.loading-page .counter .count {
+  font-size: 40px;
+  font-weight: 100;
+  color: var(--text);
+}
+
+.loading-page .counter .text {
+  color: var(--text);
+  font-size: 5rem;
+  margin-top: -10px;
+}
+
+.loading-page .counter .load-progress {
+  background: var(--primary);
+  border: none;
+  height: 2px;
+  box-shadow: rgba(255, 30, 0, 0.24) 0px 8px 24px,
+    rgba(255, 38, 0, 0.158) 0px 16px 56px, rgba(235, 6, 25, 0.233) 0px 24px 80px;
+}

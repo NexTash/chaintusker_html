@@ -1,0 +1,100 @@
+.modal {
+  --modal-padding-x: 1.2rem;
+  --modal-padding-y: 1rem;
+  --modal-width: 40%;
+  --modal-overlay: rgba(0, 0, 0, 0.5);
+  --modal-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
+    rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+  --modal-margin: 2rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: var(--modal-overlay);
+  display: none;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  outline: 0;
+  z-index: 9999;
+  .modal-dialog {
+    position: relative;
+    margin: var(--modal-margin);
+    height: calc(100% - var(--modal-margin) * 2);
+    min-height: calc(100% - var(--modal-margin) * 2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .modal-content {
+      background-color: var(--body);
+      box-shadow: var(--modal-shadow);
+      border-radius: var(--rounded);
+      max-height: 100%;
+      overflow: hidden;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      width: var(--modal-width);
+
+      .modal-head {
+        padding: var(--modal-padding-y) var(--modal-padding-x);
+        display: flex;
+        align-items: center;
+
+        .modal-title {
+          font-weight: bold;
+          font-size: 1.5rem;
+        }
+
+        .modal-close {
+          padding: 0.3rem;
+          border-radius: 50px;
+          font-size: 1rem;
+          color: var(--muted);
+          margin-left: auto;
+          margin-top: -5px;
+
+          &:hover {
+            background-color: var(--light-hover);
+          }
+        }
+      }
+
+      .modal-body {
+        padding: var(--modal-padding-y) var(--modal-padding-x);
+        overflow-y: auto;
+        height: 100%;
+      }
+
+      .modal-foot {
+        padding: var(--modal-padding-y) var(--modal-padding-x);
+        display: flex;
+        justify-content: flex-end;
+        * {
+          margin-left: 0.4rem;
+        }
+      }
+    }
+  }
+  &.modal-backdrop {
+    backdrop-filter: blur(10px);
+  }
+
+  &.active {
+    transition: transform 0.3s ease-out;
+    display: block;
+
+    body {
+      overflow: hidden;
+    }
+  }
+
+  &.modal-sm {
+    --modal-width: 30%;
+  }
+
+  &.modal-lg {
+    --modal-width: 90%;
+  }
+}

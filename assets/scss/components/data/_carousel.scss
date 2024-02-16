@@ -1,0 +1,30 @@
+.carousel {
+  position: relative;
+  border-radius: var(--rounded);
+  .swiper-wrapper {
+    .swiper-slide {
+      padding:2rem 1rem 0rem 1rem;
+    }
+  }
+  .slide-prev,
+  .slide-next {
+    position: absolute;
+    z-index: 999;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    background-color: var(--body);
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+    border-radius: 50px;
+    border: none;
+    outline: none;
+    font-size: 1.5rem;
+    padding: 0.5rem;
+  }
+  .slide-next {
+    right: 0;
+  }
+  .slide-prev {
+    left: 0;
+  }
+}

@@ -1,0 +1,178 @@
+<div class="tabs">
+    <div class="t-items t-pills">
+        <button class="t-item active" data-toggle="tab" data-target="#tab1">
+            Tab 1
+        </button>
+        <button class="t-item" data-toggle="tab" data-target="#tab2">
+            Tab 2
+        </button>
+        <button class="t-item" data-toggle="tab" data-target="#tab3">
+            Tab 3
+        </button>
+    </div>
+    <div class="tab-content">
+        <div class="t-pane active" id="tab1">Tab content 1</div>
+        <div class="t-pane" id="tab2">Tab content 2</div>
+        <div class="t-pane" id="tab3">Tab content 3</div>
+    </div>
+</div>
+
+<div class="tabs">
+    <div class="t-items t-nav">
+        <button class="t-item active" data-toggle="tab" data-target="#tab4">
+            Tab 1
+        </button>
+        <button class="t-item" data-toggle="tab" data-target="#tab5">
+            Tab 2
+        </button>
+        <button class="t-item" data-toggle="tab" data-target="#tab6">
+            Tab 3
+        </button>
+    </div>
+    <div class="tab-content">
+        <div class="t-pane active" id="tab4">Tab content 4</div>
+        <div class="t-pane" id="tab5">Tab content 5</div>
+        <div class="t-pane" id="tab6">Tab content 6</div>
+    </div>
+</div>
+
+<!-- <div class="modal modal-sm modal-backdrop" id="demo">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-head ">
+                <h3 class="modal-title">Create</h3>
+                <button class="btn-close bx bx-x" data-toggle="modal" data-target="#demo"></button>
+            </div>
+            <div class="modal-body"></div>
+            <div class="modal-foot ">
+                <button class="btn btn-sm btn-primary">
+                    Create
+                </button>
+                <button class="btn btn-sm btn-light" data-toggle="modal" data-target="#demo">
+                    Cancel
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+<button data-toggle="modal" data-target="#demo">click</button> -->
+
+<!--
+
+
+<div class="collapse">
+    <div class="c-item active">
+        <button class="c-head" data-toggle="collapse" data-target="#item1">Item 1</button>
+        <div class="c-body" id="item1">
+            content
+        </div>
+    </div>
+    <div class="c-item">
+        <button class="c-head" data-toggle="collapse" data-target="#item2">Item 2</button>
+        <div class="c-body" id="item2">
+            content
+        </div>
+    </div>
+</div>
+
+
+<button data-toggle="collapse" data-target="#item3">Item 2</button>
+<div id="item3" class="hide">
+    content
+</div> -->
+
+<!-- <div class="notice">
+    <span class="n-icon bx bx-check-circle"></span>
+    <div class="n-body">
+        <h3 class="n-title">Notice title</h3>
+        <p class="n-desc">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+        </p>
+    </div>
+    <button class="btn-close bx bx-x" data-toggle="notice"></button>
+</div> -->
+
+<label class="switch" for="s">
+    <input type="checkbox" id="s">
+    <span class="toggle"></span>
+</label>
+
+
+<script>
+  
+</script>
+
+
+<div class="multi-range">
+    <input type="range" class="min-range" id="price-range-min" name="price" min="5.99" max="49.99" value="10.99">
+    <input type="range" class="max-range" id="price-range-max" name="price" min="5.99" max="49.99" value="44.99">
+    <div class="range-controls">
+        <div class="range"></div>
+        <div class="range-thumb min-range-thumb"></div>
+        <div class="range-thumb max-range-thumb"></div>
+    </div>
+    <div class="range-values">
+        <span class="min">10.99</span>
+        <span class="max">10.99</span>
+    </div>
+</div>
+
+<div class="multi-range">
+    <input type="range" class="min-range" id="price-range-min" name="price" min="5.99" max="49.99" value="10.99">
+    <input type="range" class="max-range" id="price-range-max" name="price" min="5.99" max="49.99" value="44.99">
+    <div class="range-controls">
+        <div class="range"></div>
+        <div class="range-thumb min-range-thumb"></div>
+        <div class="range-thumb max-range-thumb"></div>
+    </div>
+    <div class="range-values">
+        <span class="min">10.99</span>
+        <span class="max">10.99</span>
+    </div>
+</div>
+
+
+<script>
+    function multirange(inputMin, inputMax, sideTomove, rangethumb, range, minText, maxText) {
+        const min_value = parseFloat(inputMin.value);
+        const min_range = parseFloat(inputMin.min);
+        const max_input = parseFloat(inputMax.value);
+        const max_range = parseFloat(inputMin.max);
+        let count;
+        if (sideTomove === 'left') {
+            inputMin.value = Math.min(min_value, max_input - 1);
+            count = ((inputMin.value - min_range) / (max_range - min_range)) * 100;
+            rangethumb.style.setProperty(sideTomove, `${count}%`);
+            range.style.setProperty(sideTomove, `${count}%`);
+            minText.innerHTML = `${inputMin.value}`;
+        }
+        else if (sideTomove === 'right') {
+            inputMax.value = Math.max(min_value + 1, max_input);
+            count = ((inputMax.value - min_range) / (max_range - min_range)) * 100;
+            rangethumb.style.setProperty(sideTomove, `${100 - count}%`);
+            range.style.setProperty(sideTomove, `${100 - count}%`);
+            maxText.innerHTML = `${inputMax.value}`;
+        }
+    }
+
+    document.querySelectorAll(".multi-range").forEach(el => {
+        const min_input = el.querySelector('.min-range');
+        const max_input = el.querySelector('.max-range');
+        const minrangethumb = el.querySelector('.min-range-thumb');
+        const maxrangethumb = el.querySelector('.max-range-thumb');
+        const range = el.querySelector('.range');
+        const minText = el.querySelector('.min');
+        const maxText = el.querySelector('.max');
+
+        multirange(min_input, max_input, 'left', minrangethumb, range, minText, maxText);
+        multirange(min_input, max_input, 'right', maxrangethumb, range, minText, maxText);
+
+        min_input.addEventListener("input", function () {
+            multirange(min_input, max_input, 'left', minrangethumb, range, minText, maxText);
+        });
+
+        max_input.addEventListener("input", function () {
+            multirange(min_input, max_input, 'right', maxrangethumb, range, minText, maxText);
+        });
+    });
+</script>

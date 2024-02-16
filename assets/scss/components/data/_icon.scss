@@ -1,0 +1,14 @@
+.icon-text {
+  display: flex;
+  align-items: center;
+  .icon {
+    margin-right: 0.5rem;
+    font-size: 1.2rem;
+  }
+  .lg {
+    font-size: 1.3rem;
+  }
+  &.gap {
+    margin-bottom: 1rem;
+  }
+}

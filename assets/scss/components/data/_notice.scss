@@ -1,0 +1,61 @@
+.notice {
+  --notice-bg: var(--bg);
+  --notice-title-color: var(--text);
+  --notice-desc-color: var(--muted);
+  --notice-icon-bg: var(--light);
+  --notice-icon-text: var(--text);
+  --notice-rounded: var(--rounded);
+  --notice-shadow: var(--shadow);
+  --notice-border: transparent;
+  background-color: var(--notice-bg);
+  color: var(--notice-title-color);
+  border-radius: var(--notice-rounded);
+  box-shadow: var(--notice-shadow);
+  display: flex;
+  align-items: flex-start;
+  padding: 1rem;
+  margin-bottom: 0.5rem;
+  border-left: 4px solid var(--notice-border);
+  .n-icon {
+    font-size: 1.2rem;
+    background-color: var(--notice-icon-bg);
+    color: var(--notice-icon-text);
+    padding: 0.5rem;
+    border-radius: 5rem;
+  }
+
+  .n-body {
+    margin: 0 0.5rem;
+    .n-title {
+      font-size: 1rem;
+      color: var(--notice-title-color);
+      margin-bottom: 0.5rem;
+      font-weight: bold;
+    }
+    .n-desc {
+      font-size: 0.9rem;
+      color: var(--notice-desc-color);
+    }
+  }
+
+  &.notice-primary {
+    --notice-border: var(--primary);
+    --notice-icon-bg: var(--primary-subtle);
+    --notice-icon-text: var(--primary);
+  }
+  &.notice-light {
+    --notice-border: var(--light);
+    --notice-icon-bg: var(--light-subtle);
+    --notice-icon-text: var(--text);
+  }
+  &.notice-danger {
+    --notice-border: var(--danger);
+    --notice-icon-bg: var(--danger-subtle);
+    --notice-icon-text: var(--danger);
+  }
+  &.notice-dark {
+    --notice-border: var(--dark);
+    --notice-icon-bg: var(--dark-subtle);
+    --notice-icon-text: var(--text);
+  }
+}

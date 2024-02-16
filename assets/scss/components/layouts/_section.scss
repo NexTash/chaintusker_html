@@ -1,0 +1,36 @@
+.section-badge {
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.section-title,
+.section-subtitle {
+  color: var(--text);
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  font-style: normal;
+  font-family: "Prata", serif;
+}
+.section-title {
+  font-size: 2.5rem;
+}
+
+.section-subtitle {
+  font-size: 2rem;
+  font-weight: 400;
+  * {
+    font-size: inherit !important;
+  }
+}
+
+.section-desc {
+  font-size: 1.2rem;
+  color: var(--muted);
+  margin-bottom: 2rem;
+}
+
+.section-gap {
+  margin: 2rem 0;
+}

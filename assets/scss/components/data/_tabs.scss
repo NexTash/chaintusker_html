@@ -1,0 +1,59 @@
+.tabs {
+  --tab-active-bg: var(--body);
+  --tab-active-color: var(--primary);
+  --tab-bg: var(--light);
+  --tab-border: var(--primary);
+  --tab-rounded: 50px;
+  .t-items {
+    display: inline-flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    .t-item {
+      font-size: 1rem;
+      font-weight: 500;
+      padding: 0.5rem 1rem;
+      background-color: transparent;
+      text-align: center;
+      cursor: pointer;
+      border: none;
+      outline: none;
+      transition: 0.25s ease-out;
+    }
+  }
+
+  .t-pills {
+    border-radius: var(--tab-rounded);
+    background-color: var(--tab-bg);
+
+    .t-item {
+      border-radius: inherit;
+      border: 1px solid transparent;
+
+      &.active {
+        background-color: var(--tab-active-bg);
+        color: var(--tab-active-color);
+        border: 1px solid var(--tab-border);
+      }
+    }
+  }
+  .t-nav {
+    padding: 0.3rem;
+    .t-item {
+      border-bottom: 2px solid var(--tab-border);
+      &.active {
+        border-color: var(--tab-active-color);
+        color: var(--tab-active-color);
+        font-weight: bold;
+      }
+    }
+  }
+
+  .t-pane {
+    display: none;
+    margin-bottom: 1rem;
+
+    &.active {
+      display: block;
+    }
+  }
+}

@@ -1,0 +1,46 @@
+<div class="modal modal-sm modal-backdrop" id="demo">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-head ">
+                <h3 class="modal-title">Create</h3>
+                <button class="btn modal-close bx bx-x" data-toggle="modal" data-target="#demo"></button>
+            </div>
+            <div class="modal-body"></div>
+            <div class="modal-foot ">
+                <button class="btn btn-sm btn-primary">
+                    Create
+                </button>
+                <button class="btn btn-sm btn-light" data-toggle="modal" data-target="#demo">
+                    Cancel
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+<button data-toggle="modal" data-target="#demo">click</button>
+<script>
+    function openModel(id) {
+        document.getElementById(id).classList.add("active");
+    }
+    function closeModel(id) {
+        document.getElementById(id).classList.remove("active");
+    }
+
+    document.addEventListener("click", function (e) {
+        const target = e.target;
+        const body = document.querySelector("body");
+
+        if (target.matches("[data-toggle='modal']")) {
+            const attr = target.getAttribute("data-target");
+            const selector = document.querySelector(attr);
+            selector.classList.toggle("active");
+            !target.classList.contains("active")
+                ? (body.style.overflow = "hidden")
+                : null;
+        } else if (target.matches(".modal-dialog")) {
+            const modal = target.closest(".active");
+            modal.classList.remove("active");
+            body.style.overflow = "auto";
+        }
+    });
+</script>

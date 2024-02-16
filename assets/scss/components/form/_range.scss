@@ -1,0 +1,76 @@
+.multi-range {
+  --range-strip: var(--primary-subtle);
+  --range-strip-active: var(--primary);
+  --range-left-value: 0%;
+  --range-right-value: 0%;
+  --range-thumb-size: 15px;
+  --range-height: 3px;
+  position: relative;
+  width: 100%;
+  z-index: 1;
+  margin-bottom: 1rem;
+  input[type="range"] {
+    position: absolute;
+    pointer-events: none;
+    z-index: 3;
+    height: var(--range-height);
+    width: 100%;
+    opacity: 0;
+    &::-webkit-slider-thumb {
+      pointer-events: all;
+      width: 20px;
+      height: 20px;
+      cursor: pointer;
+    }
+  }
+  .range-controls {
+    position: relative;
+    height: var(--range-height);
+    &::before {
+      content: "";
+      position: absolute;
+      z-index: 1;
+      width: 100%;
+      height: var(--range-height);
+      background-color: var(--range-strip);
+      border-radius: 50px;
+    }
+
+    .range {
+      position: absolute;
+      height: 100%;
+      left: var(--range-left-value);
+      right: var(--range-right-value);
+      top: 0;
+      bottom: 0;
+      border-radius: 10px;
+      z-index: 2;
+      background-color: var(--range-strip-active);
+    }
+    .range-thumb {
+      position: absolute;
+      z-index: 2;
+      width: var(--range-thumb-size);
+      height: var(--range-thumb-size);
+      top: -6px;
+      background-color: var(--range-strip-active);
+      border-radius: 50%;
+      &.min-range-thumb {
+        left: var(--range-left-value);
+      }
+      &.max-range-thumb {
+        right: var(--range-right-value);
+      }
+    }
+  }
+
+  .range-values {
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1rem;
+    font-weight: bold;
+    user-select: none;
+  }
+}

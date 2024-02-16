@@ -1,0 +1,119 @@
+.btn {
+  --btn-padding: 0.9rem 1.5rem;
+  --btn-rounded: var(--rounded);
+  --btn-bg: transparent;
+  --btn-bg-hover: var(--light);
+  --btn-bg-disabled: var(--light);
+  --btn-bg-focus: var(--light);
+  --btn-color: var(--text);
+  --btn-color-hover: var(--text);
+  --btn-color-disabled: var(--text);
+  --btn-color-focus: var(--text);
+  --btn-size: var(--font-size);
+  --btn-shadow: 0px 0px;
+  --btn-border: var(--border);
+  background-color: var(--btn-bg);
+  color: var(--btn-color);
+  box-shadow: var(--btn-shadow);
+  border: 1px solid var(--btn-border);
+  border-radius: var(--btn-rounded);
+  padding: var(--btn-padding);
+  cursor: pointer;
+  user-select: none;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: var(--font-size);
+  transition: background 1s, color 1s, border 0.5s;
+  text-decoration: none;
+
+  img {
+    width: 20px;
+    height: 20px;
+    margin: 0 0.5rem;
+  }
+
+  .icon {
+    font-size: 1.1rem;
+    margin: 0 2px;
+  }
+
+  &:hover {
+    background-color: var(--btn-bg-hover);
+    color: var(--btn-color-hover);
+  }
+  &:focus {
+    background-color: var(--btn-bg-focus);
+    color: var(--btn-color-focus);
+  }
+  &:disabled {
+    background-color: var(--btn-bg-disabled);
+    color: var(--btn-color-disabled);
+  }
+}
+
+.btn-primary {
+  --btn-bg: var(--primary);
+  --btn-bg-hover: var(--primary-hover);
+  --btn-bg-disabled: var(--primary);
+  --btn-bg-focus: var(--primary);
+  --btn-color: white;
+  --btn-color-hover: white;
+  --btn-color-disabled: white;
+  --btn-color-focus: white;
+  --btn-border: var(--primary);
+}
+
+.btn-light {
+  --btn-bg: var(--light);
+  --btn-bg-hover: var(--light-hover);
+  --btn-bg-disabled: var(--light);
+  --btn-bg-focus: var(--light);
+  --btn-color: var(--text);
+  --btn-color-hover: var(--text);
+  --btn-color-disabled: var(--muted);
+  --btn-color-focus: var(--text);
+  --btn-border: var(--light);
+}
+
+.btn-dark {
+  --btn-bg: var(--dark);
+  --btn-bg-hover: var(--dark-hover);
+  --btn-bg-disabled: var(--dark);
+  --btn-bg-focus: var(--dark);
+  --btn-color: white;
+  --btn-color-hover: white;
+  --btn-color-disabled: white;
+  --btn-color-focus: white;
+  --btn-border: var(--dark);
+}
+
+.btn-sm {
+  --btn-padding: 0.5rem 1rem;
+}
+.btn-lg {
+  --btn-padding: 1rem 1.8rem;
+  --btn-size: 1.2rem;
+}
+
+.btn-block {
+  width: 100%;
+}
+.btn-pill {
+  --btn-rounded: 5rem;
+}
+
+.btn-close {
+  padding: 0.3rem;
+  border-radius: 50px;
+  font-size: 1rem;
+  color: var(--muted);
+  margin-left: auto;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  &:hover {
+    background-color: var(--light);
+  }
+}

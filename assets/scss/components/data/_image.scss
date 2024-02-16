@@ -1,0 +1,12 @@
+.image-row {
+  display: flex;
+  flex-wrap: wrap;
+  .image {
+    width: 50%;
+    padding: 0.2rem;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: inherit;
+  }
+}

@@ -1,0 +1,74 @@
+.collapse {
+  --collapse-title-size: var(--font-size);
+  --collapse-desc-size: var(--font-size);
+  --collapse-gap: 1rem 0;
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  .c-item {
+    width: 100%;
+    border-bottom: 1px solid var(--border);
+    position: relative;
+    user-select: none;
+    &.active {
+      .c-head {
+        color: var(--primary);
+        cursor: auto;
+      }
+
+      .c-body {
+        display: block;
+      }
+
+      &::after {
+        content: "\ebc1";
+        transform: rotate(90deg);
+        color: var(--primary);
+      }
+    }
+
+    &:last-child {
+      border: none;
+    }
+    &::after {
+      content: "\eb8d";
+      font-family: "icons";
+      font-size: 1.8rem;
+      transition: 0.5s transform;
+      position: absolute;
+      right: 10px;
+      top: 10px;
+    }
+
+    .c-head {
+      width: 100%;
+      padding: var(--collapse-gap);
+      cursor: pointer;
+      color: var(--text);
+      font-size: var(--collapse-title-size);
+      padding-right: 3rem;
+      border: none;
+      outline: none;
+      background-color: transparent;
+      text-align: left;
+    }
+
+    .c-body {
+      width: 100%;
+      padding: var(--collapse-gap);
+      display: none;
+      color: var(--text);
+      font-size: var(--collapse-desc-size);
+    }
+  }
+
+  &.collapse-lg {
+    --collapse-title-size: 1.5rem;
+    --collapse-gap: 1.2rem 0;
+    --collapse-desc-size: 1.3rem;
+  }
+}
+
+.hide {
+  display: none;
+}

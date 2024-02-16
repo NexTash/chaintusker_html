@@ -1,0 +1,52 @@
+.blog-card {
+  border: none;
+  .c-head {
+    display: inline-block;
+    border-radius: var(--rounded);
+    height: 200px;
+    width: 100%;
+    cursor: pointer;
+  }
+  .c-head,
+  .c-foot {
+    padding: 0;
+  }
+  .c-body {
+    padding: 1rem 0;
+  }
+
+  .meta {
+    font-size: 0.9rem;
+    a {
+      font-size: inherit;
+    }
+  }
+  .c-title {
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &.blog-pin {
+    flex-direction: row;
+    align-items: center;
+    margin: 4rem 0;
+    position: relative;
+    .pin-icon {
+      background-color: var(--body);
+      border-radius: 50px;
+      padding: 1rem;
+      font-size: 1.5rem;
+      position: absolute;
+      right: 1rem;
+      top: 1rem;
+    }
+    .c-head {
+      height: 450px;
+      overflow: hidden;
+    }
+    .c-body {
+      padding-left: 2rem;
+    }
+  }
+}

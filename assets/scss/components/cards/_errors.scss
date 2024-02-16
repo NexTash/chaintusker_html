@@ -1,0 +1,62 @@
+.error-section {
+  text-align: center;
+
+  .error-code {
+    color: var(--text);
+    z-index: 9;
+    text-transform: uppercase;
+    font-size: 10rem;
+    color: transparent;
+    -webkit-text-stroke: 3px var(--primary);
+    @media (max-width: screen-size(sm)) {
+      font-size: 8rem;
+    }
+  }
+  .error-title {
+    font-weight: bold;
+    margin: 0;
+    margin-bottom: 1.2rem;
+    font-size: 5rem;
+
+    @media (max-width: screen-size(xl)) {
+      font-size: 3rem;
+    }
+
+    @media (max-width: screen-size(lg)) {
+      margin-bottom: 1rem;
+      font-size: 4.5rem;
+    }
+
+    @media (max-width: screen-size(sm)) {
+      margin-bottom: 1rem;
+      font-size: 2rem;
+    }
+  }
+  .error-description {
+    color: var(--muted);
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+    margin-bottom: 2rem;
+
+    @media (max-width: screen-size(sm)) {
+      font-size: 1.1rem;
+      margin-bottom: 2rem;
+    }
+  }
+
+  @media (max-width: screen-size(xl)) {
+    padding: 0;
+  }
+
+  @media (max-width: screen-size(lg)) {
+    padding: 1rem;
+  }
+
+  @media (max-width: screen-size(md)) {
+    padding: 4rem;
+  }
+
+  @media (max-width: screen-size(sm)) {
+    padding: 6rem 0;
+  }
+}

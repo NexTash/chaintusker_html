@@ -1,0 +1,40 @@
+.link {
+  --link-color: var(--text);
+  --link-color-hover: var(--primary);
+  --link-size: var(--font-size);
+  color: var(--link-color);
+  text-decoration: none;
+  font-size: var(--link-size);
+  .icon {
+    font-size: 1.5rem;
+    position: relative;
+    top: 6px;
+  }
+  &:hover {
+    color: var(--link-color-hover);
+  }
+}
+.link-lg {
+  --link-size: 1rem;
+}
+.link-right {
+  float: right;
+}
+.link-primary {
+  --link-color: var(--primary);
+  --link-color-hover: var(--primary-hover);
+}
+
+
+.suggestions{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  span{
+    color: var(--primary);
+  }
+  a{
+    margin: 0 0.5rem;
+    font-weight: 400;
+  }
+}

@@ -1,0 +1,56 @@
+.freelancer-card {
+  justify-content: center;
+  padding: 0;
+
+  .status,
+  .charges {
+    top: 20px;
+    left: 20px;
+    position: absolute;
+  }
+
+  .charges {
+    left: auto;
+    right: 20px;
+    top: 25px;
+    font-weight: bold;
+    color: var(--text);
+    font-size: 1rem;
+  }
+
+  .c-head {
+    .media-image {
+      --image-size: 60px;
+      --image-rounded: var(--image-size);
+      .image {
+        padding: 2px;
+        border: 2px solid var(--text);
+      }
+    }
+  }
+
+  .c-body {
+    .c-title {
+      font-size: 1.2rem;
+      margin-bottom: 0.2rem;
+    }
+
+    .c-desc {
+      --c-desc-color: var(--success);
+      margin: 0.2rem 0;
+      margin-bottom: 2rem;
+    }
+  }
+
+  .c-foot {
+    padding: 2rem 0.5rem;
+    .a-title {
+      font-weight: bold;
+      margin-top: 0.5rem;
+    }
+    .a-desc {
+      font-size: 1.5rem;
+      color: var(--success);
+    }
+  }
+}

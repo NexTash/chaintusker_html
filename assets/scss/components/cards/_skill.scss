@@ -1,0 +1,32 @@
+.skill-card {
+  margin: 4rem 0;
+
+  .title {
+    font-weight: bold;
+    font-size: 2rem;
+    text-transform: capitalize;
+    margin-bottom: 1rem;
+    position: sticky;
+    top: 5rem;
+  }
+
+  .list {
+    list-style: none;
+    display: block;
+    .list-item {
+      width: 33.33333%;
+      float: left;
+padding: 0;
+      .list-link {
+        display: block;
+        font-size: 1rem;
+        padding: 0.3rem;
+        font-weight: 500;
+
+        &:hover {
+          color: var(--primary);
+        }
+      }
+    }
+  }
+}

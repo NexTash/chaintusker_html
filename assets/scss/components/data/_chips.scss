@@ -1,0 +1,96 @@
+.chips {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin: 1rem 0;
+}
+
+.chip {
+  --chip-color: var(--text);
+  --chip-color-hover: var(--muted);
+  --chip-bg: transparent;
+  --chip-bg-hover: transparent;
+  --chip-border: var(--border);
+  --chip-border-hover: var(--border);
+  --chip-shadow: transparent;
+  --chip-font-size: 0.8rem;
+  --chip-rounded: 50px;
+  --chip-padding: 0.2rem 0.5rem;
+  --chip-gap: 0.1rem;
+  border-radius: var(--chip-rounded);
+  padding: var(--chip-padding);
+  border: 2px solid var(--chip-border);
+  color: var(--chip-color);
+  background-color: var(--chip-bg);
+  font-weight: 600;
+  margin: var(--chip-gap);
+  font-size: var(--chip-font-size);
+  user-select: none;
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+
+  .chip-icon {
+    margin-right: 0.5rem;
+    font-size: 1.2rem;
+  }
+  .close {
+    cursor: pointer;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    background-color: transparent;
+    color: var(--chip-color);
+    font-size: 1.2rem;
+    margin-left: 0.5rem;
+  }
+}
+
+a.chip {
+  &:hover {
+    color: var(--chip-color-hover);
+    border-color: var(--chip-border-hover);
+  }
+}
+
+.chip-primary {
+  --chip-color: var(--primary);
+  --chip-color-hover: var(--primary-hover);
+  --chip-border: var(--primary);
+  --chip-border-hover: var(--primary-hover);
+  --chip-bg: transparent;
+  --chip-bg-hover: transparent;
+}
+
+.chip-dark {
+  --chip-color: var(--dark);
+  --chip-border: var(--dark);
+}
+
+.chip-danger {
+  --chip-color: var(--danger);
+  --chip-border: var(--danger);
+}
+
+.chip-light {
+  --chip-color: var(--text);
+  --chip-color-hover: var(--muted);
+  --chip-border: var(--light);
+  --chip-border-hover: var(--light-hover);
+  --chip-bg: var(--light-subtle);
+  --chip-bg-hover: var(--light-hover);
+}
+
+.chip-md {
+  --chip-font-size: 0.9rem;
+  --chip-padding: 0.2rem 0.6rem;
+  --chip-gap: 0.2rem;
+}
+
+.chip-lg {
+  --chip-font-size: 1rem;
+  --chip-padding: 0.3rem 1rem;
+  --chip-gap: 0.3rem;
+}

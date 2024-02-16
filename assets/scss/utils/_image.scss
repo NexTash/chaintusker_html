@@ -1,0 +1,14 @@
+.zoom {
+  overflow: hidden;
+
+  .image,
+  img {
+    transition: transform;
+    transition-duration: 600ms;
+    transition-timing-function: ease;
+
+    &:hover {
+      transform: scale(1.5);
+    }
+  }
+}

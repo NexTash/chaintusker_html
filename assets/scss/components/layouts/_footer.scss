@@ -5,6 +5,12 @@
     display: inline-block;
   }
 
+  .social-group {
+    @media (max-width: screen-size(sm)) {
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+    }
+  }
   .first {
     margin-top: 4rem;
     margin-bottom: 4rem;
@@ -19,10 +25,7 @@
         margin-top: 1rem;
         margin-bottom: 1rem;
         justify-content: center;
-      }
-      .social-group {
-        margin-top: 1rem;
-        margin-bottom: 1rem;
+        align-items: center;
       }
     }
   }

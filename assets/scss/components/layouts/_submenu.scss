@@ -1,0 +1,27 @@
+.sub-menu {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  background-color: var(--light);
+  margin-bottom: 2rem;
+  padding: 1rem 0;
+  .m-list {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    overflow-x: auto;
+    .l-item {
+      margin-right: 2rem;
+      .l-link {
+        text-decoration: none;
+        color: var(--text);
+        text-wrap: nowrap;
+        word-break: keep-all;
+      }
+    }
+    &::-webkit-scrollbar{
+        width: 0;
+        height: 0;
+    }
+  }
+}

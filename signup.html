@@ -133,79 +133,143 @@
     <!-- SIDEBAR -->
 
     <!-- CONTENT -->
-    <main class="container">
-        <div class="flex-center">
-            <div class="col-12 col-sm-12 col-md-5 col-lg-6 col-xl-6">
-                <form method="POST" class="card form-card">
-                    <div class="c-head">
-                        <h1 class="c-title">Signup</h1>
-                        <p class="c-description">
-                            Already have an account?
-                            <a href="login.html" class="link">Login</a>
-                        </p>
-                    </div>
-                    <div class="c-body">
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <div class="form-group">
-                                    <label for="first_name" class="form-label"><b>First Name</b></label>
-                                    <input type="text" class="form-field" id="first_name" name="first_name" />
-                                </div>
-                            </div>
-                            <div class="col-sm-6">
-                                <div class="form-group">
-                                    <label for="last_name" class="form-label"><b>Last name</b></label>
-                                    <input type="text" class="form-field" id="last_name" name="last_name" />
-                                </div>
-                            </div>
-                            <div class="col-sm-12">
-                                <div class="form-group">
-                                    <label for="email" class="form-label"><b>Email address</b></label>
-                                    <input type="email" class="form-field" id="email" name="email" />
-                                </div>
-                            </div>
-                            <div class="col-sm-6">
-                                <div class="form-group">
-                                    <label for="create_password" class="form-label"><b>Create Password</b></label>
-                                    <input type="password" class="form-field" id="create_password"
-                                        name="create_password" />
-                                </div>
-                            </div>
-                            <div class="col-sm-6">
-                                <div class="form-group">
-                                    <label for="confirm_password" class="form-label"><b>Confirm Password</b></label>
-                                    <input type="password" class="form-field" id="confirm_password"
-                                        name="confirm_password" />
-                                </div>
-                            </div>
-                            <div class="col-sm-12">
-                                <label class="checkbox">
-                                    <input type="checkbox" id="agreement" name="agreement" />
-                                    <span class="checkmark"></span>
-                                    <span class="text">I agree to the
-                                        <a href="terms-of-use.html" class="link">Terms and conditions</a>
-                                        and
-                                        <a href="privacy-policy.html" class="link">Privacy
-                                            policy</a></span>
-                                </label>
+    <main class="boxed flex-center">
+        <div class="col-12 col-sm-12 col-md-5 col-lg-6 col-xl-6 col-xxl-5">
+            <form method="POST" class="card form-card">
+                <div class="c-head">
+                    <h1 class="c-title">Signup</h1>
+                    <p class="c-description">
+                        Already have an account?
+                        <a href="login.html" class="link">Login</a>
+                    </p>
+                </div>
+                <div class="c-body">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label for="first_name" class="form-label"><b>First Name</b></label>
+                                <input type="text" class="form-field" id="first_name" name="first_name" />
                             </div>
                         </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label for="last_name" class="form-label"><b>Last name</b></label>
+                                <input type="text" class="form-field" id="last_name" name="last_name" />
+                            </div>
+                        </div>
+                        <div class="col-sm-12">
+                            <div class="form-group">
+                                <label for="email" class="form-label"><b>Email address</b></label>
+                                <input type="email" class="form-field" id="email" name="email" />
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label for="create_password" class="form-label"><b>Create Password</b></label>
+                                <input type="password" class="form-field" id="create_password" name="create_password" />
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label for="confirm_password" class="form-label"><b>Confirm Password</b></label>
+                                <input type="password" class="form-field" id="confirm_password"
+                                    name="confirm_password" />
+                            </div>
+                        </div>
+                        <div class="col-sm-12">
+                            <label class="checkbox">
+                                <input type="checkbox" id="agreement" name="agreement" />
+                                <span class="checkmark"></span>
+                                <span class="text">I agree to the
+                                    <a href="terms-of-use.html" class="link">Terms and conditions</a>
+                                    and
+                                    <a href="privacy-policy.html" class="link">Privacy
+                                        policy</a></span>
+                            </label>
+                        </div>
                     </div>
-                    <div class="c-foot">
-                        <button type="submit" class="btn btn-dark btn-block">
-                            Signup
-                        </button>
-                        <div class="divider">OR</div>
-                        <button class="btn btn-light btn-block">
-                            <img src="./assets/images/google.png" alt="" />
-                            Signup With Google
-                        </button>
-                    </div>
-                </form>
-            </div>
+                </div>
+                <div class="c-foot">
+                    <button type="submit" class="btn btn-dark btn-block">
+                        Signup
+                    </button>
+                    <div class="divider">OR</div>
+                    <button class="btn btn-light btn-block">
+                        <img src="./assets/images/google.png" alt="" />
+                        Signup With Google
+                    </button>
+                </div>
+            </form>
         </div>
     </main>
     <!-- CONTENT -->
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="boxed">
+            <div class="first flex-between flex-wrap">
+                <a href="index.html" class="logo" role="img" aria-label="chaintusker">
+                    <img src="assets/images/logo.png" width="120" class="image" alt="chaintusker Logo" />
+                </a>
+                <ul class="inline-list">
+                    <li class="l-item" role="listitem">
+                        <a href="about-us.html" class="l-link">About</a>
+                    </li>
+                    <li class="l-item" role="listitem">
+                        <a href="contact-us.html" class="l-link">Contact</a>
+                    </li>
+                    <li class="l-item" role="listitem">
+                        <a href="freelancers.html" class="l-link">Freelancers</a>
+                    </li>
+                    <li class="l-item" role="listitem">
+                        <a href="skills.html" class="l-link">Skills</a>
+                    </li>
+                    <li class="l-item" role="listitem">
+                        <a href="blogs.html" class="l-link">Blog</a>
+                    </li>
+                    <li class="l-item" role="listitem">
+                        <a href="faqs.html" class="l-link">FAQs</a>
+                    </li>
+                    <li class="l-item" role="listitem">
+                        <a href="jobs.html" class="l-link">Jobs</a>
+                    </li>
+                    <li class="l-item" role="listitem">
+                        <a href="vacancies.html" class="l-link">Vacancies</a>
+                    </li>
+                </ul>
+                <div class="social-group">
+                    <a href="#" class="bx bxl-facebook-circle social-icon"></a>
+                    <a href="#" class="bx bxl-twitter social-icon"></a>
+                    <a href="#" class="bx bxl-instagram social-icon"></a>
+                    <a href="#" class="bx bxl-pinterest social-icon"></a>
+                </div>
+            </div>
+            <div class="last flex-between flex-wrap">
+                <p>
+                    &copy; 2024,
+                    <a href="index.html" class="link link-primary">ChainTusker</a>
+                </p>
+                <ul class="inline-list">
+                    <li class="l-item" role="listitem">
+                        <a href="terms-of-use.html" class="l-link">Terms of use</a>
+                    </li>
+                    <li class="l-item" role="listitem">
+                        <a href="privacy-policy.html" class="l-link">Privacy</a>
+                    </li>
+                    <li class="l-item" role="listitem">
+                        <a href="cookies-policy.html" class="l-link">Cookies</a>
+                    </li>
+                    <li class="l-item" role="listitem">
+                        <a href="agreement.html" class="l-link">Agreement</a>
+                    </li>
+                    <li class="l-item" role="listitem">
+                        <a href="refunds-policy.html" class="l-link">Refunds</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <!-- FOOTER -->
 
     <!-- SCRIPTS -->
     <script src="assets/js/main.js"></script>

@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Customer details</title>
+    <title>Freelancer details</title>
     <link rel="shortcut icon" href="assets/images/logos/favicon.ico" type="image/x-icon" />
     <meta charset="UTF-8" />
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
@@ -134,360 +134,226 @@
     </aside>
     <!-- SIDEBAR -->
 
+
+    <!-- HEAD -->
+    <section class="page-head boxed">
+        <ul class="breadcrumb">
+            <li class="b-item">
+                <a href="javascript:void(0)" onclick="window.history.back()" class="page-link">
+                    <span class=" bx bx-arrow-back"></span> Back
+                </a>
+            </li>
+            <li class="b-item active">Profile</li>
+        </ul>
+        <h1 class="p-title">Profile</h1>
+    </section>
+    <!-- HEAD -->
+
     <!-- CONTENT -->
-    <main class="container">
-        <div class="row flex-center">
-            <div class="col-12 col-sm-12 col-md-5 col-lg-10 col-xl-10">
-                <ul class="breadcrumb">
-                    <li class="b-item">
-                        <a href="javascript:void(0)" onclick="window.history.back()" class="page-link">
-                            <span class=" bx bx-arrow-back"></span> Back
-                        </a>
-                    </li>
-                </ul>
-                <div class="card section-gap bg-light">
-                    <div class="c-body my-1">
-                        <div class="row">
-                            <div class="col-sm-12 mb-2">
+    <main class="boxed">
+        <div class="card">
+            <div class="c-body my-1">
+                <div class="row">
+                    <div class="col-sm-12 mb-2">
+                        <div class="media">
+                            <a class="media-image" href="freelancer-details.html">
+                                <img src="./assets/images/man.png" class="image" alt="" />
+                            </a>
+                            <div class="media-body">
+                                <a class="media-title" href="freelancer-details.html">Abdul Hannan
+                                    <span class="bx bxs-badge-check v-badge"></span></a>
+                                <p class="media-desc">Reviews(0)</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 mb-2">
+                        <h3 class="detail-title">Average ratings </h3>
+                        <p class="detail-desc">
+                        <div class="ratings">
+                            <span class="bx bxs-star icon active"></span>
+                            <span class="bx bxs-star icon active"></span>
+                            <span class="bx bxs-star icon active"></span>
+                            <span class="bx bx-star icon"></span>
+                            <span class="bx bx-star icon"></span>
+                            <b class="text">4.3</b>
+                        </div>
+                        </p>
+                    </div>
+                    <div class="col-sm-4 mb-2">
+                        <h3 class="detail-title">Reputation</h3>
+                        <p class="detail-desc">0</p>
+                    </div>
+                    <div class="col-sm-4 mb-2">
+                        <h3 class="detail-title">Finished gigs </h3>
+                        <p class="detail-desc">0</p>
+                    </div>
+                    <div class="col-sm-4 mb-2">
+                        <h3 class="detail-title">Finished jobs</h3>
+                        <p class="detail-desc">0</p>
+                    </div>
+                    <div class="col-sm-4 mb-2">
+                        <h3 class="detail-title">Website</h3>
+                        <p class="detail-desc">
+                            <a href="" class="link link-primary">brave.com</a>
+                        </p>
+                    </div>
+                    <div class="col-sm-4 mb-2">
+                        <h3 class="detail-title">Country</h3>
+                        <p class="detail-desc">Not specified</p>
+                    </div>
+                    <div class="col-sm-4 mb-2">
+                        <h3 class="detail-title">Skills</h3>
+                        <p class="detail-desc">Not specified</p>
+                    </div>
+                    <div class="col-sm-4 mb-2">
+                        <h3 class="detail-title">Specialization</h3>
+                        <p class="detail-desc">Not specified</p>
+                    </div>
+                    <div class="col-sm-4 mb-2">
+                        <h3 class="detail-title">Hourly rate </h3>
+                        <p class="detail-desc">Not specified</p>
+                    </div>
+                    <div class="col-sm-4 mb-2">
+                        <h3 class="detail-title">Follow on</h3>
+                        <div class="social-group">
+                            <a href="#" class="bx bxl-facebook-circle social-icon"></a>
+                            <a href="#" class="bx bxl-twitter social-icon"></a>
+                            <a href="#" class="bx bxl-instagram social-icon"></a>
+                            <a href="#" class="bx bxl-pinterest social-icon"></a>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 mb-2">
+                        <h3 class="detail-title">About me </h3>
+                        <p class="detail-desc">Not specified</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="tabs">
+            <div class="t-items t-pills m-auto">
+                <button class="t-item active" data-toggle="tab" data-target="#gigstab">
+                    Gigs
+                </button>
+                <button class="t-item" data-toggle="tab" data-target="#reviewstab">
+                    Reviews
+                </button>
+                <!-- <button class="t-item" data-toggle="tab" data-target="#portfoliotab">
+                    Portfolio
+                </button> -->
+            </div>
+            <div class="tab-content">
+                <div class="t-pane active" id="gigstab">
+                    <div class="swiper carousel cols3">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <article class="card card-shadow gig-card">
+                                    <a class="c-head c-image" href="gig-details.html">
+                                        <img src="./assets/images/gigs/g1.webp" class="image" alt="" />
+                                    </a>
+                                    <div class="c-body">
+                                        <div class="media">
+                                            <a class="media-image" href="freelancer-details.html">
+                                                <img src="./assets/images/man.png" class="image" alt="" />
+                                            </a>
+                                            <div class="media-body">
+                                                <a class="media-title" href="freelancer-details.html">Abdul
+                                                    Hannan <span class="bx bxs-badge-check v-badge"></span></a>
+                                            </div>
+                                            <div class="media-ctrl">
+                                                <span class="bx bx-check-circle icon"></span> 5
+                                            </div>
+                                        </div>
+                                        <a href="gig-details.html" class="c-title">
+                                            i will proffessionaly deign, create a cutome website,website
+                                        </a>
+                                        <div class="chips">
+                                            <span class="text">Skills: </span>
+                                            <a href="" class="chip chip-light">HTML 5</a>
+                                            <a href="" class="chip chip-light">CSS 3</a>
+                                            <a href="" class="chip chip-light">SCSS</a>
+                                            <a href="" class="chip chip-light">JAVASCRIPT</a>
+                                            <a href="" class="chip chip-light">JQuery</a>
+                                            <a href="" class="chip chip-light">Bootstrap 5</a>
+                                            <a href="" class="chip chip-light">Uikit</a>
+                                        </div>
+                                    </div>
+                                    <div class="c-foot c-foot-flex">
+                                        <b class="c-title">5/hr</b>
+                                        <div class="ratings">
+                                            <span class="bx bxs-star icon active"></span>
+                                            <span class="bx bxs-star icon active"></span>
+                                            <span class="bx bxs-star icon active"></span>
+                                            <span class="bx bx-star icon"></span>
+                                            <span class="bx bx-star icon"></span>
+                                            <b class="text">4.3</b>
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+                        <button class="slide-prev bx bx-left-arrow-alt"></button>
+                        <button class="slide-next bx bx-right-arrow-alt"></button>
+                    </div>
+                </div>
+                <div class="t-pane" id="reviewstab">
+                    <div class="mt-2">
+                        <div class="card bg-light mb-2">
+                            <div class="c-head">
                                 <div class="media">
-                                    <a class="media-image" href="freelancer-details.html">
-                                        <img src="./assets/images/man.png" class="image" alt="" />
+                                    <a href="customer-details.html" class="media-image">
+                                        <img src="assets/images/man.png" class="image" alt="" />
                                     </a>
                                     <div class="media-body">
-                                        <a class="media-title" href="freelancer-details.html">Abdul Hannan
-                                            <span class="bx bxs-badge-check v-badge"></span></a>
-                                        <p class="media-desc">Reviews(0)</p>
+                                        <a class="media-title" href="customer-details.html">Abdul Hannan</a>
+                                        <p class="media-desc">5 hours ago</p>
+                                    </div>
+                                    <div class="media-ctrl">
+                                        <div class="ratings">
+                                            <span class="bx bxs-star icon active"></span>
+                                            <b class="text">4.3</b>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-sm-6 mb-2">
-                                <h3 class="detail-title">Average ratings </h3>
-                                <p class="detail-desc">
-                                <div class="ratings">
-                                    <span class="bx bxs-star icon active"></span>
-                                    <span class="bx bxs-star icon active"></span>
-                                    <span class="bx bxs-star icon active"></span>
-                                    <span class="bx bx-star icon"></span>
-                                    <span class="bx bx-star icon"></span>
-                                    <b class="text">4.3</b>
-                                </div>
-                                </p>
+                            <div class="c-body mb-2 section-desc">
+                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut labore voluptates
+                                optio eaque!
+                                Praesentium ducimus tenetur laborum aliquid deleniti ipsa error, culpa molestias
+                                suscipit
+                                quas, quia inventore laudantium tempora blanditiis?
                             </div>
-                            <div class="col-sm-6 mb-2">
-                                <h3 class="detail-title">Reputation</h3>
-                                <p class="detail-desc">0</p>
-                            </div>
-                            <div class="col-sm-6 mb-2">
-                                <h3 class="detail-title">Finished gigs </h3>
-                                <p class="detail-desc">0</p>
-                            </div>
-                            <div class="col-sm-6 mb-2">
-                                <h3 class="detail-title">Finished jobs</h3>
-                                <p class="detail-desc">0</p>
-                            </div>
-                            <div class="col-sm-6 mb-2">
-                                <h3 class="detail-title">Website</h3>
-                                <p class="detail-desc">
-                                    <a href="" class="link link-primary">brave.com</a>
-                                </p>
-                            </div>
-                        
-                            <div class="col-sm-6 mb-2">
-                                <h3 class="detail-title">Country</h3>
-                                <p class="detail-desc">Not specified</p>
-                            </div>
-                            <div class="col-sm-6 mb-2">
-                                <h3 class="detail-title">Skills</h3>
-                                <p class="detail-desc">Not specified</p>
-                            </div>
-                            <div class="col-sm-6 mb-2">
-                                <h3 class="detail-title">Specialization</h3>
-                                <p class="detail-desc">Not specified</p>
-                            </div>
-                            <div class="col-sm-6 mb-2">
-                                <h3 class="detail-title">Hourly rate </h3>
-                                <p class="detail-desc">Not specified</p>
-                            </div>
-                            <div class="col-sm-6 mb-2">
-                                <h3 class="detail-title">Follow on</h3>
-                                <div class="social-group">
-                                    <a href="#" class="bx bxl-facebook-circle social-icon"></a>
-                                    <a href="#" class="bx bxl-twitter social-icon"></a>
-                                    <a href="#" class="bx bxl-instagram social-icon"></a>
-                                    <a href="#" class="bx bxl-pinterest social-icon"></a>
+                        </div>
+                        <div class="card bg-light mb-2">
+                            <div class="c-head">
+                                <div class="media">
+                                    <a href="customer-details.html" class="media-image">
+                                        <img src="assets/images/man.png" class="image" alt="" />
+                                    </a>
+                                    <div class="media-body">
+                                        <a class="media-title" href="customer-details.html">Abdul Hannan</a>
+                                        <p class="media-desc">5 hours ago</p>
+                                    </div>
+                                    <div class="media-ctrl">
+                                        <div class="ratings">
+                                            <span class="bx bxs-star icon active"></span>
+                                            <b class="text">4.3</b>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="col-sm-12 mb-2">
-                                <h3 class="detail-title">About me </h3>
-                                <p class="detail-desc">Not specified</p>
+                            <div class="c-body mb-2 section-desc">
+                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut labore voluptates
+                                optio eaque!
+                                Praesentium ducimus tenetur laborum aliquid deleniti ipsa error, culpa molestias
+                                suscipit
+                                quas, quia inventore laudantium tempora blanditiis?
                             </div>
                         </div>
                     </div>
                 </div>
-                <section class="gap-y">
-                    <div class="tabs">
-                        <div class="t-items t-pills m-auto">
-                            <button class="t-item active" data-toggle="tab" data-target="#gigstab">
-                                Gigs
-                            </button>
-                            <button class="t-item" data-toggle="tab" data-target="#reviewstab">
-                                Reviews
-                            </button>
-                            <!-- <button class="t-item" data-toggle="tab" data-target="#portfoliotab">
-                                Portfolio
-                            </button> -->
-                        </div>
-                        <div class="tab-content">
-                            <div class="t-pane active" id="gigstab">
-                                <div class="swiper carousel cols3">
-                                    <div class="swiper-wrapper">
-                                        <div class="swiper-slide">
-                                            <article class="card card-shadow gig-card">
-                                                <a class="c-head c-image" href="gig-details.html">
-                                                    <img src="./assets/images/gigs/g1.webp" class="image" alt="" />
-                                                </a>
-                                                <div class="c-body">
-                                                    <div class="media">
-                                                        <a class="media-image" href="freelancer-details.html">
-                                                            <img src="./assets/images/man.png" class="image" alt="" />
-                                                        </a>
-                                                        <div class="media-body">
-                                                            <a class="media-title" href="freelancer-details.html">Abdul
-                                                                Hannan <span
-                                                                    class="bx bxs-badge-check v-badge"></span></a>
-                                                        </div>
-                                                        <div class="media-ctrl">
-                                                            <span class="bx bx-check-circle icon"></span> 5
-                                                        </div>
-                                                    </div>
-                                                    <a href="gig-details.html" class="c-title">
-                                                        i will proffessionaly deign, create a cutome website,website
-                                                    </a>
-                                                    <div class="chips">
-                                                        <span class="text">Skills: </span>
-                                                        <a href="" class="chip chip-light">HTML 5</a>
-                                                        <a href="" class="chip chip-light">CSS 3</a>
-                                                        <a href="" class="chip chip-light">SCSS</a>
-                                                        <a href="" class="chip chip-light">JAVASCRIPT</a>
-                                                        <a href="" class="chip chip-light">JQuery</a>
-                                                        <a href="" class="chip chip-light">Bootstrap 5</a>
-                                                        <a href="" class="chip chip-light">Uikit</a>
-                                                    </div>
-                                                </div>
-                                                <div class="c-foot c-foot-flex">
-                                                    <b class="c-title">5/hr</b>
-                                                    <div class="ratings">
-                                                        <span class="bx bxs-star icon active"></span>
-                                                        <span class="bx bxs-star icon active"></span>
-                                                        <span class="bx bxs-star icon active"></span>
-                                                        <span class="bx bx-star icon"></span>
-                                                        <span class="bx bx-star icon"></span>
-                                                        <b class="text">4.3</b>
-                                                    </div>
-                                                </div>
-                                            </article>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <article class="card card-shadow gig-card">
-                                                <a class="c-head c-image" href="gig-details.html">
-                                                    <img src="./assets/images/gigs/g1.webp" class="image" alt="" />
-                                                </a>
-                                                <div class="c-body">
-                                                    <div class="media">
-                                                        <a class="media-image" href="freelancer-details.html">
-                                                            <img src="./assets/images/man.png" class="image" alt="" />
-                                                        </a>
-                                                        <div class="media-body">
-                                                            <a class="media-title" href="freelancer-details.html">Abdul
-                                                                Hannan <span
-                                                                    class="bx bxs-badge-check v-badge"></span></a>
-                                                        </div>
-                                                        <div class="media-ctrl">
-                                                            <span class="bx bx-check-circle icon"></span> 5
-                                                        </div>
-                                                    </div>
-                                                    <a href="gig-details.html" class="c-title">
-                                                        i will proffessionaly deign, create a cutome website,website
-                                                    </a>
-                                                    <div class="chips">
-                                                        <span class="text">Skills: </span>
-                                                        <a href="" class="chip chip-light">HTML 5</a>
-                                                        <a href="" class="chip chip-light">CSS 3</a>
-                                                        <a href="" class="chip chip-light">SCSS</a>
-                                                        <a href="" class="chip chip-light">JAVASCRIPT</a>
-                                                        <a href="" class="chip chip-light">JQuery</a>
-                                                        <a href="" class="chip chip-light">Bootstrap 5</a>
-                                                        <a href="" class="chip chip-light">Uikit</a>
-                                                    </div>
-                                                </div>
-                                                <div class="c-foot c-foot-flex">
-                                                    <b class="c-title">5/hr</b>
-                                                    <div class="ratings">
-                                                        <span class="bx bxs-star icon active"></span>
-                                                        <span class="bx bxs-star icon active"></span>
-                                                        <span class="bx bxs-star icon active"></span>
-                                                        <span class="bx bx-star icon"></span>
-                                                        <span class="bx bx-star icon"></span>
-                                                        <b class="text">4.3</b>
-                                                    </div>
-                                                </div>
-                                            </article>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <article class="card card-shadow gig-card">
-                                                <a class="c-head c-image" href="gig-details.html">
-                                                    <img src="./assets/images/gigs/g1.webp" class="image" alt="" />
-                                                </a>
-                                                <div class="c-body">
-                                                    <div class="media">
-                                                        <a class="media-image" href="freelancer-details.html">
-                                                            <img src="./assets/images/man.png" class="image" alt="" />
-                                                        </a>
-                                                        <div class="media-body">
-                                                            <a class="media-title" href="freelancer-details.html">Abdul
-                                                                Hannan <span
-                                                                    class="bx bxs-badge-check v-badge"></span></a>
-                                                        </div>
-                                                        <div class="media-ctrl">
-                                                            <span class="bx bx-check-circle icon"></span> 5
-                                                        </div>
-                                                    </div>
-                                                    <a href="gig-details.html" class="c-title">
-                                                        i will proffessionaly deign, create a cutome website,website
-                                                    </a>
-                                                    <div class="chips">
-                                                        <span class="text">Skills: </span>
-                                                        <a href="" class="chip chip-light">HTML 5</a>
-                                                        <a href="" class="chip chip-light">CSS 3</a>
-                                                        <a href="" class="chip chip-light">SCSS</a>
-                                                        <a href="" class="chip chip-light">JAVASCRIPT</a>
-                                                        <a href="" class="chip chip-light">JQuery</a>
-                                                        <a href="" class="chip chip-light">Bootstrap 5</a>
-                                                        <a href="" class="chip chip-light">Uikit</a>
-                                                    </div>
-                                                </div>
-                                                <div class="c-foot c-foot-flex">
-                                                    <b class="c-title">5/hr</b>
-                                                    <div class="ratings">
-                                                        <span class="bx bxs-star icon active"></span>
-                                                        <span class="bx bxs-star icon active"></span>
-                                                        <span class="bx bxs-star icon active"></span>
-                                                        <span class="bx bx-star icon"></span>
-                                                        <span class="bx bx-star icon"></span>
-                                                        <b class="text">4.3</b>
-                                                    </div>
-                                                </div>
-                                            </article>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <article class="card card-shadow gig-card">
-                                                <a class="c-head c-image" href="gig-details.html">
-                                                    <img src="./assets/images/gigs/g1.webp" class="image" alt="" />
-                                                </a>
-                                                <div class="c-body">
-                                                    <div class="media">
-                                                        <a class="media-image" href="freelancer-details.html">
-                                                            <img src="./assets/images/man.png" class="image" alt="" />
-                                                        </a>
-                                                        <div class="media-body">
-                                                            <a class="media-title" href="freelancer-details.html">Abdul
-                                                                Hannan <span
-                                                                    class="bx bxs-badge-check v-badge"></span></a>
-                                                        </div>
-                                                        <div class="media-ctrl">
-                                                            <span class="bx bx-check-circle icon"></span> 5
-                                                        </div>
-                                                    </div>
-                                                    <a href="gig-details.html" class="c-title">
-                                                        i will proffessionaly deign, create a cutome website,website
-                                                    </a>
-                                                    <div class="chips">
-                                                        <span class="text">Skills: </span>
-                                                        <a href="" class="chip chip-light">HTML 5</a>
-                                                        <a href="" class="chip chip-light">CSS 3</a>
-                                                        <a href="" class="chip chip-light">SCSS</a>
-                                                        <a href="" class="chip chip-light">JAVASCRIPT</a>
-                                                        <a href="" class="chip chip-light">JQuery</a>
-                                                        <a href="" class="chip chip-light">Bootstrap 5</a>
-                                                        <a href="" class="chip chip-light">Uikit</a>
-                                                    </div>
-                                                </div>
-                                                <div class="c-foot c-foot-flex">
-                                                    <b class="c-title">5/hr</b>
-                                                    <div class="ratings">
-                                                        <span class="bx bxs-star icon active"></span>
-                                                        <span class="bx bxs-star icon active"></span>
-                                                        <span class="bx bxs-star icon active"></span>
-                                                        <span class="bx bx-star icon"></span>
-                                                        <span class="bx bx-star icon"></span>
-                                                        <b class="text">4.3</b>
-                                                    </div>
-                                                </div>
-                                            </article>
-                                        </div>
-                                    </div>
-                                    <button class="slide-prev bx bx-left-arrow-alt"></button>
-                                    <button class="slide-next bx bx-right-arrow-alt"></button>
-                                </div>
-                            </div>
-                            <div class="t-pane" id="reviewstab">
-                                <div class="mt-2">
-                                    <div class="card bg-light mb-2">
-                                        <div class="c-head">
-                                            <div class="media">
-                                                <a href="customer-details.html" class="media-image">
-                                                    <img src="assets/images/man.png" class="image" alt="" />
-                                                </a>
-                                                <div class="media-body">
-                                                    <a class="media-title" href="customer-details.html">Abdul Hannan</a>
-                                                    <p class="media-desc">5 hours ago</p>
-                                                </div>
-                                                <div class="media-ctrl">
-                                                    <div class="ratings">
-                                                        <span class="bx bxs-star icon active"></span>
-                                                        <b class="text">4.3</b>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="c-body mb-2 section-desc">
-                                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut labore voluptates optio eaque!
-                                            Praesentium ducimus tenetur laborum aliquid deleniti ipsa error, culpa molestias suscipit
-                                            quas, quia inventore laudantium tempora blanditiis?
-                                        </div>
-                                    </div>
-                                    <div class="card bg-light mb-2">
-                                        <div class="c-head">
-                                            <div class="media">
-                                                <a href="customer-details.html" class="media-image">
-                                                    <img src="assets/images/man.png" class="image" alt="" />
-                                                </a>
-                                                <div class="media-body">
-                                                    <a class="media-title" href="customer-details.html">Abdul Hannan</a>
-                                                    <p class="media-desc">5 hours ago</p>
-                                                </div>
-                                                <div class="media-ctrl">
-                                                    <div class="ratings">
-                                                        <span class="bx bxs-star icon active"></span>
-                                                        <b class="text">4.3</b>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="c-body mb-2 section-desc">
-                                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut labore voluptates optio eaque!
-                                            Praesentium ducimus tenetur laborum aliquid deleniti ipsa error, culpa molestias suscipit
-                                            quas, quia inventore laudantium tempora blanditiis?
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="t-pane" id="portfoliotab">
-                            </div>
-                        </div>
-                    </div>
-
-                </section>
+                <div class="t-pane" id="portfoliotab">
+                </div>
             </div>
         </div>
     </main>
@@ -495,74 +361,66 @@
 
     <!-- FOOTER -->
     <footer class="footer">
-        <div class="container container-sm container-md container-lg">
-            <div class="row first">
-                <div class="col-sm-2">
-                    <a href="index.html" class="logo" role="img" aria-label="chaintusker">
-                        <img src="assets/images/logo.png" width="120" class="image" alt="chaintusker Logo" />
-                    </a>
-                </div>
-                <div class="col-sm-7">
-                    <ul class="f-list">
-                        <li class="l-item" role="listitem">
-                            <a href="about-us.html" class="l-link">About</a>
-                        </li>
-                        <li class="l-item" role="listitem">
-                            <a href="contact-us.html" class="l-link">Contact</a>
-                        </li>
-                        <li class="l-item" role="listitem">
-                            <a href="freelancers.html" class="l-link">Freelancers</a>
-                        </li>
-                        <li class="l-item" role="listitem">
-                            <a href="skills.html" class="l-link">Skills</a>
-                        </li>
-                        <li class="l-item" role="listitem">
-                            <a href="blogs.html" class="l-link">Blog</a>
-                        </li>
-                        <li class="l-item" role="listitem">
-                            <a href="faqs.html" class="l-link">FAQs</a>
-                        </li>
-                        <li class="l-item" role="listitem">
-                            <a href="support.html" class="l-link">Support</a>
-                        </li>
-                        <li class="l-item" role="listitem">
-                            <a href="jobs.html" class="l-link">Jobs</a>
-                        </li>
-                        <li class="l-item" role="listitem">
-                            <a href="vacancies.html" class="l-link">Vacancies</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-sm-2">
-                    <div class="social-group">
-                        <a href="#" class="bx bxl-facebook-circle social-icon"></a>
-                        <a href="#" class="bx bxl-twitter social-icon"></a>
-                        <a href="#" class="bx bxl-instagram social-icon"></a>
-                        <a href="#" class="bx bxl-pinterest social-icon"></a>
-                    </div>
+        <div class="boxed">
+            <div class="first flex-between flex-wrap">
+                <a href="index.html" class="logo" role="img" aria-label="chaintusker">
+                    <img src="assets/images/logo.png" width="120" class="image" alt="chaintusker Logo" />
+                </a>
+                <ul class="inline-list">
+                    <li class="l-item" role="listitem">
+                        <a href="about-us.html" class="l-link">About</a>
+                    </li>
+                    <li class="l-item" role="listitem">
+                        <a href="contact-us.html" class="l-link">Contact</a>
+                    </li>
+                    <li class="l-item" role="listitem">
+                        <a href="freelancers.html" class="l-link">Freelancers</a>
+                    </li>
+                    <li class="l-item" role="listitem">
+                        <a href="skills.html" class="l-link">Skills</a>
+                    </li>
+                    <li class="l-item" role="listitem">
+                        <a href="blogs.html" class="l-link">Blog</a>
+                    </li>
+                    <li class="l-item" role="listitem">
+                        <a href="faqs.html" class="l-link">FAQs</a>
+                    </li>
+                    <li class="l-item" role="listitem">
+                        <a href="jobs.html" class="l-link">Jobs</a>
+                    </li>
+                    <li class="l-item" role="listitem">
+                        <a href="vacancies.html" class="l-link">Vacancies</a>
+                    </li>
+                </ul>
+                <div class="social-group">
+                    <a href="#" class="bx bxl-facebook-circle social-icon"></a>
+                    <a href="#" class="bx bxl-twitter social-icon"></a>
+                    <a href="#" class="bx bxl-instagram social-icon"></a>
+                    <a href="#" class="bx bxl-pinterest social-icon"></a>
                 </div>
             </div>
-            <div class="row last">
-                <div class="col-sm-4">
-                    &copy; 2024, All Right Reserved
+            <div class="last flex-between flex-wrap">
+                <p>
+                    &copy; 2024,
                     <a href="index.html" class="link link-primary">ChainTusker</a>
-                </div>
-                <div class="col-sm-4">
-                    <ul class="f-list">
-                        <li class="l-item" role="listitem">
-                            <a href="terms-of-use.html" class="l-link">Terms</a>
-                        </li>
-                        <li class="l-item" role="listitem">
-                            <a href="privacy-policy.html" class="l-link">Privacy</a>
-                        </li>
-                        <li class="l-item" role="listitem">
-                            <a href="freelancers.html" class="l-link">Cookies</a>
-                        </li>
-                        <li class="l-item" role="listitem">
-                            <a href="cookies-policy.html" class="l-link">Cookies</a>
-                        </li>
-                    </ul>
-                </div>
+                </p>
+                <ul class="inline-list">
+                    <li class="l-item" role="listitem">
+                        <a href="terms-of-use.html" class="l-link">Terms of use</a>
+                    </li>
+                    <li class="l-item" role="listitem">
+                        <a href="privacy-policy.html" class="l-link">Privacy</a>
+                    </li>
+                    <li class="l-item" role="listitem">
+                        <a href="cookies-policy.html" class="l-link">Cookies</a>
+                    </li>
+                    <li class="l-item" role="listitem">
+                        <a href="agreement.html" class="l-link">Agreement</a>
+                    </li>
+                    <li class="l-item" role="listitem">
+                        <a href="refunds-policy.html" class="l-link">Refunds</a>
+                    </li>
+                </ul>
             </div>
         </div>
     </footer>

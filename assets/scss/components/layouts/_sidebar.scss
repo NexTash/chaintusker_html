@@ -3,11 +3,12 @@
   right: 0;
   top: 0;
   width: 100%;
+  height: 100%;
   z-index: 9;
   overflow: auto;
   display: none;
   padding: 1rem;
-
+  backdrop-filter: blur(10px);
   .sidebar-content {
     margin-top: 5rem;
     background-color: var(--body);
@@ -15,7 +16,8 @@
     border-radius: var(--rounded);
     .s-body {
       overflow: auto;
-      padding: 0.5rem 0.8rem;
+      padding: 1rem ;
+
 
       .menu-list {
         margin: 0;
@@ -26,7 +28,6 @@
             font-size: 1rem;
             text-decoration: none;
             color: var(--text);
-            font-weight: 600;
             &:hover {
               color: var(--primary);
             }
@@ -35,7 +36,7 @@
       }
     }
     .s-foot {
-      padding: 0.5rem 0.8rem;
+      padding: 1rem ;
       display: flex;
       align-items: center;
       .btn {

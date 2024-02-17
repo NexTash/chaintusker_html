@@ -1,11 +1,10 @@
 .search-group {
   display: flex;
   align-items: center;
-  background-color: var(--body);
-  border-radius: var(--rounded);
+  background-color: var(--light);
+  border-radius: calc(var(--rounded) * 5);
   padding: 0.5rem;
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-  width: 50%;
+  width: 40%;
   margin: auto;
   margin-top: -2rem;
   .field {
@@ -29,5 +28,9 @@
     padding: 0.5rem;
     margin-right: 1rem;
     cursor: pointer;
+  }
+
+  @media(max-width: screen-size(sm)){
+    width: 90%;
   }
 }

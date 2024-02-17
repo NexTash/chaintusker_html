@@ -3,84 +3,41 @@
   right: 0;
   top: 0;
   width: 100%;
-  height: 100%;
-  z-index: 99;
-  background-color: get-var(body);
-  box-shadow: get-var(shadow);
+  z-index: 9;
   overflow: auto;
   display: none;
+  padding: 1rem;
 
   .sidebar-content {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    .head {
-      padding: 10px 0.8rem;
-    }
-    .body {
-      height: 100%;
-      padding: 2rem 0.8rem;
-      padding-top: 5rem;
+    margin-top: 5rem;
+    background-color: var(--body);
+    box-shadow: var(--shadow);
+    border-radius: var(--rounded);
+    .s-body {
       overflow: auto;
-
-      .heading {
-        font-size: 1rem;
-        font-weight: bold;
-        margin-bottom: 1rem;
-        text-transform: uppercase;
-        color: get-var(muted);
-      }
+      padding: 0.5rem 0.8rem;
 
       .menu-list {
-        counter-reset: menu;
-        margin-bottom: 50px;
-        .list-item {
-          display: flex;
-          align-items: center;
-          .list-link {
-            font-size: 2.2rem;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        .l-item {
+          .l-link {
+            font-size: 1rem;
             text-decoration: none;
-            color: get-var(text);
+            color: var(--text);
+            font-weight: 600;
             &:hover {
-              color: get-var(text);
-              text-decoration: underline;
-              text-decoration-color: get-var(primary);
+              color: var(--primary);
             }
-          }
-          &::before {
-            margin-right: 10px;
-            color: get-var(text);
-            font-size: 20px;
-            counter-increment: menu;
-            // content: "0" counter(menu) " \27F6 ";
-          }
-        }
-      }
-
-      .social-links {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        counter-reset: social;
-
-        .social-link {
-          font-size: 1rem;
-          text-decoration: none;
-          color: get-var(text);
-          margin-bottom: 3px;
-          display: flex;
-          align-items: center;
-          span {
-            margin-right: 5px;
           }
         }
       }
     }
-    .foot {
-        padding: 10px 0.8rem;
+    .s-foot {
+      padding: 0.5rem 0.8rem;
       display: flex;
       align-items: center;
-      border-top: 1px solid get-var(border);
       .btn {
         width: 100%;
         &:first-child {

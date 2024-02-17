@@ -1,0 +1,26 @@
+.boxed {
+  --box-space: 1rem;
+  width: 90%;
+  padding-right: calc(var(--box-space) * 0.1);
+  padding-left: calc(var(--box-space) * 0.1);
+  margin-right: auto;
+  margin-left: auto;
+  @media (min-width: screen-size(xs)) {
+    max-width: calc(var(--xs) - 20);
+  }
+  @media (min-width: screen-size(sm)) {
+    max-width: calc(var(--sm) - 20);
+  }
+  @media (min-width: screen-size(md)) {
+    max-width: calc(var(--md) - 20);
+  }
+  @media (min-width: screen-size(lg)) {
+    max-width: calc(var(--lg) - 20);
+  }
+  @media (min-width: screen-size(xl)) {
+    max-width: calc(var(--xl) - 20);
+  }
+  @media (min-width: screen-size(xxl)) {
+    max-width: calc(var(--xxl) - 50);
+  }
+}

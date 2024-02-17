@@ -1,17 +1,3 @@
-// document.querySelectorAll(".sidebarBtn").forEach(function (item) {
-//   item.addEventListener("click", function () {
-//     const sidebar = document.getElementById("sidebar");
-//     const body = document.querySelector("body");
-//     if (sidebar.classList.contains("hide")) {
-//       sidebar.classList.remove("hide");
-//       body.style.overflowY = "hidden !important";
-//     } else {
-//       sidebar.classList.add("hide");
-//       body.style.overflowY = "auto";
-//     }
-//   });
-// });
-
 // // // Get the custom cursorpointer elements
 // // const cursorpointer = document.querySelector(".cursor");
 // // // Track mouse movement
@@ -103,24 +89,24 @@
 //   };
 // })();
 
-// document.querySelectorAll(".menu-btn").forEach(function (item) {
-//   item.addEventListener("click", function () {
-//     const sidebar = document.getElementById("sidebar");
-//     const body = document.querySelector("body");
-//     const html = document.querySelector("html");
-//     if (sidebar.classList.contains("hide")) {
-//       sidebar.classList.remove("hide");
-//       item.classList.add("close-icon");
-//       body.style.overflowY = "hidden";
-//       html.style.overflowY = "hidden";
-//     } else {
-//       item.classList.remove("close-icon");
-//       sidebar.classList.add("hide");
-//       body.style.overflowY = "auto";
-//       html.style.overflowY = "auto";
-//     }
-//   });
-// });
+document.querySelectorAll(".menu-btn").forEach(function (item) {
+  item.addEventListener("click", function () {
+    const sidebar = document.getElementById("sidebar");
+    const body = document.querySelector("body");
+    const html = document.querySelector("html");
+    if (sidebar.classList.contains("active")) {
+      sidebar.classList.remove("active");
+      item.classList.remove("close-icon");
+      body.style.overflowY = "auto";
+      html.style.overflowY = "auto";
+    } else {
+      item.classList.add("close-icon");
+      sidebar.classList.add("active");
+      body.style.overflowY = "hidden";
+      html.style.overflowY = "hidden";
+    }
+  });
+});
 
 // NAVBAR
 window.onscroll = function () {
@@ -221,4 +207,3 @@ function navbar() {
 // } else if (type == "link") {
 //     navigator.clipboard.writeText(link);
 // }
-

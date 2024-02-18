@@ -1,9 +1,6 @@
 .boxed {
-  --box-space: 0.5rem;
   --box-width: 90%;
   width: var(--box-width);
-  padding-right: calc(var(--box-space) * 0.1);
-  padding-left: calc(var(--box-space) * 0.1);
   margin-right: auto;
   margin-left: auto;
   @media (min-width: screen-size(sm)) {

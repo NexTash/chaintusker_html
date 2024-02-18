@@ -5,12 +5,13 @@
   --switch-border: var(--border);
   --switch-rounded: 50px;
   position: relative;
-  display: inline-block;
+  display: flex;
+  align-items: center;
   width: 60px;
   height: 34px;
   border: 1px solid var(--switch-border);
   border-radius: var(--switch-rounded);
-
+margin: 1rem 0;
   input {
     opacity: 0;
     width: 0;
@@ -52,5 +53,8 @@
       transition: 0.4s;
       border-radius: inherit;
     }
+  }
+  .text {
+    padding-left: 5rem;
   }
 }

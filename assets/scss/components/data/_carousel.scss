@@ -1,9 +1,10 @@
 .carousel {
   position: relative;
   border-radius: var(--rounded);
+  margin-top: 2rem;
   .swiper-wrapper {
     .swiper-slide {
-      padding:2rem 1rem 0rem 1rem;
+      padding: 0rem 0.5rem 0rem 0.5rem;
     }
   }
   .slide-prev,
@@ -18,7 +19,7 @@
     border-radius: 50px;
     border: none;
     outline: none;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     padding: 0.5rem;
   }
   .slide-next {

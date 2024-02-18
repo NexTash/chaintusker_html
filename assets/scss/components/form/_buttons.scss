@@ -117,3 +117,13 @@
     background-color: var(--light);
   }
 }
+
+.btn-file {
+  display: flex;
+  align-items: center;
+  color: var(--muted);
+font-size: 1rem;
+  input {
+    display: none;
+  }
+}

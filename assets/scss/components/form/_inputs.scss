@@ -1,13 +1,13 @@
 .form-group {
   display: flex;
   flex-direction: column;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
 }
 
 .form-label {
-  margin-bottom: 0.2rem;
+  margin-bottom: 0.3rem;
   font-weight: 600;
-  font-size: 0.9rem;
+  font-size: 1rem;
 }
 
 .form-field {
@@ -22,5 +22,24 @@
   border: 1px solid var(--border);
   &:focus {
     box-shadow: inset var(--dark) 0px 0px 0px 2px;
+  }
+  &:disabled{
+  background-color: var(--light-subtle);
+  cursor:not-allowed;
+
+  }
+}
+.input-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  margin-top: 0.3rem;
+  input {
+    width: 100%;
+    margin-right: 0.5rem;
+    &:last-child{
+      margin-right: 0;
+    margin-left: 0.5rem;
+    }
   }
 }

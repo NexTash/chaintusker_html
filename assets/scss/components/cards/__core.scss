@@ -4,7 +4,7 @@
   --c-head-padding: 1rem 2rem;
   --c-body-padding: 1rem 2rem;
   --c-foot-padding: 1rem 2rem;
-  --c-rounded: calc(var(--rounded) * 3);
+  --c-rounded: var(--rounded);
   --c-title-color: var(--text);
   --c-title-size: 1.4rem;
   --c-subtitle-color: var(--text);
@@ -21,6 +21,14 @@
   height: 100%;
   display: flex;
   flex-direction: column;
+  text-decoration: none;
+
+  @media (max-width: screen-size(sm)) {
+    --c-head-padding: 1rem;
+    --c-body-padding: 1rem;
+    --c-foot-padding: 1rem;
+  }
+
   .c-head {
     padding: var(--c-head-padding);
     width: 100%;
@@ -33,7 +41,6 @@
   .c-foot {
     padding: var(--c-foot-padding);
     width: 100%;
-    border-top: 1px solid var(--border);
   }
 
   .c-foot-flex {
@@ -131,7 +138,8 @@
   }
 
   &.card-shadow {
-    box-shadow: rgba(17, 17, 26, 0.05) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+    box-shadow: rgba(17, 17, 26, 0.05) 0px 4px 16px,
+      rgba(17, 17, 26, 0.05) 0px 8px 32px;
   }
 
   &.card-no-bg {
@@ -142,5 +150,10 @@
   }
   &.card-dark {
     --c-bg: var(--dark);
+  }
+  &.card-hover {
+    &:hover {
+      box-shadow: inset var(--primary) 0px 0px 0px 2px;
+    }
   }
 }

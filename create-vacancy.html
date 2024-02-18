@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Create gig</title>
+    <title>Create vacancy</title>
     <link rel="shortcut icon" href="assets/images/logos/favicon.ico" type="image/x-icon" />
     <meta charset="UTF-8" />
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
@@ -11,7 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
     <meta name="description" content="" />
     <meta name="keywords" content="" />
-    <link rel="canonical" href="create-gig.html" />
+    <link rel="canonical" href="create-vacancy.html" />
     <meta property="og:title" content="" />
     <meta property="og:type" content="website" />
     <meta property="og:image" content="assets/images/logos/logo.png" />
@@ -37,7 +37,6 @@
     <meta name="robots" content="index, follow" />
     <link rel="stylesheet" href="./assets/libs/choices/css/choices.min.css">
     <link rel="stylesheet" href="./assets/libs/quill/css/quill.min.css">
-    <link rel="stylesheet" href="./assets/libs/filepond/css/filepond.min.css">
 </head>
 
 <body>
@@ -166,21 +165,72 @@
                 </ul>
                 <form method="POST" class="card form-card">
                     <div class="c-head">
-                        <h1 class="c-title mb-2">Create gig</h1>
+                        <h1 class="c-title mb-2">Create full time job</h1>
                     </div>
                     <div class="c-body">
                         <div class="row">
                             <div class="col-sm-12">
                                 <div class="form-group">
-                                    <label for="title" class="form-label"><b>Gig Title</b></label>
-                                    <input type="text" class="form-field" id="title" name="title" />
+                                    <label for="title" class="form-label"><b>Job Title</b></label>
+                                    <input type="text" class="form-field" id="title" name="title"  placeholder="Example: Senior iOS developer for GameDev startup"/>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label for="emptype" class="form-label"><b>Employment Type</b></label>
+                                    <select class="form-control" name="emptype" id="emptype">
+                                        <option value="" disabled selected>Select</option>
+                                        <option value="Part Time">Part Time</option>
+                                        <option value="Full Time">Full Time</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label for="workplacetype" class="form-label"><b>Workplace Type</b></label>
+                                    <select class="form-control" name="workplacetype" id="workplacetype">
+                                        <option value="" disabled selected>Select</option>
+                                        <option value="Remote">Remote</option>
+                                        <option value="Office">Office</option>
+                                        <option value="Hybrid">Hybrid</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label for="role" class="form-label"><b>Role</b></label>
+                                    <select class="form-control" name="role" id="role">
+                                        <option value="" disabled selected>Select</option>
+                                        <option value="Remote">Remote</option>
+                                        <option value="Office">Office</option>
+                                        <option value="Hybrid">Hybrid</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label for="workplaceexp" class="form-label"><b>Work Experience</b></label>
+                                    <select class="form-control" name="workplaceexp" id="workplaceexp">
+                                        <option value="" disabled selected>Select</option>
+                                        <option value="1 year">Less than 1 year</option>
+                                        <option value="2 year">+2 year</option>
+                                        <option value="3 year">+3 year</option>
+                                        <option value="5 year">+3 year</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-sm-12">
+                                <div class="form-group">
+                                    <label for="location" class="form-label"><b>Location</b></label>
+                                    <input type="text" class="form-field" id="location" name="location" />
                                 </div>
                             </div>
                             <div class="col-sm-12">
                                 <div class="form-group">
                                     <label for="title" class="form-label"><b>Skills Required</b></label>
-                                    <select class="form-control" name="skills" id="skills">
-                                        <option value="" disabled selected>Select</option>
+                                    <select class="form-control" name="categories" id="categories">
+                                        <option value="" disabled selected>Select category</option>
                                         <option value="Leeds">Leeds</option>
                                         <option value="Manchester">Manchester</option>
                                         <option value="London">London</option>
@@ -191,8 +241,8 @@
                             </div>
                             <div class="col-sm-12">
                                 <div class="form-group">
-                                    <label for="rskills" class="form-label"><b>Recommended Skills:</b></label>
-                                    <select name="rskills" id="rskills" multiple>
+                                    <label for="title" class="form-label"><b>Recommended Skills:</b></label>
+                                    <select name="skills" id="skills" multiple>
                                         <option value="" disabled>Select skills</option>
                                         <option value="Choice 1">Choice 1</option>
                                         <option value="Choice 2">Choice 2</option>
@@ -201,12 +251,22 @@
                                 </div>
                             </div>
                             <div class="col-sm-12">
-                                <label for="price" class="form-label"><b>Price</b></label>
+                                <label class="detail-title" for="compensation">Compensation</label>
+                                <div class="flex items-center">
+                                    <label class="detail-desc mx-1" for="compensation">Monthly</label>
+                                    <label class="switch mr-1" for="compensation">
+                                        <input type="checkbox" id="compensation">
+                                        <span class="toggle"></span>
+                                    </label>
+                                    <label class="detail-desc mx-1" for="compensation">Annually</label>
+                                </div>
+                            </div>
+                            <div class="col-sm-12">
+                                <label for="budget" class="form-label"><b>Budget</b></label>
                                 <div class="input-group">
-                                    <input type="text" class="form-field" id="price_form" name="price_form"
-                                        placeholder="$" />
+                                    <input type="text" class="form-field" id="budget_form" name="budget_form" placeholder="$" />
                                     <span class="is_hide"> - </span>
-                                    <input type="text" class="form-field" id="price_to" name="price_to"
+                                    <input type="text" class="form-field" id="budget_to" name="budget_to"
                                         placeholder="$" />
                                 </div>
                                 <label class="checkbox my-1 mb-2">
@@ -216,28 +276,9 @@
                                 </label>
                             </div>
                             <div class="col-sm-12">
-                                <div class="col-sm-12">
-                                    <div class="form-group">
-                                        <label for="cover" class="form-label"><b>Cover</b></label>
-                                        <label for="cover" class="btn btn-file btn-block btn-light">
-                                            <input type="file" id="cover" name="cover" /> Upload
-                                        </label>
-                                    </div>
+                                <div class="form-group">
+                                    <div id="editor"></div>
                                 </div>
-                            </div>
-                            <div class="col-sm-12"></div>
-                            <div class="col-sm-12"></div>
-                            <div class="form-group">
-                                <label for="title" class="form-label"><b>Portfolio </b></label>
-                                <input type="file" class="filepond" id="file" multiple data-allow-reorder="true"
-                                    data-max-file-size="3MB" data-max-files="3">
-                            </div>
-                            <div class="flex items-center">
-                                <label class="switch mr-1" for="draft">
-                                    <input type="checkbox" id="draft">
-                                    <span class="toggle"></span>
-                                </label>
-                                <label class="detail-title mx-1" for="draft">Save as draft</label>
                             </div>
                         </div>
                     </div>
@@ -253,16 +294,14 @@
     <!-- SCRIPTS -->
     <script src="assets/js/main.js"></script>
     <script src="assets/libs/choices/js/choices.min.js"></script>
-    <script src="assets/libs/filepond/js/filepond.min.js"></script>
     <script src="assets/libs/quill/js/quill.min.js"></script>
 
     <script>
-
-        FilePond.create(
-            document.querySelector('#file')
-        );
-
-        new Choices('#rskills');
+        new Choices('#emptype');
+        new Choices('#workplacetype');
+        new Choices('#workplaceexp');
+        new Choices('#role');
+        new Choices('#categories');
         new Choices('#skills', {
             removeItemButton: true,
         });
@@ -274,9 +313,9 @@
         document.querySelector("#fixed").addEventListener("change", function (e) {
             const value = e.target.checked
             if (value) {
-                document.querySelector("#price_to").disabled = true
+                document.querySelector("#budget_to").disabled = true
             } else {
-                document.querySelector("#price_to").disabled = false
+                document.querySelector("#budget_to").disabled = false
 
             }
 

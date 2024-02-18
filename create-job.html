@@ -35,32 +35,31 @@
     <link rel="stylesheet" href="assets/css/style.css" />
     <meta name="theme-color" content="#ffffff" />
     <meta name="robots" content="index, follow" />
+    <link rel="stylesheet" href="./assets/libs/filepond/css/filepond.min.css">
+    <link rel="stylesheet" href="./assets/libs/choices/css/choices.min.css">
+    <link rel="stylesheet" href="./assets/libs/quill/css/quill.min.css">
 </head>
 
 <body>
     <!-- NAVBAR -->
-    <header class="navbar " id="navbar">
+    <header class="navbar" id="navbar">
         <div class="nav-items boxed">
             <a href="index.html" class="logo">
                 <img src="./assets/images/logo.png" class="image" alt="Website Logo" />
             </a>
             <ul class="nav-menus">
+                <li class="m-item">
+                    <a href="dashboard.html" class="m-link"> Dashboard </a>
+                </li>
                 <li class="m-item dropdown">
                     <a href="javascript:void(0)" data-toggle="dropdown" class="m-link dropdown-toggle">
-                        Find work
+                        Explore
                     </a>
                     <div class="dropdown-menu">
                         <a href="vacancies.html" class="dropdown-item">Full-time Jobs</a>
                         <a href="jobs.html" class="dropdown-item">Freelance Jobs</a>
-                    </div>
-                </li>
-                <li class="m-item dropdown">
-                    <a href="javascript:void(0)" data-toggle="dropdown" class="m-link dropdown-toggle">
-                        Find talent
-                    </a>
-                    <div class="dropdown-menu">
-                        <a href="skills.html" class="dropdown-item">Explore Skills</a>
-                        <a href="gigs.html" class="dropdown-item">Browse Gigs</a>
+                        <a href="skills.html" class="dropdown-item">Skills</a>
+                        <a href="gigs.html" class="dropdown-item">Gigs</a>
                         <a href="freelancers.html" class="dropdown-item">Freelancers</a>
                     </div>
                 </li>
@@ -76,12 +75,38 @@
                     </div>
                 </li>
                 <li class="m-item">
-                    <a href="login.html" class="m-link"> Login </a>
+                    <a href="post-job.html" class="btn btn-pill btn-sm btn-dark">
+                        Post job
+                    </a>
+                </li>
+
+            </ul>
+            <ul class="nav-menus n-hide">
+                <li class="m-item">
+                    <a href="messages.html" class="m-link icon-link bx bx-message"></a>
+                    <span class="badge">0</span>
                 </li>
                 <li class="m-item">
-                    <a href="signup.html" class="btn btn-pill btn-sm btn-dark">
-                        Signup
+                    <a href="messages.html" class="m-link icon-link bx bx-bell">
                     </a>
+                    <span class="badge">0</span>
+                </li>
+                <li class="m-item">
+                    <a href="bookmarks.html" class="m-link icon-link bx bx-heart">
+                    </a>
+                </li>
+                <li class="m-item dropdown">
+                    <a href="javascript:void(0)" data-toggle="dropdown" class="m-link ">
+                        <img src="./assets/images/man.png" class="avatar" alt="">
+                        <span class="dropdown-toggle"></span>
+                    </a>
+                    <div class="dropdown-menu">
+                        <a href="my-jobs.html" class="dropdown-item">My Freelance</a>
+                        <a href="my-vacancies.html" class="dropdown-item">My Full-time Jobs</a>
+                        <a href="my-gigs.html" class="dropdown-item">My Gigs</a>
+                        <a href="settings.html" class="dropdown-item">Settings</a>
+                        <a href="settings.html" class="dropdown-item">Logout</a>
+                    </div>
                 </li>
             </ul>
             <button type="button" class="menu-btn">
@@ -94,7 +119,7 @@
 
     <!-- SIDEBAR -->
     <aside class="sidebar" id="sidebar">
-        <div class="sidebar-content ">
+        <div class="sidebar-content">
             <div class="s-body boxed">
                 <ul class="menu-list">
                     <li class="l-item">
@@ -130,7 +155,7 @@
 
     <!-- CONTENT -->
     <main class="boxed">
-        <div class="row flex-center">
+        <section class="row flex-center">
             <div class="col-12 col-sm-12 col-md-5 col-lg-6 col-xl-6">
                 <ul class="breadcrumb">
                     <li class="b-item">
@@ -139,42 +164,65 @@
                         </a>
                     </li>
                 </ul>
-                <form method="POST">
-                    <h1 class="section-title mb-2">Create job</h1>
-                    <div class="form-group">
-                        <label for="title" class="form-label"><b>Title</b></label>
-                        <input type="text" class="form-field" id="title" name="first_name" />
+                <form method="POST" class="card form-card">
+                    <div class="c-head">
+                        <h1 class="c-title mb-2">Create freelance job</h1>
                     </div>
-                    <div class="form-group">
-                        <label for="title" class="form-label"><b>Category</b></label>
-                        <select class="form-control" name="categories" id="categories">
-                            <option value="" disabled selected>Select category</option>
-                            <option value="Leeds">Leeds</option>
-                            <option value="Manchester">Manchester</option>
-                            <option value="London">London</option>
-                            <option value="Sheffield">Sheffield</option>
-                            <option value="Newcastle">Newcastle</option>
-                        </select>
+                    <div class="c-body">
+                        <div class="form-group">
+                            <label for="title" class="form-label"><b>Job Title</b></label>
+                            <input type="text" class="form-field" id="title" name="title" />
+                        </div>
+                        <div class="form-group">
+                            <label for="title" class="form-label"><b>Skills Required</b></label>
+                            <select class="form-control" name="categories" id="categories">
+                                <option value="" disabled selected>Select category</option>
+                                <option value="Leeds">Leeds</option>
+                                <option value="Manchester">Manchester</option>
+                                <option value="London">London</option>
+                                <option value="Sheffield">Sheffield</option>
+                                <option value="Newcastle">Newcastle</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="title" class="form-label"><b>Recommended Skills:</b></label>
+                            <select name="skills" id="skills" multiple>
+                                <option value="" disabled>Select skills</option>
+                                <option value="Choice 1">Choice 1</option>
+                                <option value="Choice 2">Choice 2</option>
+                                <option value="Choice 3">Choice 3</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="budget" class="form-label"><b>Budget</b></label>
+                            <input type="text" class="form-field" id="budget" name="budget" />
+                        </div>
+                        <div class="form-group">
+                            <div id="editor"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="title" class="form-label"><b>Files </b></label>
+                            <input type="file" class="filepond" id="file" multiple data-allow-reorder="true"
+                                data-max-file-size="3MB" data-max-files="3">
+                        </div>
+                        <div class="form-group">
+                            <label for="deadline" class="form-label"><b>Deadline</b></label>
+                            <input type="date" class="form-field" id="deadline" name="deadline" />
+                        </div>
+                        <div class="flex items-center">
+                            <label class="switch mr-1" for="draft">
+                                <input type="checkbox" id="draft">
+                                <span class="toggle"></span>
+                            </label>
+                            <label class="detail-title mx-1" for="draft">Save as draft</label>
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <label for="title" class="form-label"><b>Skills</b></label>
-                        <select name="skills" id="skills" multiple>
-                            <option value="" disabled>Select skills</option>
-                            <option value="Choice 1">Choice 1</option>
-                            <option value="Choice 2">Choice 2</option>
-                            <option value="Choice 3">Choice 3</option>
-                        </select>
+                    <div class="c-foot center">
+                        <button class="btn btn-dark">Save</button>
                     </div>
-                    <div class="form-group">
-                        <label for="title" class="form-label"><b>Images</b></label>
-                        <input type="file" class="filepond" id="file" multiple data-allow-reorder="true"
-                            data-max-file-size="3MB" data-max-files="3">
-                    </div>
-
                 </form>
             </div>
-
-        </div>
+        </section>
     </main>
     <!-- CONTENT -->
 
@@ -182,6 +230,7 @@
     <script src="assets/js/main.js"></script>
     <script src="assets/libs/choices/js/choices.min.js"></script>
     <script src="assets/libs/filepond/js/filepond.min.js"></script>
+    <script src="assets/libs/quill/js/quill.min.js"></script>
 
     <script>
 
@@ -195,8 +244,16 @@
             allowHTML: true,
             removeItemButton: true,
         });
+
+        const quill = new Quill("#editor", {
+            theme: "snow",
+        });
     </script>
     <!-- SCRIPTS -->
+    <!-- Initialize Quill editor -->
+    <script>
+
+    </script>
 </body>
 
 </html>

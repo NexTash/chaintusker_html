@@ -12,6 +12,7 @@
     overflow: auto;
     @media (max-width: screen-size(sm)) {
       display: flex;
+      justify-content: center;
     }
 
     .t-item {

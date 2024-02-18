@@ -243,7 +243,7 @@
         <!-- BLOGS -->
         <h3 class="section-title">Connected Insights</h3>
         <p class="section-desc">Explore Our Related Thoughts in Blogs!</p>
-        <div class="swiper carousel" id="blogs">
+        <div class="swiper carousel cols4">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
                     <article class="card blog-card">
@@ -438,28 +438,31 @@
     <script src="assets/js/main.js"></script>
     <script src="assets/libs/swiper/swiper.min.js"></script>
     <script>
-        new Swiper('#blogs', {
-            slidesPerView: 3,
+        new Swiper(".cols4", {
+            slidesPerView: 1,
             pagination: true,
             navigation: true,
             navigation: {
-                nextEl: '.slide-next',
-                prevEl: '.slide-prev',
+                nextEl: ".slide-next",
+                prevEl: ".slide-prev",
             },
             breakpoints: {
-                480: {
+                340: {
                     slidesPerView: 1,
                 },
-                640: {
+                576: {
+                    slidesPerView: 1,
+                },
+                768: {
                     slidesPerView: 2,
                 },
-                876: {
+                992: {
                     slidesPerView: 3,
                 },
-                1200: {
+                1280: {
                     slidesPerView: 4,
-                }
-            }
+                },
+            },
         });
     </script>
     <!-- SCRIPTS -->

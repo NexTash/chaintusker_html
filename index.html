@@ -1172,7 +1172,7 @@
             <p class="section-subtitle">
                 Read our latest articles, news and stories
             </p>
-            <div class="swiper carousel" id="blogs">
+            <div class="swiper carousel cols4">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
                         <article class="card blog-card">
@@ -1369,7 +1369,7 @@
     <script src="assets/libs/swiper/swiper.min.js"></script>
     <script>
         new Swiper(".cols3", {
-            slidesPerView: 3,
+            slidesPerView: 1,
             pagination: true,
             navigation: true,
             navigation: {
@@ -1377,22 +1377,22 @@
                 prevEl: ".slide-prev",
             },
             breakpoints: {
-                390: {
+                340: {
                     slidesPerView: 1,
                 },
-                480: {
+                576: {
                     slidesPerView: 1,
                 },
-                640: {
+                768: {
                     slidesPerView: 2,
                 },
-                1024: {
+                1280: {
                     slidesPerView: 3,
                 },
             },
         });
-        new Swiper("#blogs", {
-            slidesPerView: 3,
+        new Swiper(".cols4", {
+            slidesPerView: 1,
             pagination: true,
             navigation: true,
             navigation: {
@@ -1400,16 +1400,19 @@
                 prevEl: ".slide-prev",
             },
             breakpoints: {
-                480: {
+                340: {
                     slidesPerView: 1,
                 },
-                640: {
+                576: {
+                    slidesPerView: 1,
+                },
+                768: {
                     slidesPerView: 2,
                 },
-                876: {
+                992: {
                     slidesPerView: 3,
                 },
-                1200: {
+                1280: {
                     slidesPerView: 4,
                 },
             },

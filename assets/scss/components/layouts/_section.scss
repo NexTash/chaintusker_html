@@ -15,6 +15,9 @@
 }
 .section-title {
   font-size: 2.5rem;
+  @media (max-width: screen-size(sm)) {
+    font-size: 2rem;
+  }
 }
 
 .section-subtitle {
@@ -23,12 +26,19 @@
   * {
     font-size: inherit !important;
   }
+
+  @media (max-width: screen-size(sm)) {
+    font-size: 1.4rem;
+  }
 }
 
 .section-desc {
   font-size: 1.2rem;
   color: var(--muted);
   margin-bottom: 2rem;
+  @media (max-width: screen-size(sm)) {
+    font-size: 1rem;
+  }
 }
 
 .section-gap {

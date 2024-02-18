@@ -39,9 +39,10 @@
     }
     .s-foot {
       padding: 1rem ;
-      padding-top: 0;
       display: flex;
       align-items: center;
+      background-color: var(--light);
+      border-top: 1px solid var(--border);
       .btn {
         width: 100%;
         &:first-child {

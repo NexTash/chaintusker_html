@@ -19,6 +19,7 @@
   font-size: 1rem;
   font-family: Arial, Helvetica, sans-serif;
   resize: none;
+  border: 1px solid var(--border);
   &:focus {
     box-shadow: inset var(--dark) 0px 0px 0px 2px;
   }

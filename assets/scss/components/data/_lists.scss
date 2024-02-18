@@ -13,8 +13,8 @@
     border-bottom: 1px solid var(--border);
     text-transform: uppercase;
   }
-  .list-item {
-    .list-link {
+  .l-item {
+    .l-link {
       display: inline-flex;
       align-items: center;
       text-decoration: none;
@@ -32,15 +32,6 @@
         color: inherit;
       }
     }
-  }
-}
-
-ul {
-  margin: 0;
-  padding: 0;
-  list-style-position: inside;
-  li {
-    padding: 0.5rem 0;
   }
 }
 

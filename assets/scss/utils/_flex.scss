@@ -1,5 +1,7 @@
 .flex {
   display: flex;
+}
+.items-center {
   align-items: center;
 }
 .flex-wrap {
@@ -26,4 +28,14 @@
   align-items: flex-start;
   justify-content: space-between;
   flex-wrap: nowrap;
+}
+
+.align-self-start {
+  align-self: flex-start;
+}
+.flex-column {
+  flex-direction: column;
+}
+.justify-center {
+  justify-content: center;
 }

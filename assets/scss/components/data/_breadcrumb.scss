@@ -9,8 +9,7 @@
   .b-item {
     display: inline;
     font-size: 0.9rem;
-    color: var(--text);
-    font-weight: 600;
+    color: var(--muted);
 
     &:not(:first-child)::before {
       padding: 0 0.5rem;
@@ -18,7 +17,7 @@
       content: "/\00a0";
     }
     .page-link {
-      color: var(--text);
+      color: var(--muted);
       text-decoration: none;
       display: inline-flex;
       align-items: center;
@@ -28,7 +27,7 @@
       }
 
       &:hover {
-        color: var(--muted);
+        color: var(--text);
       }
     }
     &.active {

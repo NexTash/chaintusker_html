@@ -26,6 +26,10 @@
         margin-bottom: 1rem;
         justify-content: center;
         align-items: center;
+        .l-item{
+          margin: 0.5rem 0;
+
+        }
       }
     }
   }
@@ -38,6 +42,9 @@
       .inline-list {
         justify-content: center;
         margin-top: 1rem;
+        .l-item{
+          margin: 0.5rem 0;
+        }
       }
     }
   }

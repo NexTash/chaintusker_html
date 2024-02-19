@@ -131,63 +131,34 @@
     </aside>
     <!-- SIDEBAR -->
 
-    <!-- HEAD -->
-    <section class="page-head boxed">
-        <h1 class="p-title center">Gigs</h1>
-        <div class="search-group mt-2">
-            <input type="text" placeholder="Search..." class="field" />
-            <button class="btn-search bx bx-search"></button>
-        </div>
-    </section>
-    <!-- HEAD -->
-
     <!-- CONTENT -->
-    <main class="boxed">
-        <section class="suggestions flex-wrap section-gap">
-            <span>Related</span>:
-            <a href="" class="link">website</a>
-            <a href="" class="link">ux</a>
-            <a href="" class="link">ui</a>
-            <a href="" class="link">webdesign</a>
-            <a href="" class="link">landing page</a>
-            <a href="" class="link">minimal</a>
-        </section>
-        <section class="flex-between flex-wrap mb-2">
-            <h3 class="section-desc m-0"><b>7568+ gigs</b></h3>
-            <div>
-                <div class="dropdown">
-                    <a href="javascript:void(0)" class="btn btn-sm btn-light dropdown-toggle" data-toggle="dropdown">
-                        <span class="bx bx-sort btn-icon"></span>
-                        Sort
-                    </a>
-                    <div class="dropdown-menu dropmenu-right">
-                        <div class="d-body">
-                            <label class="checkbox radio">
-                                <input type="checkbox" />
-                                <span class="checkmark"></span>
-                                <span class="text">Recents</span>
-                            </label>
-                            <label class="checkbox radio">
-                                <input type="checkbox" />
-                                <span class="checkmark"></span>
-                                <span class="text">Oldests</span>
-                            </label>
-                        </div>
-                        <div class="d-foot">
-                            <button type="submit" class="btn btn-block btn-dark btn-pill btn-sm">
-                                Apply
-                            </button>
-                            <button class="btn btn-block btn-light btn-pill btn-sm" type="reset">Clear</button>
-                        </div>
-                    </div>
+    <main class="bg-light">
+        <div class="boxed">
+            <!-- HEAD -->
+            <section class="page-head">
+                <h1 class="p-title center">Gigs</h1>
+                <div class="search-group mt-2">
+                    <input type="text" placeholder="Search..." class="field" />
+                    <button class="btn-search bx bx-search"></button>
                 </div>
+            </section>
+            <!-- HEAD -->
+            <section class="suggestions flex-wrap section-gap">
+                <span>Related</span>:
+                <a href="" class="link">website</a>
+                <a href="" class="link">ux</a>
+                <a href="" class="link">ui</a>
+                <a href="" class="link">webdesign</a>
+                <a href="" class="link">landing page</a>
+                <a href="" class="link">minimal</a>
+            </section>
+            <section class="flex-between flex-wrap mb-2">
+                <h3 class="section-desc m-0"><b>7568+ gigs</b></h3>
                 <button class="btn btn-sm btn-light" data-toggle="collapse" data-target="#filters">
                     <span class="bx bx-filter icon"></span> Filters
                 </button>
-            </div>
-        </section>
-        <section id="filters" class="hide">
-            <div class="section-gap">
+            </section>
+            <section id="filters" class="hide">
                 <div class="dropdown">
                     <a href="javascript:void(0)" class="btn btn-sm btn-light dropdown-toggle" data-toggle="dropdown">
                         <span class="bx bx-category btn-icon"></span>
@@ -224,73 +195,198 @@
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
-        <section class="chips section-gap my-2">
-            <span class="chip chip-light">
-                <span class="chip-icon bx bx-category"></span>
-                News
-                <button class="close bx bx-x-circle"></button>
-            </span>
-            <button class="chip chip-primary">
-                <span class="chip-icon bx bx-x-circle"></span>
-                Clear filters
-            </button>
-        </section>
-        <section class="row row-cols-1 row-cols-sm-2 row-cols-md-2 row-cols-lg-3 row-cols-xl-3 g-4">
-            <div class="col">
-                <article class="card card-shadow gig-card">
-                    <a class="c-head c-image" href="gig-details.html">
-                        <img src="./assets/images/gigs/g1.webp" class="image" alt="" />
+                <div class="dropdown">
+                    <a href="javascript:void(0)" class="btn btn-sm btn-light dropdown-toggle" data-toggle="dropdown">
+                        <span class="bx bx-sort btn-icon"></span>
+                        Sort
                     </a>
-                    <div class="c-body">
-                        <div class="media">
-                            <a class="media-image" href="freelancer-details.html">
-                                <img src="./assets/images/man.png" class="image" alt="" />
-                            </a>
-                            <div class="media-body">
-                                <a class="media-title" href="freelancer-details.html">Abdul Hannan <span
-                                        class="bx bxs-badge-check v-badge"></span></a>
-                            </div>
-                            <div class="media-ctrl">
-                                <span class="bx bx-check-circle icon"></span> 5
-                            </div>
+                    <div class="dropdown-menu dropmenu-right">
+                        <div class="d-body">
+                            <label class="checkbox radio">
+                                <input type="radio" name="sort" value="latest" />
+                                <span class="checkmark"></span>
+                                <span class="text">Latest</span>
+                            </label>
+                            <label class="checkbox radio">
+                                <input type="radio" name="sort" value="oldest" />
+                                <span class="checkmark"></span>
+                                <span class="text">Oldests</span>
+                            </label>
                         </div>
-                        <a href="gig-details.html" class="c-title">
-                            i will proffessionaly deign, create a cutome website,website
+                        <div class="d-foot">
+                            <button type="submit" class="btn btn-block btn-dark btn-pill btn-sm">
+                                Apply
+                            </button>
+                            <button class="btn btn-block btn-light btn-pill btn-sm" type="reset">Clear</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <a href="javascript:void(0)" class="btn btn-sm btn-light dropdown-toggle" data-toggle="dropdown">
+                        <span class="bx bx-dollar btn-icon"></span>
+                        Price
+                    </a>
+                    <div class="dropdown-menu dropmenu-right">
+                        <div class="d-body">
+                            <div class="multi-range mt-2">
+                                <input type="range" class="min-range" id="price-range-min" name="price" min="5.99"
+                                    max="49.99" value="10.99">
+                                <input type="range" class="max-range" id="price-range-max" name="price" min="5.99"
+                                    max="49.99" value="44.99">
+                                <div class="range-controls">
+                                    <div class="range"></div>
+                                    <div class="range-thumb min-range-thumb"></div>
+                                    <div class="range-thumb max-range-thumb"></div>
+                                </div>
+                                <div class="range-values">
+                                    <span class="min">10.99</span>
+                                    <span class="max">10.99</span>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="d-foot">
+                            <button type="submit" class="btn btn-block btn-dark btn-pill btn-sm">
+                                Apply
+                            </button>
+                            <button class="btn btn-block btn-light btn-pill btn-sm" type="reset">Clear</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <a href="javascript:void(0)" class="btn btn-sm btn-light dropdown-toggle" data-toggle="dropdown">
+                        <span class="bx bx-note btn-icon"></span>
+                        Payment
+                    </a>
+                    <div class="dropdown-menu dropmenu-right">
+                        <div class="d-body">
+                            <label class="checkbox radio">
+                                <input type="radio" name="payment" value="" checked/>
+                                <span class="checkmark"></span>
+                                <span class="text">All</span>
+                            </label>
+                            <label class="checkbox radio">
+                                <input type="radio" name="payment" value="fixed" />
+                                <span class="checkmark"></span>
+                                <span class="text">Fixed</span>
+                            </label>
+                            <label class="checkbox radio">
+                                <input type="checkbox" name="payment" value="perhour" />
+                                <span class="checkmark"></span>
+                                <span class="text">Per Hour</span>
+                            </label>
+                        </div>
+                        <div class="d-foot">
+                            <button type="submit" class="btn btn-block btn-dark btn-pill btn-sm">
+                                Apply
+                            </button>
+                            <button class="btn btn-block btn-light btn-pill btn-sm" type="reset">Clear</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <a href="javascript:void(0)" class="btn btn-sm btn-light dropdown-toggle" data-toggle="dropdown">
+                        <span class="bx bx-star btn-icon"></span>
+                        Ratings
+                    </a>
+                    <div class="dropdown-menu dropmenu-right">
+                        <div class="d-body">
+                            <label class="checkbox radio">
+                                <input type="radio" name="ratings" value="" />
+                                <span class="checkmark"></span>
+                                <span class="text">All</span>
+                            </label>
+                            <label class="checkbox radio">
+                                <input type="radio" name="ratings" value="3+" />
+                                <span class="checkmark"></span>
+                                <span class="text">5+</span>
+                            </label>
+                            <label class="checkbox radio">
+                                <input type="radio" name="ratings" value="4+" />
+                                <span class="checkmark"></span>
+                                <span class="text">4+</span>
+                            </label>
+                            <label class="checkbox radio">
+                                <input type="radio" name="ratings" value="4+" />
+                                <span class="checkmark"></span>
+                                <span class="text">3+</span>
+                            </label>
+                        </div>
+                        <div class="d-foot">
+                            <button type="submit" class="btn btn-block btn-dark btn-pill btn-sm">
+                                Apply
+                            </button>
+                            <button class="btn btn-block btn-light btn-pill btn-sm" type="reset">Clear</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="chips section-gap my-2">
+                <span class="chip chip-light">
+                    <span class="chip-icon bx bx-category"></span>
+                    News
+                    <button class="close bx bx-x-circle"></button>
+                </span>
+                <button class="chip chip-primary">
+                    <span class="chip-icon bx bx-x-circle"></span>
+                    Clear filters
+                </button>
+            </section>
+            <section class="row row-cols-1 row-cols-sm-2 row-cols-md-2 row-cols-lg-3 row-cols-xl-3 g-4">
+                <div class="col">
+                    <article class="card gig-card">
+                        <a class="c-head c-image" href="gig-details.html">
+                            <img src="./assets/images/gigs/g1.webp" class="image" alt="" />
                         </a>
-                        <div class="chips">
-                            <span class="text">Skills: </span>
-                            <a href="gigs.html" class="chip chip-primary">HTML 5</a>
-                            <a href="gigs.html" class="chip chip-primary">CSS 3</a>
-                            <a href="gigs.html" class="chip chip-primary">SCSS</a>
-                            <a href="gigs.html" class="chip chip-primary">JAVASCRIPT</a>
-                            <a href="gigs.html" class="chip chip-primary">JQuery</a>
-                            <a href="gigs.html" class="chip chip-primary">Bootstrap 5</a>
-                            <a href="gigs.html" class="chip chip-primary">Uikit</a>
+                        <div class="c-body">
+                            <div class="media">
+                                <a class="media-image" href="freelancer-details.html">
+                                    <img src="./assets/images/man.png" class="image" alt="" />
+                                </a>
+                                <div class="media-body">
+                                    <a class="media-title" href="freelancer-details.html">Abdul Hannan <span
+                                            class="bx bxs-badge-check v-badge"></span></a>
+                                </div>
+                                <div class="media-ctrl">
+                                    <span class="bx bx-check-circle icon"></span> 5
+                                </div>
+                            </div>
+                            <a href="gig-details.html" class="c-title">
+                                i will proffessionaly deign, create a cutome website,website
+                            </a>
+                            <div class="chips">
+
+                                <a href="gigs.html" class="chip chip-primary">HTML 5</a>
+                                <a href="gigs.html" class="chip chip-primary">CSS 3</a>
+                                <a href="gigs.html" class="chip chip-primary">SCSS</a>
+                                <a href="gigs.html" class="chip chip-primary">JAVASCRIPT</a>
+                                <a href="gigs.html" class="chip chip-primary">JQuery</a>
+                                <a href="gigs.html" class="chip chip-primary">Bootstrap 5</a>
+                                <a href="gigs.html" class="chip chip-primary">Uikit</a>
+                            </div>
                         </div>
-                    </div>
-                    <div class="c-foot c-foot-flex">
-                        <b class="c-title">5/hr</b>
-                        <div class="ratings">
-                            <span class="bx bxs-star icon active"></span>
-                            <span class="bx bxs-star icon active"></span>
-                            <span class="bx bxs-star icon active"></span>
-                            <span class="bx bx-star icon"></span>
-                            <span class="bx bx-star icon"></span>
-                            <b class="text">4.3</b>
+                        <div class="c-foot c-foot-flex">
+                            <b class="c-title">5/hr</b>
+                            <div class="ratings">
+                                <span class="bx bxs-star icon active"></span>
+                                <span class="bx bxs-star icon active"></span>
+                                <span class="bx bxs-star icon active"></span>
+                                <span class="bx bx-star icon"></span>
+                                <span class="bx bx-star icon"></span>
+                                <b class="text">4.3</b>
+                            </div>
                         </div>
-                    </div>
-                </article>
-            </div>
-        </section>
-        <section class="pagination">
-            <button class="b-item bx bx-left-arrow-alt"></button>
-            <button class="b-item">1</button>
-            <button class="b-item active">2</button>
-            <button class="b-item">3</button>
-            <button class="b-item bx bx-right-arrow-alt"></button>
-        </section>
+                    </article>
+                </div>
+            </section>
+            <section class="pagination">
+                <button class="b-item bx bx-left-arrow-alt"></button>
+                <button class="b-item">1</button>
+                <button class="b-item active">2</button>
+                <button class="b-item">3</button>
+                <button class="b-item bx bx-right-arrow-alt"></button>
+            </section>
+        </div>
     </main>
     <!-- CONTENT -->
 

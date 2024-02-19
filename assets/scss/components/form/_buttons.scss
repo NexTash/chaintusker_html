@@ -26,7 +26,7 @@
   font-size: var(--font-size);
   transition: background 1s, color 1s, border 0.5s;
   text-decoration: none;
-
+  font-weight: 600;
   img {
     width: 20px;
     height: 20px;
@@ -73,7 +73,7 @@
   --btn-color-hover: var(--text);
   --btn-color-disabled: var(--muted);
   --btn-color-focus: var(--text);
-  --btn-border: var(--light);
+  --btn-border: var(--border);
 }
 
 .btn-dark {
@@ -122,7 +122,7 @@
   display: flex;
   align-items: center;
   color: var(--muted);
-font-size: 1rem;
+  font-size: 1rem;
   input {
     display: none;
   }

@@ -76,3 +76,46 @@
 .radio {
   --checkbox-rounded: 50px;
 }
+
+.btn-radio {
+  --btn-radio-bg: var(--body);
+  --btn-radio-hover: var(--light);
+  --btn-radio-border: var(--border);
+  --btn-active: var(--body);
+  display: inline-block;
+  position: relative;
+  padding: 0.5rem 1rem;
+  background-color: var(--btn-radio-bg);
+  border: 1px solid var(--btn-radio-border);
+  border-radius: var(--rounded);
+  cursor: pointer;
+  padding-right: 2rem;
+
+  input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: var(--btn-radio-hover);
+    box-shadow: inset var(--dark) 0px 0px 0px 2px;
+  }
+
+  &::after {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    width: 15px;
+    height: 15px;
+    background-color: var(--btn-radio-bg);
+    border-radius: 50px;
+    content: "";
+    border: 1px solid var(--btn-radio-border);
+  }
+}
+
+.btn-radio input[type="radio"]:checked + .btn-radio::after {
+  --btn-active: var(--primary);
+}

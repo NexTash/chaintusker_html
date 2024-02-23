@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="" method="get" id="form"></form>
+
+    <script>
+        let form = document.querySelector("#form");
+        let fields = [
+            {
+                id: "first_name",
+                type: "text",
+                col: 12,
+                label: "First Name",
+                name: "first_name",
+                default: "Abdul",
+                placeholder: "Enter your first name",
+                hint: "e.g ----------",
+                style: {},
+                classes: [],
+                attrs: [],
+            },
+            {
+                id: "last_name",
+                type: "text",
+                col: 12,
+                label: "last Name",
+                name: "last_name",
+                default: "Hannan",
+                placeholder: "Enter your last name",
+                hint: "e.g ----------",
+                style: {},
+                classes: [],
+                attrs: []
+            },
+            {
+                id: "email",
+                type: "email",
+                col: 12,
+                label: "Email address",
+                name: "email",
+                default: "abdul@gmail.com",
+                placeholder: "Enter your email",
+                hint: "e.g ----------",
+                style: {},
+                classes: [],
+                attrs: [],
+            },
+            {
+                id: "password",
+                type: "password",
+                col: 12,
+                label: "Password",
+                name: "password",
+                default: "85046",
+                placeholder: "Enter your password",
+                hint: "e.g ----------",
+                style: {},
+                classes: [],
+                attrs: []
+            },
+            {
+                id: "separator",
+                type: "separator",
+                col: 12,
+                label: "Choose your gender",
+                heading: "h3"
+            },
+            {
+                id: "female",
+                type: "radio",
+                col: 12,
+                label: "Female",
+                name: "gender",
+                default: "",
+                style: {},
+                classes: [],
+                attrs: []
+            },
+            {
+                id: "male",
+                type: "radio",
+                col: 12,
+                label: "Male",
+                name: "gender",
+                default: "",
+                style: {},
+                classes: [],
+                attrs: { "checked": true }
+            },
+        ];
+
+        fields.forEach((field) => {
+            if (["text", "email", "password", "checkbox", "radio", "url", "datetime"].includes(field.type)) {
+                let col = document.createElement("div");
+                col.classList.add("col-" + field.col);
+                let group = document.createElement("div");
+                group.classList.add("form-group");
+                let label = document.createElement("label");
+                label.classList.add("form-label");
+                label.textContent = field.label;
+                label.setAttribute("for", field.id);
+                let input = document.createElement("input");
+                input.classList.add("input-field");
+                input.setAttribute("id", field.id);
+                input.setAttribute("name", field.name);
+                input.setAttribute("value", field.default);
+                input.setAttribute("type", field.type);
+                input.setAttribute("placeholder", field.placeholder);
+
+                // field.attrs.forEach(attr => {
+                // input.setAttribute("placeholder", field.placeholder);
+                // });
+                for (attr in field.attrs) {
+                    input.setAttribute(attr, field.attrs[attr]);
+                }
+
+                let hint = document.createElement("p");
+                hint.classList.add("hint");
+                hint.textContent = field.hint;
+                if (field.type == "radio" | field.type == "checkbox") {
+                    group.appendChild(input);
+                    group.appendChild(label);
+                } else {
+                    group.appendChild(label);
+                    group.appendChild(input);
+                }
+
+                group.appendChild(hint);
+                col.appendChild(group);
+                form.appendChild(col);
+            } else if (field.type) {
+                let col = document.createElement("div");
+                col.classList.add("col-" + field.col);
+                let heading = document.createElement(field.heading);
+                heading.classList.add("form-heading");
+                heading.textContent = field.label;
+                col.appendChild(heading);
+                form.appendChild(col);
+            }
+        });
+    </script>
+</body>
+
+</html>

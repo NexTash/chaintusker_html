@@ -6,8 +6,7 @@
 
 .form-label {
   margin-bottom: 0.3rem;
-  font-weight: 600;
-  font-size: 1rem;
+  font-size: 0.9rem;
 }
 
 .form-field {
@@ -26,7 +25,10 @@
   &:disabled{
   background-color: var(--light-subtle);
   cursor:not-allowed;
-
+  }
+  &::placeholder{
+    color: var(--muted);
+    font-size: var(--font-size);
   }
 }
 .input-group {

@@ -43,7 +43,7 @@
 
 <body>
     <!-- NAVBAR -->
-    <header class="navbar " id="navbar">
+    <header class="navbar" id="navbar">
         <div class="nav-items boxed">
             <a href="index.html" class="logo">
                 <img src="./assets/images/logo.png" class="image" alt="Website Logo" />
@@ -98,7 +98,7 @@
 
     <!-- SIDEBAR -->
     <aside class="sidebar" id="sidebar">
-        <div class="sidebar-content ">
+        <div class="sidebar-content">
             <div class="s-body boxed">
                 <ul class="menu-list">
                     <li class="l-item">
@@ -148,108 +148,88 @@
 
     <!-- CONTENT -->
     <main class="boxed">
-        <div class="flex-between">
-            <h3 class="title"><b>7568+ blog posts</b></h3>
-            <div>
-                <div class="dropdown">
-                    <a href="javascript:void(0)" class="btn btn-sm btn-light dropdown-toggle" data-toggle="dropdown">
-                        <span class="bx bx-category btn-icon"></span>
-                        Categories
-                    </a>
-                    <div class="dropdown-menu">
-                        <div class="d-body">
-                            <label class="checkbox">
-                                <input type="checkbox" />
-                                <span class="checkmark"></span>
-                                <b class="text">AI</b>
-                            </label>
-                            <label class="checkbox">
-                                <input type="checkbox" />
-                                <span class="checkmark"></span>
-                                <b class="text">News</b>
-                            </label>
-                            <label class="checkbox">
-                                <input type="checkbox" />
-                                <span class="checkmark"></span>
-                                <b class="text">Case study</b>
-                            </label>
-                            <label class="checkbox">
-                                <input type="checkbox" />
-                                <span class="checkmark"></span>
-                                <b class="text">Real estate</b>
-                            </label>
-                        </div>
-                        <div class="d-foot">
-                            <button type="submit" class="btn btn-block btn-dark btn-pill btn-sm">
-                                Apply
-                            </button>
-                            <button class="btn btn-block btn-light btn-pill btn-sm" type="reset">
-                                Clear
-                            </button>
-                        </div>
+        <section class="flex-between flex-wrap mb-2">
+            <h3 class="section-desc m-0"><b>7568+ Posts</b></h3>
+            <button class="btn btn-sm btn-light" data-toggle="collapse" data-target="#filters">
+                <span class="bx bx-filter icon"></span> Filters
+            </button>
+        </section>
+        <section id="filters" class="hide">
+            <div class="dropdown">
+                <a href="javascript:void(0)" class="btn btn-sm btn-light dropdown-toggle" data-toggle="dropdown">
+                    <span class="bx bx-category btn-icon"></span>
+                    Categories
+                </a>
+                <div class="dropdown-menu dropmenu-left">
+                    <div class="d-body">
+                        <label class="checkbox">
+                            <input type="checkbox" />
+                            <span class="checkmark"></span>
+                            <span class="text">AI</sp>
+                        </label>
+                        <label class="checkbox">
+                            <input type="checkbox" />
+                            <span class="checkmark"></span>
+                            <span class="text">News</sp>
+                        </label>
+                        <label class="checkbox">
+                            <input type="checkbox" />
+                            <span class="checkmark"></span>
+                            <span class="text">Case study</sp>
+                        </label>
+                        <label class="checkbox">
+                            <input type="checkbox" />
+                            <span class="checkmark"></span>
+                            <span class="text">Real estate</sp>
+                        </label>
                     </div>
-                </div>
-                <div class="dropdown">
-                    <a href="javascript:void(0)" class="btn btn-sm btn-light dropdown-toggle" data-toggle="dropdown">
-                        <span class="bx bx-sort btn-icon"></span>
-                        Sort
-                    </a>
-                    <div class="dropdown-menu">
-                        <div class="d-body">
-                            <label class="checkbox radio">
-                                <input type="checkbox" />
-                                <span class="checkmark"></span>
-                                <span class="text">Recents</span>
-                            </label>
-                            <label class="checkbox radio">
-                                <input type="checkbox" />
-                                <span class="checkmark"></span>
-                                <span class="text">Oldests</span>
-                            </label>
-                        </div>
-                        <div class="d-foot">
-                            <button type="submit" class="btn btn-block btn-dark btn-pill btn-sm">
-                                Apply
-                            </button>
-                            <button class="btn btn-block btn-light btn-pill btn-sm" type="reset">
-                                Clear
-                            </button>
-                        </div>
+                    <div class="d-foot">
+                        <button type="submit" class="btn btn-block btn-dark btn-pill btn-sm">
+                            Apply
+                        </button>
+                        <button class="btn btn-block btn-light btn-pill btn-sm" type="reset">Clear</button>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="section-gap chips">
+            <div class="dropdown">
+                <a href="javascript:void(0)" class="btn btn-sm btn-light dropdown-toggle" data-toggle="dropdown">
+                    <span class="bx bx-sort btn-icon"></span>
+                    Sort
+                </a>
+                <div class="dropdown-menu dropmenu-right">
+                    <div class="d-body">
+                        <label class="checkbox radio">
+                            <input type="radio" name="sort" value="latest" />
+                            <span class="checkmark"></span>
+                            <span class="text">Latest</span>
+                        </label>
+                        <label class="checkbox radio">
+                            <input type="radio" name="sort" value="oldest" />
+                            <span class="checkmark"></span>
+                            <span class="text">Oldests</span>
+                        </label>
+                    </div>
+                    <div class="d-foot">
+                        <button type="submit" class="btn btn-block btn-dark btn-pill btn-sm">
+                            Apply
+                        </button>
+                        <button class="btn btn-block btn-light btn-pill btn-sm" type="reset">Clear</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="chips my-2">
             <span class="chip chip-light">
                 <span class="chip-icon bx bx-category"></span>
                 News
                 <button class="close bx bx-x-circle"></button>
             </span>
-            <button class="chip chip-dark">
+            <button class="chip chip-primary">
                 <span class="chip-icon bx bx-x-circle"></span>
                 Clear filters
             </button>
-        </div>
-        <article class="card blog-card blog-pin">
-            <a class="c-head c-image zoom" href="blog-details.html">
-                <img src="./assets/images/blogs/b1.jpg" alt="" class="image" />
-            </a>
-            <div class="c-body">
-                <p class="c-desc meta">
-                    <a href="blogs.html" class="link link-primary">lorem ipsum</a>
-                    <span class="bx bx-pin pin-icon"></span>
-                </p>
-                <a href="blog-details.html" class="c-title">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Exercitationem possimus voluptatum adipisci.
-                </a>
-                <p class="c-desc">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus
-                    corrupti aperiam pariatur asperiores saepe placeat
-                </p>
-                <p class="c-desc meta">By Fiverr Team - 24 july 2024</p>
-            </div>
-        </article>
+        </section>
+
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-3 row-cols-xl-4">
             <div class="col">
                 <article class="card blog-card">
@@ -257,9 +237,10 @@
                         <img src="./assets/images/blogs/b1.jpg" alt="" class="image" />
                     </a>
                     <div class="c-body">
-                        <p class="c-desc meta">
-                            <a href="blogs.html" class="link link-primary">lorem ipsum</a>
-                            - 24 july 2024
+                        <p class="c-desc">
+                            <a href="blogs.html" class="c-badge">lorem ipsum</a>
+                            -
+                            24 july 2024
                         </p>
                         <a href="blog-details.html" class="c-title">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -278,9 +259,10 @@
                         <img src="./assets/images/blogs/b2.jpg" alt="" class="image" />
                     </a>
                     <div class="c-body">
-                        <p class="c-desc meta">
-                            <a href="blogs.html" class="link link-primary">lorem ipsum</a>
-                            - 24 july 2024
+                        <p class="c-desc">
+                            <a href="blogs.html" class="c-badge">lorem ipsum</a>
+                            -
+                            24 july 2024
                         </p>
                         <a href="blog-details.html" class="c-title">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -299,9 +281,10 @@
                         <img src="./assets/images/blogs/b3.jpg" alt="" class="image" />
                     </a>
                     <div class="c-body">
-                        <p class="c-desc meta">
-                            <a href="blogs.html" class="link link-primary">lorem ipsum</a>
-                            - 24 july 2024
+                        <p class="c-desc">
+                            <a href="blogs.html" class="c-badge">lorem ipsum</a>
+                            -
+                            24 july 2024
                         </p>
                         <a href="blog-details.html" class="c-title">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -320,9 +303,10 @@
                         <img src="./assets/images/blogs/b4.jpg" alt="" class="image" />
                     </a>
                     <div class="c-body">
-                        <p class="c-desc meta">
-                            <a href="blogs.html" class="link link-primary">lorem ipsum</a>
-                            - 24 july 2024
+                        <p class="c-desc">
+                            <a href="blogs.html" class="c-badge">lorem ipsum</a>
+                            -
+                            24 july 2024
                         </p>
                         <a href="blog-details.html" class="c-title">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -336,6 +320,7 @@
                 </article>
             </div>
         </div>
+        <!-- PAGINATION -->
         <section class="pagination">
             <button class="b-item bx bx-left-arrow-alt"></button>
             <button class="b-item">1</button>
@@ -343,6 +328,7 @@
             <button class="b-item">3</button>
             <button class="b-item bx bx-right-arrow-alt"></button>
         </section>
+        <!-- PAGINATION -->
     </main>
     <!-- CONTENT -->
 

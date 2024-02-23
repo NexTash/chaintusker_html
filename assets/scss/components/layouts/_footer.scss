@@ -13,11 +13,7 @@
   }
   .first {
     margin-top: 4rem;
-    margin-bottom: 4rem;
-
-    .l-link {
-      font-weight: 600;
-    }
+    margin-bottom: 6rem;
 
     @media (max-width: screen-size(sm)) {
       flex-direction: column;
@@ -26,9 +22,8 @@
         margin-bottom: 1rem;
         justify-content: center;
         align-items: center;
-        .l-item{
+        .l-item {
           margin: 0.5rem 0;
-
         }
       }
     }
@@ -42,7 +37,7 @@
       .inline-list {
         justify-content: center;
         margin-top: 1rem;
-        .l-item{
+        .l-item {
           margin: 0.5rem 0;
         }
       }

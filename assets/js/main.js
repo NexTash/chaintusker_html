@@ -146,7 +146,11 @@ function navbar() {
       const active = target?.closest(".c-item");
       if (active) {
         items.forEach((i) => i.classList.remove("active"));
-        active.classList.add("active");
+        if (active.classList.contains(".active")) {
+          active.classList.remove("active");
+        } else {
+          active.classList.add("active");
+        }
       } else {
         const attr = target.getAttribute("data-target");
         document.querySelector(attr).classList.toggle("hide");
@@ -208,46 +212,84 @@ function navbar() {
 //     navigator.clipboard.writeText(link);
 // }
 
-
-function multirange(inputMin, inputMax, sideTomove, rangethumb, range, minText, maxText) {
+function multirange(
+  inputMin,
+  inputMax,
+  sideTomove,
+  rangethumb,
+  range,
+  minText,
+  maxText
+) {
   const min_value = parseFloat(inputMin.value);
   const min_range = parseFloat(inputMin.min);
   const max_input = parseFloat(inputMax.value);
   const max_range = parseFloat(inputMin.max);
   let count;
-  if (sideTomove === 'left') {
-      inputMin.value = Math.min(min_value, max_input - 1);
-      count = ((inputMin.value - min_range) / (max_range - min_range)) * 100;
-      rangethumb.style.setProperty(sideTomove, `${count}%`);
-      range.style.setProperty(sideTomove, `${count}%`);
-      minText.innerHTML = `${inputMin.value}`;
-  }
-  else if (sideTomove === 'right') {
-      inputMax.value = Math.max(min_value + 1, max_input);
-      count = ((inputMax.value - min_range) / (max_range - min_range)) * 100;
-      rangethumb.style.setProperty(sideTomove, `${100 - count}%`);
-      range.style.setProperty(sideTomove, `${100 - count}%`);
-      maxText.innerHTML = `${inputMax.value}`;
+  if (sideTomove === "left") {
+    inputMin.value = Math.min(min_value, max_input - 1);
+    count = ((inputMin.value - min_range) / (max_range - min_range)) * 100;
+    rangethumb.style.setProperty(sideTomove, `${count}%`);
+    range.style.setProperty(sideTomove, `${count}%`);
+    minText.innerHTML = `${inputMin.value}`;
+  } else if (sideTomove === "right") {
+    inputMax.value = Math.max(min_value + 1, max_input);
+    count = ((inputMax.value - min_range) / (max_range - min_range)) * 100;
+    rangethumb.style.setProperty(sideTomove, `${100 - count}%`);
+    range.style.setProperty(sideTomove, `${100 - count}%`);
+    maxText.innerHTML = `${inputMax.value}`;
   }
 }
 
-document.querySelectorAll(".multi-range").forEach(el => {
-  const min_input = el.querySelector('.min-range');
-  const max_input = el.querySelector('.max-range');
-  const minrangethumb = el.querySelector('.min-range-thumb');
-  const maxrangethumb = el.querySelector('.max-range-thumb');
-  const range = el.querySelector('.range');
-  const minText = el.querySelector('.min');
-  const maxText = el.querySelector('.max');
+document.querySelectorAll(".multi-range").forEach((el) => {
+  const min_input = el.querySelector(".min-range");
+  const max_input = el.querySelector(".max-range");
+  const minrangethumb = el.querySelector(".min-range-thumb");
+  const maxrangethumb = el.querySelector(".max-range-thumb");
+  const range = el.querySelector(".range");
+  const minText = el.querySelector(".min");
+  const maxText = el.querySelector(".max");
 
-  multirange(min_input, max_input, 'left', minrangethumb, range, minText, maxText);
-  multirange(min_input, max_input, 'right', maxrangethumb, range, minText, maxText);
+  multirange(
+    min_input,
+    max_input,
+    "left",
+    minrangethumb,
+    range,
+    minText,
+    maxText
+  );
+  multirange(
+    min_input,
+    max_input,
+    "right",
+    maxrangethumb,
+    range,
+    minText,
+    maxText
+  );
 
   min_input.addEventListener("input", function () {
-      multirange(min_input, max_input, 'left', minrangethumb, range, minText, maxText);
+    multirange(
+      min_input,
+      max_input,
+      "left",
+      minrangethumb,
+      range,
+      minText,
+      maxText
+    );
   });
 
   max_input.addEventListener("input", function () {
-      multirange(min_input, max_input, 'right', maxrangethumb, range, minText, maxText);
+    multirange(
+      min_input,
+      max_input,
+      "right",
+      maxrangethumb,
+      range,
+      minText,
+      maxText
+    );
   });
 });

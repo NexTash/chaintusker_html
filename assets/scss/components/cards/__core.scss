@@ -6,15 +6,15 @@
   --c-foot-padding: 1rem 2rem;
   --c-rounded: var(--rounded);
   --c-title-color: var(--text);
-  --c-title-size: 1.4rem;
+  --c-title-size: 1.3rem;
   --c-subtitle-color: var(--text);
-  --c-subtitle-size: 1.2rem;
+  --c-subtitle-size: 1.1rem;
   --c-desc-color: var(--muted);
-  --c-desc-size: 1rem;
+  --c-desc-size: 0.9rem;
   --c-space: 1.4rem;
   --c-title-clamp: 2;
   --c-subtitle-clamp: 2;
-  --c-shadow: var(--shadow);
+  --c-shadow: 0px 0px;
   box-shadow: var(--c-shadow);
   position: relative;
   background-color: var(--c-bg);
@@ -24,7 +24,7 @@
   display: flex;
   flex-direction: column;
   text-decoration: none;
-
+  border: 1px solid var(--c-border);
   @media (max-width: screen-size(sm)) {
     --c-head-padding: 1rem;
     --c-body-padding: 1rem;
@@ -93,11 +93,9 @@
   }
 
   .c-link {
-    text-decoration: none;
-    font-weight: 600;
     color: var(--text);
+    text-decoration: underline;
     &:hover {
-      text-decoration: underline;
       color: var(--primary);
     }
   }
@@ -125,6 +123,16 @@
     }
   }
 
+  .c-badge {
+    background-color: var(--primary-subtle);
+    color: var(--primary);
+    padding: 0.2rem 0.8rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    display: inline-block;
+  }
+
   .media {
     margin: 0;
 
@@ -137,15 +145,6 @@
     margin: 0;
   }
 
-  &.card-no-bg {
-    --c-bg: transparent;
-  }
-  &.card-light {
-    --c-bg: var(--light);
-  }
-  &.card-dark {
-    --c-bg: var(--dark);
-  }
   &.card-hover {
     &:hover {
       box-shadow: inset var(--primary) 0px 0px 0px 2px;

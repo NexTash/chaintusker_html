@@ -16,18 +16,6 @@
     height: auto;
   }
 
-  .meta {
-    font-size: 0.9rem;
-    a {
-      font-size: inherit;
-    }
-  }
-  .c-title {
-    &:hover {
-      text-decoration: underline;
-    }
-  }
-
   &.blog-pin {
     flex-direction: row;
     align-items: center;

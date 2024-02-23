@@ -7,7 +7,7 @@
   margin-bottom: 0.5rem;
 
   .b-item {
-    display: inline;
+    display: inline-block;
     font-size: 0.9rem;
     color: var(--muted);
 
@@ -23,7 +23,7 @@
       align-items: center;
       .bx {
         margin-right: 5px;
-        font-size: 1.2rem;
+        font-size: 1rem;
       }
 
       &:hover {

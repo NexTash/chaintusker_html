@@ -11,7 +11,7 @@
   --btn-color-focus: var(--text);
   --btn-size: var(--font-size);
   --btn-shadow: 0px 0px;
-  --btn-border: var(--border);
+  --btn-border: transparent;
   background-color: var(--btn-bg);
   color: var(--btn-color);
   box-shadow: var(--btn-shadow);
@@ -26,7 +26,7 @@
   font-size: var(--font-size);
   transition: background 1s, color 1s, border 0.5s;
   text-decoration: none;
-  font-weight: 600;
+
   img {
     width: 20px;
     height: 20px;
@@ -73,7 +73,7 @@
   --btn-color-hover: var(--text);
   --btn-color-disabled: var(--muted);
   --btn-color-focus: var(--text);
-  --btn-border: var(--border);
+  --btn-border: transparent;
 }
 
 .btn-dark {

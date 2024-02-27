@@ -6,7 +6,8 @@
 
 .form-label {
   margin-bottom: 0.3rem;
-  font-size: 0.9rem;
+  font-size: var(--font-size);
+  font-weight: 500;
 }
 
 .form-field {

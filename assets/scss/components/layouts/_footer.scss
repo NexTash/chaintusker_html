@@ -14,7 +14,9 @@
   .first {
     margin-top: 4rem;
     margin-bottom: 6rem;
-
+    .l-link {
+      font-weight: 500;
+    }
     @media (max-width: screen-size(sm)) {
       flex-direction: column;
       .inline-list {
@@ -30,8 +32,14 @@
   }
 
   .last {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
     margin-bottom: 2rem;
-
+    .l-link {
+      font-weight: 400;
+    }
     @media (max-width: screen-size(sm)) {
       flex-direction: column;
       .inline-list {

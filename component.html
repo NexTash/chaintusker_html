@@ -8,52 +8,35 @@
 </head>
 
 <body>
-    <label for="radio1" class="btn-radio">
-        <input type="radio" id="radio1" name="radios" value="iPhone" checked> iPhone
-    </label>
-    <label for="radio2" class="btn-radio">
-        <input type="radio" id="radio2" name="radios" value="Galaxy S IV"> Galaxy S IV
-    </label>
-    <label for="radio3" class="btn-radio">
-        <input type="radio" id="radio3" name="radios" value="Nexus S"> Nexus S
-    </label>
 
-    <!-- <br />
-    <input type="checkbox" id="checkbox1" name="radios" value="all">
-    <label for="checkbox1">iPhone</label>
-    <input type="checkbox" id="checkbox2" name="radios" value="false">
-    <label for="checkbox2">Galaxy S IV</label>
-    <input type="checkbox" id="checkbox3" name="radios" value="true">
-    <label for="checkbox3">Nexus S</label> -->
+    <div class="boxed gap-y">
 
+        <div class="card pricing-card">
+            <div class="c-head">
+                <span class="badge">TRIAL</span>
+                <h3 class="c-title">Free <small>/month</small></h3>
+            </div>
+            <div class="c-body">
+                <ul class="list">
+                    <li class="l-item"> 1 service posting</li>
+                    <li class="l-item"> 1 featured service</li>
+                    <li class="l-item"> 1 jobs applied</li>
+                    <li class="l-item"> 1 jobs wishlist</li>
+                    <li class="l-item"> 1 company follow</li>
+                    <li class="l-item"> Limited support</li>
+                </ul>
+            </div>
+            <div class="c-foot">
+                <a href="" class="btn btn-block btn-primary btn-pill">Get Started</a>
+            </div>
+        </div>
 
+        <div class="get-started">
 
-    <select name="" id="" class="select-field">
-        <option value="" selected>Select</option>
-        <option value="abc">abc</option>
-        <option value="xyz">xyz</option>
-    </select>
+        </div>
 
+    </div>
 
-    <script>
-
-        const select_fields = document.querySelectorAll(".select-field")
-        select_fields.forEach(field => {
-            let select = document.createElement("div");
-            select.classList.add("dropdown", "dropdown-select")
-            let btn = document.createElement("button");
-            btn.classList.add("dro")
-            btn.setAttribute("data-toggle", "dropdown");
-            select.appendChild(btn)
-            field.insertAdjacentElement("afterend", select)
-            field.style.display = "none";
-            const options = field.querySelectorAll("option");
-            options.forEach(option => {
-
-            });
-            // console.log(options);
-        });
-    </script>
 </body>
 
 </html>

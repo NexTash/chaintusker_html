@@ -9,25 +9,19 @@
 .section-subtitle {
   color: var(--text);
   margin-bottom: 0.5rem;
-  font-weight: 600;
+  font-weight: 500;
   font-style: normal;
-  font-family: "Prata", serif;
+  font-family: "Domine", serif;
 }
 .section-title {
-  font-size: 2.5rem;
-  @media (max-width: screen-size(sm)) {
-    font-size: 1.6rem;
-  }
+  font-size: clamp(2rem, 5vw, 2.5rem);
 }
 
 .section-subtitle {
-  font-size: 1.8rem;
+  font-size: clamp(1.2rem, 5vw, 1.6rem);
+
   * {
     font-size: inherit !important;
-  }
-
-  @media (max-width: screen-size(sm)) {
-    font-size: 1.2rem;
   }
 }
 

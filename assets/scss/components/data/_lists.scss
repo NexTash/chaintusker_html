@@ -14,6 +14,7 @@
     text-transform: uppercase;
   }
   .l-item {
+    padding: 0.5rem 0;
     .l-link {
       display: inline-flex;
       align-items: center;
@@ -48,7 +49,7 @@
       display: block;
       text-decoration: none;
       color: inherit;
-      font-size: 0.9rem;
+      font-size: 1rem;
       &:hover {
         color: var(--primary);
         text-decoration: underline;

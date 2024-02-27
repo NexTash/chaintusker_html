@@ -1,8 +1,7 @@
 .media {
   display: flex;
-  align-items: center;
-  align-content: center;
   margin-bottom: 2rem;
+  text-decoration: none;
 
   .media-icon {
     color: var(--primary);
@@ -35,7 +34,7 @@
     margin-left: 1rem;
     .media-title {
       color: var(--text);
-      font-weight: bold;
+      font-weight: 600;
       font-size: var(--font-size);
       margin-bottom: 0.3rem;
       text-decoration: none;
@@ -44,7 +43,7 @@
 
     .media-desc,
     a.media-desc {
-      color: var(--text);
+      color: var(--muted);
       font-weight: 500;
       font-size: var(--font-size);
       margin: 0;
@@ -61,8 +60,6 @@
   }
 
   .media-ctrl {
-    display: flex;
-    align-items: center;
     margin-left: auto;
     .icon {
       font-size: 1.2rem;

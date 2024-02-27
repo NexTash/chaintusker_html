@@ -43,10 +43,11 @@
     }
   }
   .text {
-    font-size: var(--font-size);
     position: relative;
     top: 5px;
     color: var(--text);
+    font-size: var(--font-size);
+    font-weight: 500;
   }
   b.text {
     font-weight: 600;

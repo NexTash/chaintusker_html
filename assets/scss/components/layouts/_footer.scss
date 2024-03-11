@@ -1,54 +1,52 @@
 .footer {
+  --footer-link-weight: 500;
+  --footer-link-color: var(--text);
   background-color: var(--body);
 
-  .logo {
-    display: inline-block;
-  }
-
-  .social-group {
-    @media (max-width: screen-size(sm)) {
-      margin-top: 1rem;
-      margin-bottom: 1rem;
-    }
-  }
-  .first {
-    margin-top: 4rem;
-    margin-bottom: 6rem;
-    .l-link {
-      font-weight: 500;
-    }
-    @media (max-width: screen-size(sm)) {
-      flex-direction: column;
-      .inline-list {
-        margin-top: 1rem;
-        margin-bottom: 1rem;
-        justify-content: center;
-        align-items: center;
-        .l-item {
-          margin: 0.5rem 0;
-        }
-      }
-    }
-  }
-
-  .last {
+  .footer-top-menus,
+  .footer-bottom-menus {
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
-    margin-bottom: 2rem;
-    .l-link {
-      font-weight: 400;
-    }
-    @media (max-width: screen-size(sm)) {
-      flex-direction: column;
-      .inline-list {
-        justify-content: center;
-        margin-top: 1rem;
-        .l-item {
-          margin: 0.5rem 0;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    .footer-list {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin: 0;
+      list-style: none;
+      .list-item {
+        margin: 5px 10px;
+        .list-link {
+          text-decoration: none;
+          color: var(--footer-link-color);
+          font-weight: var(--footer-link-weight);
+          &:hover {
+            text-decoration: underline;
+            color: var(--primary);
+          }
         }
       }
     }
+    @media (max-width: screen-size(lg)) {
+      flex-direction: column;
+      justify-content: center;
+      .footer-list {
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  .footer-top-menus {
+    --footer-link-weight: 600;
+    --footer-link-color: var(--text);
+  }
+  .footer-bottom-menus {
+    --footer-link-weight: 400;
+    --footer-link-color: var(--muted);
   }
 }

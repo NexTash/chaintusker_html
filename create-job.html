@@ -164,7 +164,7 @@
                         </a>
                     </li>
                 </ul>
-                <form method="POST" class="card form-card">
+                <form method="POST" class="card form-card" enctype="multipart/form-data">
                     <div class="c-head">
                         <h1 class="c-title mb-2">Create freelance job</h1>
                     </div>
@@ -205,6 +205,7 @@
                             <input type="file" class="filepond" id="file" multiple data-allow-reorder="true"
                                 data-max-file-size="3MB" data-max-files="3">
                         </div>
+                        <input type="file" name="images" id="images" multiple>
                         <div class="form-group">
                             <label for="deadline" class="form-label"><b>Deadline</b></label>
                             <input type="date" class="form-field" id="deadline" name="deadline" />
@@ -226,6 +227,11 @@
     </main>
     <!-- CONTENT -->
 
+
+
+
+    <button onclick="getFiles()">get</button>
+
     <!-- SCRIPTS -->
     <script src="assets/js/main.js"></script>
     <script src="assets/libs/choices/js/choices.min.js"></script>
@@ -234,10 +240,32 @@
 
     <script>
 
-        FilePond.create(
-            document.querySelector('#file')
+        const files = FilePond.create(
+            document.querySelector('#file', {
+                allowMultiple: true,
+                instantUpload: false,
+                allowProcess: false
+            })
         );
 
+        function getFiles() {
+            const pondFiles = files.getFiles();
+            const dataTransfer = new DataTransfer();
+
+            for (let i = 0; i < pondFiles.length; i++) {
+                const pondFile = pondFiles[i].file;
+                dataTransfer.items.add(pondFile);
+            }
+
+            const inputElement = document.querySelector('#file');
+            const fileList = dataTransfer.files;
+
+            inputElement.files = fileList;
+
+            return fileList
+        }
+
+        
         new Choices('#categories', {
         });
         new Choices('#skills', {

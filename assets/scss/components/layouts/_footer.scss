@@ -1,6 +1,7 @@
 .footer {
   --footer-link-weight: 500;
   --footer-link-color: var(--text);
+
   background-color: var(--body);
 
   .footer-top-menus,
@@ -9,8 +10,6 @@
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
-    padding-top: 30px;
-    padding-bottom: 30px;
     .footer-list {
       display: flex;
       align-items: center;
@@ -44,9 +43,13 @@
   .footer-top-menus {
     --footer-link-weight: 600;
     --footer-link-color: var(--text);
+    padding-top: 40px;
+    padding-bottom: 40px;
   }
   .footer-bottom-menus {
     --footer-link-weight: 400;
     --footer-link-color: var(--muted);
+    padding-top: 60px;
+    padding-bottom: 20px;
   }
 }

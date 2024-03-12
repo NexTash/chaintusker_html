@@ -1,0 +1,12 @@
+.module-layout {
+    display: flex;
+    justify-content: space-between;
+
+    .col-left {
+        width: 25%;
+    }
+
+    .col-right {
+        width: 70%;
+    }
+}

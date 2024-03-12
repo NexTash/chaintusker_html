@@ -1,16 +1,4 @@
 .form-card {
-  --c-shadow: 0px 0px;
-  margin:2rem 0;
-
-  .c-head {
-    padding-top: 2rem;
-  }
-  .c-body {
-    padding-top: 0.5rem;
-    padding-bottom: 0rem;
-  }
-  .c-foot {
-    border: none;
-    padding-bottom: 3rem;
-  }
+  --card-shadow: transparent;
+  --card-border: transparent;
 }

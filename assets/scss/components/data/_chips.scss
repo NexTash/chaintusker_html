@@ -15,7 +15,7 @@
   --chip-border: var(--border);
   --chip-border-hover: var(--border);
   --chip-shadow: transparent;
-  --chip-font-size: 0.8rem;
+  --chip-font-size: clamp(10px, 50vw, 12px);
   --chip-rounded: 50px;
   --chip-padding: 0.2rem 0.5rem;
   --chip-gap: 0.1rem;
@@ -45,6 +45,8 @@
     color: var(--chip-color);
     font-size: 1.2rem;
     margin-left: 0.5rem;
+    position: relative;
+    top: 1px;
   }
 }
 
@@ -62,35 +64,4 @@ a.chip {
   --chip-border-hover: var(--primary-hover);
   --chip-bg: transparent;
   --chip-bg-hover: transparent;
-}
-
-.chip-dark {
-  --chip-color: var(--dark);
-  --chip-border: var(--dark);
-}
-
-.chip-danger {
-  --chip-color: var(--danger);
-  --chip-border: var(--danger);
-}
-
-.chip-light {
-  --chip-color: var(--text);
-  --chip-color-hover: var(--muted);
-  --chip-border: var(--light);
-  --chip-border-hover: var(--light-hover);
-  --chip-bg: var(--light-subtle);
-  --chip-bg-hover: var(--light-hover);
-}
-
-.chip-md {
-  --chip-font-size: 0.9rem;
-  --chip-padding: 0.2rem 0.6rem;
-  --chip-gap: 0.2rem;
-}
-
-.chip-lg {
-  --chip-font-size: 1rem;
-  --chip-padding: 0.3rem 1rem;
-  --chip-gap: 0.3rem;
 }

@@ -1,27 +1,23 @@
-.collapse {
-  --collapse-title-size: var(--font-size);
-  --collapse-desc-size: var(--font-size);
-  --collapse-gap: 1rem 0;
+.collapsible {
   margin-bottom: 2rem;
-  display: flex;
-  flex-direction: column;
-  .c-item {
-    width: 100%;
+  --collapse-title-size: clamp(16px, 50vw, 18px);
+  --collapse-desc-size: clamp(14px, 50vw, 16px);
+  .collapse-item {
     border-bottom: 1px solid var(--border);
     position: relative;
     user-select: none;
+
     &.active {
-      .c-head {
+      .collapse-head {
         color: var(--primary);
-        cursor: auto;
       }
 
-      .c-body {
+      .collapse-body {
         display: block;
       }
 
       &::after {
-        content: "\ebc1";
+        content: "\eb8d";
         transform: rotate(90deg);
         color: var(--primary);
       }
@@ -30,8 +26,9 @@
     &:last-child {
       border: none;
     }
+
     &::after {
-      content: "\eb8d";
+      content: "\ebc1";
       font-family: "icons";
       font-size: 1.8rem;
       transition: 0.5s transform;
@@ -40,35 +37,29 @@
       top: 10px;
     }
 
-    .c-head {
-      width: 100%;
-      padding: var(--collapse-gap);
+    .collapse-head {
+      padding: 1rem 0;
       cursor: pointer;
+      font-weight: 600;
       color: var(--text);
       font-size: var(--collapse-title-size);
       padding-right: 3rem;
+      background-color: transparent;
       border: none;
       outline: none;
-      background-color: transparent;
+      width: 100%;
       text-align: left;
     }
 
-    .c-body {
-      width: 100%;
-      padding: var(--collapse-gap);
+    .collapse-body {
+      padding: 1rem 0;
       display: none;
       color: var(--text);
       font-size: var(--collapse-desc-size);
     }
   }
-
-  &.collapse-lg {
-    --collapse-title-size: 1.5rem;
-    --collapse-gap: 1.2rem 0;
-    --collapse-desc-size: 1.3rem;
-  }
 }
-
-.hide {
-  display: none !important;
+.collapsible-lg {
+  --collapse-title-size: clamp(20px, 50vw, 24px);
+  --collapse-desc-size: clamp(18px, 50vw, 20px);
 }

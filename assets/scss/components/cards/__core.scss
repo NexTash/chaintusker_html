@@ -1,4 +1,6 @@
 .card {
+  --card-space: 40px auto;
+  --card-height: 100%;
   --card-border: var(--border);
   --card-shadow: var(--shadow);
   --card-head-space: 1rem 1.5rem;
@@ -8,73 +10,83 @@
   --card-rounded: var(--rounded);
   --card-bg: var(--body);
   --card-title-color: var(--text);
-  --card-title-size: 1.4rem;
-  --card-title-space: 15px;
-  --card-title-clamp: 2;
+  --card-title-size: clamp(18px, 80vw, 22px);
+  --card-title-space: 8px 0;
+  --card-title-wgt: 600;
   --card-subtitle-color: var(--text);
-  --card-subtitle-size: 1.1rem;
-  --card-subtitle-space: 15px;
-  --card-subtitle-clamp: 2;
+  --card-subtitle-size: clamp(16px, 80vw, 20px);
+  --card-subtitle-space: 8px 0;
+  --card-subtitle-wgt: 500;
   --card-desc-color: var(--muted);
-  --card-desc-size: 1rem;
-  --card-desc-space: 15px;
+  --card-desc-size: clamp(12px, 80vw, 14px);
+  --card-desc-space: 8px 0;
   --card-badge-size: 1rem;
-  --card-badge-space: 15px;
+  --card-badge-space: 8px 0;
   --card-image-width: 100%;
   --card-image-height: 150px;
   --card-image-rounded: var(--rounded);
-  --card-image-margin: auto;
+  --card-image-space: auto;
   box-shadow: var(--card-shadow);
   position: relative;
   background-color: var(--card-bg);
   border-radius: var(--card-rounded);
-  height: 100%;
+  height: var(--card-height);
+  margin: var(--card-space);
   display: flex;
   flex-direction: column;
   text-decoration: none;
   border: 1px solid var(--card-border);
   margin-bottom: 40px;
 
-  .card-title,
-  .card-subtitle,
-  .card-desc {
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    text-overflow: ellipsis;
+  .card-title {
+    font-size: var(--card-title-size);
+    color: var(--card-title-color);
+    margin: var(--card-title-space);
+    font-weight: var(--card-title-wgt);
     a {
-      text-decoration: none;
       color: var(--card-title-color);
+      text-decoration: none;
       &:hover {
+        color: var(--primary);
+        text-decoration: underline;
+      }
+    }
+  }
+  .card-subtitle {
+    font-size: var(--card-subtitle-size);
+    color: var(--card-subtitle-color);
+    margin: var(--card-subtitle-space);
+    font-weight: var(--card-subtitle-wgt);
+    a {
+      color: var(--card-subtitle-color);
+      text-decoration: none;
+      &:hover {
+        color: var(--primary);
+        text-decoration: underline;
+      }
+    }
+  }
+  .card-desc {
+    font-size: var(--card-desc-size);
+    color: var(--card-desc-color);
+    margin: var(--card-desc-space);
+    a {
+      color: var(--card-desc-color);
+      text-decoration: none;
+      &:hover {
+        color: var(--primary);
         text-decoration: underline;
       }
     }
   }
 
-  .card-title {
-    font-size: var(--card-title-size);
-    color: var(--card-title-color);
-    margin-bottom: var(--card-title-space);
-    -webkit-line-clamp: var(--card-title-clamp);
-    font-weight: 500;
-  }
-  .card-subtitle {
-    font-size: var(--card-subtitle-size);
-    color: var(--card-subtitle-color);
-    margin-bottom: var(--card-subtitle-space);
-    font-weight: 400;
-    -webkit-line-clamp: var(--card-subtitle-clamp);
-  }
-  .card-desc {
-    font-size: var(--card-desc-size);
-    color: var(--card-desc-color);
-    margin-bottom: var(--card-desc-space);
-  }
-
   .card-link {
-    color: var(--text);
-    text-decoration: underline;
+    color: var(--primary);
+    font-weight: 600;
+    text-decoration: none;
     &:hover {
-      color: var(--primary);
+      text-decoration: underline;
+      color: var(--text);
     }
   }
 
@@ -94,7 +106,7 @@
     display: inline-block;
     border-radius: var(--card-image-rounded);
     background-color: var(--light);
-    margin: var(--card-image-margin);
+    margin: var(--card-image-space);
     text-decoration: none;
     .image {
       height: 100%;
@@ -134,8 +146,8 @@
     .item {
       display: flex;
       align-items: center;
-      margin: 0 5px !important;
-      font-size: 16px;
+      margin: 0 5px;
+      font-size: 14px;
       b {
         font-weight: 600;
       }

@@ -1,3 +1,11 @@
 .job-card {
+  --card-border: transparent;
+  --card-height: auto;
+  --card-subtitle-size: clamp(14px, 50vw, 16px);
 
+.card-foot{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 }

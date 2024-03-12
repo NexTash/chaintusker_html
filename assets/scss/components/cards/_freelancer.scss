@@ -1,12 +1,17 @@
 .freelancer-card {
-  --card-image-width: 80px;
-  --card-image-height: 80px;
-  --card-image-rounded: 80px;
+  --card-height: auto;
+  --card-image-width: 60px;
+  --card-image-height: 60px;
+  --card-image-rounded: 60px;
+  --card-title-size: clamp(14px, 50vw, 16px);
+  --card-border: transparent;
+
   .card-head {
     position: relative;
     .card-items {
       position: absolute;
       right: 10px;
+      top: 20px;
 
       .charges {
         left: auto;
@@ -16,6 +21,15 @@
         color: var(--text);
         font-size: 1rem;
       }
+    }
+  }
+  .card-foot {
+    --card-subtitle-size: clamp(12px, 50vw, 14px);
+    --card-desc-size: clamp(12px, 50vw, 16px);
+    display: flex;
+    align-items: center;
+    .card-col {
+      width: 100%;
     }
   }
 }

@@ -1,3 +1,5 @@
 .vacancy-card {
- 
+  --card-height: auto;
+  --card-title-size: clamp(14px, 50vw, 16px);
+  --card-border: transparent;
 }

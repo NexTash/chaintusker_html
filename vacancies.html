@@ -132,207 +132,221 @@
     <!-- SIDEBAR -->
 
     <!-- CONTENT -->
+    <!-- CONTENT -->
     <main class="boxed">
         <!-- HEAD -->
         <section class="page-head">
-            <h1 class="p-title center">Vacancies</h1>
-            <div class="search-group mt-2">
+            <ul class="breadcrumb">
+                <li class="page-item">
+                    <a href="javascript:void(0)" onclick="window.history.back()" class="page-link">
+                        <span class=" bx bx-arrow-back"></span> Back
+                    </a>
+                </li>
+                <li class="page-item active">Vacancies</li>
+            </ul>
+            <h1 class="page-title">Vacancies</h1>
+            <div class="page-search">
                 <input type="text" placeholder="Search..." class="field" />
                 <button class="btn-search bx bx-search"></button>
             </div>
-        </section>
-        <!-- HEAD -->
-        <section class="suggestions flex-wrap section-gap">
-            <span>Related</span>:
-            <a href="" class="link">website</a>
-            <a href="" class="link">ux</a>
-            <a href="" class="link">ui</a>
-            <a href="" class="link">webdesign</a>
-            <a href="" class="link">landing page</a>
-            <a href="" class="link">minimal</a>
-        </section>
-        <section class="flex-between flex-wrap mb-2">
-            <h3 class="section-desc m-0"><b>7568+ Posts</b></h3>
-            <button class="btn btn-sm btn-light" data-toggle="collapse" data-target="#filters">
-                <span class="bx bx-filter icon"></span> Filters
-            </button>
-        </section>
-        <section id="filters" class="hide">
-            <div class="dropdown">
-                <a href="javascript:void(0)" class="btn btn-sm btn-light dropdown-toggle" data-toggle="dropdown">
-                    <span class="bx bx-category btn-icon"></span>
-                    Categories
-                </a>
-                <div class="dropdown-menu dropmenu-left">
-                    <div class="d-body">
-                        <label class="checkbox">
-                            <input type="checkbox" />
-                            <span class="checkmark"></span>
-                            <b class="text">AI</b>
-                        </label>
-                        <label class="checkbox">
-                            <input type="checkbox" />
-                            <span class="checkmark"></span>
-                            <b class="text">News</b>
-                        </label>
-                        <label class="checkbox">
-                            <input type="checkbox" />
-                            <span class="checkmark"></span>
-                            <b class="text">Case study</b>
-                        </label>
-                        <label class="checkbox">
-                            <input type="checkbox" />
-                            <span class="checkmark"></span>
-                            <b class="text">Real estate</b>
-                        </label>
-                    </div>
-                    <div class="d-foot">
-                        <button type="submit" class="btn btn-block btn-dark btn-pill btn-sm">
-                            Apply
-                        </button>
-                        <button class="btn btn-block btn-light btn-pill btn-sm" type="reset">Clear</button>
-                    </div>
-                </div>
+            <div class="page-suggestions">
+                <span>Related</span>:
+                <a href="" class="link">website</a>
+                <a href="" class="link">ux</a>
+                <a href="" class="link">ui</a>
+                <a href="" class="link">webdesign</a>
+                <a href="" class="link">landing page</a>
+                <a href="" class="link">minimal</a>
             </div>
-            <div class="dropdown">
-                <a href="javascript:void(0)" class="btn btn-sm btn-light dropdown-toggle" data-toggle="dropdown">
-                    <span class="bx bx-sort btn-icon"></span>
-                    Sort
-                </a>
-                <div class="dropdown-menu dropmenu-right">
-                    <div class="d-body">
-                        <label class="checkbox radio">
-                            <input type="radio" name="sort" value="latest" />
-                            <span class="checkmark"></span>
-                            <span class="text">Latest</span>
-                        </label>
-                        <label class="checkbox radio">
-                            <input type="radio" name="sort" value="oldest" />
-                            <span class="checkmark"></span>
-                            <span class="text">Oldests</span>
-                        </label>
-                    </div>
-                    <div class="d-foot">
-                        <button type="submit" class="btn btn-block btn-dark btn-pill btn-sm">
-                            Apply
-                        </button>
-                        <button class="btn btn-block btn-light btn-pill btn-sm" type="reset">Clear</button>
-                    </div>
-                </div>
-            </div>
-            <div class="dropdown">
-                <a href="javascript:void(0)" class="btn btn-sm btn-light dropdown-toggle" data-toggle="dropdown">
-                    <span class="bx bx-dollar btn-icon"></span>
-                    Price
-                </a>
-                <div class="dropdown-menu dropmenu-right">
-                    <div class="d-body">
-                        <div class="multi-range mt-2">
-                            <input type="range" class="min-range" id="price-range-min" name="price" min="5.99"
-                                max="49.99" value="10.99">
-                            <input type="range" class="max-range" id="price-range-max" name="price" min="5.99"
-                                max="49.99" value="44.99">
-                            <div class="range-controls">
-                                <div class="range"></div>
-                                <div class="range-thumb min-range-thumb"></div>
-                                <div class="range-thumb max-range-thumb"></div>
+            <h2 class="page-subtitle">60+ Vacancies posted</h2>
+            <div class="page-filters" id="filters">
+                <div class="to-apply">
+                    <div class="dropdown">
+                        <a href="javascript:void(0)" class="btn btn-sm btn-light dropdown-toggle"
+                            data-toggle="dropdown">
+                            <span class="bx bx-category btn-icon"></span>
+                            Categories
+                        </a>
+                        <div class="dropdown-menu dropmenu-left">
+                            <div class="d-body">
+                                <label class="checkbox">
+                                    <input type="checkbox" />
+                                    <span class="checkmark"></span>
+                                    <b class="text">AI</b>
+                                </label>
+                                <label class="checkbox">
+                                    <input type="checkbox" />
+                                    <span class="checkmark"></span>
+                                    <b class="text">News</b>
+                                </label>
+                                <label class="checkbox">
+                                    <input type="checkbox" />
+                                    <span class="checkmark"></span>
+                                    <b class="text">Case study</b>
+                                </label>
+                                <label class="checkbox">
+                                    <input type="checkbox" />
+                                    <span class="checkmark"></span>
+                                    <b class="text">Real estate</b>
+                                </label>
                             </div>
-                            <div class="range-values">
-                                <span class="min">10.99</span>
-                                <span class="max">10.99</span>
+                            <div class="d-foot">
+                                <button type="submit" class="btn btn-block btn-dark btn-pill btn-sm">
+                                    Apply
+                                </button>
+                                <button class="btn btn-block btn-light btn-pill btn-sm" type="reset">Clear</button>
                             </div>
                         </div>
+                    </div>
+                    <div class="dropdown">
+                        <a href="javascript:void(0)" class="btn btn-sm btn-light dropdown-toggle"
+                            data-toggle="dropdown">
+                            <span class="bx bx-sort btn-icon"></span>
+                            Sort
+                        </a>
+                        <div class="dropdown-menu dropmenu-right">
+                            <div class="d-body">
+                                <label class="checkbox radio">
+                                    <input type="radio" name="sort" value="latest" />
+                                    <span class="checkmark"></span>
+                                    <span class="text">Latest</span>
+                                </label>
+                                <label class="checkbox radio">
+                                    <input type="radio" name="sort" value="oldest" />
+                                    <span class="checkmark"></span>
+                                    <span class="text">Oldests</span>
+                                </label>
+                            </div>
+                            <div class="d-foot">
+                                <button type="submit" class="btn btn-block btn-dark btn-pill btn-sm">
+                                    Apply
+                                </button>
+                                <button class="btn btn-block btn-light btn-pill btn-sm" type="reset">Clear</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <a href="javascript:void(0)" class="btn btn-sm btn-light dropdown-toggle"
+                            data-toggle="dropdown">
+                            <span class="bx bx-dollar btn-icon"></span>
+                            Price
+                        </a>
+                        <div class="dropdown-menu dropmenu-right">
+                            <div class="d-body">
+                                <div class="multi-range mt-2">
+                                    <input type="range" class="min-range" id="price-range-min" name="price" min="5.99"
+                                        max="49.99" value="10.99">
+                                    <input type="range" class="max-range" id="price-range-max" name="price" min="5.99"
+                                        max="49.99" value="44.99">
+                                    <div class="range-controls">
+                                        <div class="range"></div>
+                                        <div class="range-thumb min-range-thumb"></div>
+                                        <div class="range-thumb max-range-thumb"></div>
+                                    </div>
+                                    <div class="range-values">
+                                        <span class="min">10.99</span>
+                                        <span class="max">10.99</span>
+                                    </div>
+                                </div>
 
+                            </div>
+                            <div class="d-foot">
+                                <button type="submit" class="btn btn-block btn-dark btn-pill btn-sm">
+                                    Apply
+                                </button>
+                                <button class="btn btn-block btn-light btn-pill btn-sm" type="reset">Clear</button>
+                            </div>
+                        </div>
                     </div>
-                    <div class="d-foot">
-                        <button type="submit" class="btn btn-block btn-dark btn-pill btn-sm">
-                            Apply
-                        </button>
-                        <button class="btn btn-block btn-light btn-pill btn-sm" type="reset">Clear</button>
+                    <div class="dropdown">
+                        <a href="javascript:void(0)" class="btn btn-sm btn-light dropdown-toggle"
+                            data-toggle="dropdown">
+                            <span class="bx bx-note btn-icon"></span>
+                            Payment
+                        </a>
+                        <div class="dropdown-menu dropmenu-right">
+                            <div class="d-body">
+                                <label class="checkbox radio">
+                                    <input type="radio" name="payment" value="" checked />
+                                    <span class="checkmark"></span>
+                                    <span class="text">All</span>
+                                </label>
+                                <label class="checkbox radio">
+                                    <input type="radio" name="payment" value="fixed" />
+                                    <span class="checkmark"></span>
+                                    <span class="text">Fixed</span>
+                                </label>
+                                <label class="checkbox radio">
+                                    <input type="checkbox" name="payment" value="perhour" />
+                                    <span class="checkmark"></span>
+                                    <span class="text">Per Hour</span>
+                                </label>
+                            </div>
+                            <div class="d-foot">
+                                <button type="submit" class="btn btn-block btn-dark btn-pill btn-sm">
+                                    Apply
+                                </button>
+                                <button class="btn btn-block btn-light btn-pill btn-sm" type="reset">Clear</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <a href="javascript:void(0)" class="btn btn-sm btn-light dropdown-toggle"
+                            data-toggle="dropdown">
+                            <span class="bx bx-star btn-icon"></span>
+                            Ratings
+                        </a>
+                        <div class="dropdown-menu dropmenu-right">
+                            <div class="d-body">
+                                <label class="checkbox radio">
+                                    <input type="radio" name="ratings" value="" />
+                                    <span class="checkmark"></span>
+                                    <span class="text">All</span>
+                                </label>
+                                <label class="checkbox radio">
+                                    <input type="radio" name="ratings" value="3+" />
+                                    <span class="checkmark"></span>
+                                    <span class="text">5+</span>
+                                </label>
+                                <label class="checkbox radio">
+                                    <input type="radio" name="ratings" value="4+" />
+                                    <span class="checkmark"></span>
+                                    <span class="text">4+</span>
+                                </label>
+                                <label class="checkbox radio">
+                                    <input type="radio" name="ratings" value="4+" />
+                                    <span class="checkmark"></span>
+                                    <span class="text">3+</span>
+                                </label>
+                            </div>
+                            <div class="d-foot">
+                                <button type="submit" class="btn btn-block btn-dark btn-pill btn-sm">
+                                    Apply
+                                </button>
+                                <button class="btn btn-block btn-light btn-pill btn-sm" type="reset">Clear</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="dropdown">
-                <a href="javascript:void(0)" class="btn btn-sm btn-light dropdown-toggle" data-toggle="dropdown">
-                    <span class="bx bx-note btn-icon"></span>
-                    Payment
-                </a>
-                <div class="dropdown-menu dropmenu-right">
-                    <div class="d-body">
-                        <label class="checkbox radio">
-                            <input type="radio" name="payment" value="" checked />
-                            <span class="checkmark"></span>
-                            <span class="text">All</span>
-                        </label>
-                        <label class="checkbox radio">
-                            <input type="radio" name="payment" value="fixed" />
-                            <span class="checkmark"></span>
-                            <span class="text">Fixed</span>
-                        </label>
-                        <label class="checkbox radio">
-                            <input type="checkbox" name="payment" value="perhour" />
-                            <span class="checkmark"></span>
-                            <span class="text">Per Hour</span>
-                        </label>
-                    </div>
-                    <div class="d-foot">
-                        <button type="submit" class="btn btn-block btn-dark btn-pill btn-sm">
-                            Apply
+                <div class="applied">
+                    <div class="chips">
+                        <span class="chip chip-dark">
+                            <span class="chip-icon bx bx-category"></span>
+                            News
+                            <button class="close bx bx-x-circle"></button>
+                        </span>
+                        <button class="chip chip-primary">
+                            <span class="chip-icon bx bx-x-circle"></span>
+                            Clear filters
                         </button>
-                        <button class="btn btn-block btn-light btn-pill btn-sm" type="reset">Clear</button>
-                    </div>
-                </div>
-            </div>
-            <div class="dropdown">
-                <a href="javascript:void(0)" class="btn btn-sm btn-light dropdown-toggle" data-toggle="dropdown">
-                    <span class="bx bx-star btn-icon"></span>
-                    Ratings
-                </a>
-                <div class="dropdown-menu dropmenu-right">
-                    <div class="d-body">
-                        <label class="checkbox radio">
-                            <input type="radio" name="ratings" value="" />
-                            <span class="checkmark"></span>
-                            <span class="text">All</span>
-                        </label>
-                        <label class="checkbox radio">
-                            <input type="radio" name="ratings" value="3+" />
-                            <span class="checkmark"></span>
-                            <span class="text">5+</span>
-                        </label>
-                        <label class="checkbox radio">
-                            <input type="radio" name="ratings" value="4+" />
-                            <span class="checkmark"></span>
-                            <span class="text">4+</span>
-                        </label>
-                        <label class="checkbox radio">
-                            <input type="radio" name="ratings" value="4+" />
-                            <span class="checkmark"></span>
-                            <span class="text">3+</span>
-                        </label>
-                    </div>
-                    <div class="d-foot">
-                        <button type="submit" class="btn btn-block btn-dark btn-pill btn-sm">
-                            Apply
-                        </button>
-                        <button class="btn btn-block btn-light btn-pill btn-sm" type="reset">Clear</button>
                     </div>
                 </div>
             </div>
         </section>
-        <section class="chips section-gap my-2">
-            <span class="chip chip-light">
-                <span class="chip-icon bx bx-category"></span>
-                News
-                <button class="close bx bx-x-circle"></button>
-            </span>
-            <button class="chip chip-primary">
-                <span class="chip-icon bx bx-x-circle"></span>
-                Clear filters
-            </button>
-        </section>
-        <section class="row  g-4">
-            <div class="col-sm-8">
+        <!-- HEAD -->
+
+        <section class="row row-cols-1 row-cols-sm-2 row-cols-md-2 row-cols-lg-3 row-cols-xl-3 g-4">
+            <div class="col">
                 <article class="card vacancy-card">
                     <div class="card-head">
                         <div class="media">
@@ -349,28 +363,28 @@
                         </div>
                     </div>
                     <div class="card-body">
-                        <a href="vacancy-details.html" class="card-title">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas
-                            modi amet ut officiis nostrum, consequatur praesentium
-                            repudiandae assumenda repellat fuga necessitatibus totam dolores
-                            illum dolorem nisi vitae inventore quae eveniet?
-                        </a>
+                        <h3 class="card-title text-ellipsis text-ellipsis-2">
+                            <a href="blog-details.html">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Exercitationem possimus voluptatum adipisci.
+                            </a>
+                        </h3>
                         <div class="chips">
 
-                            <a href="vacancies.html" class="chip chip-light">HTML 5</a>
-                            <a href="vacancies.html" class="chip chip-light">CSS 3</a>
-                            <a href="vacancies.html" class="chip chip-light">SCSS</a>
-                            <a href="vacancies.html" class="chip chip-light">JAVASCRIPT</a>
-                            <a href="vacancies.html" class="chip chip-light">JQuery</a>
-                            <a href="vacancies.html" class="chip chip-light">Bootstrap 5</a>
-                            <a href="vacancies.html" class="chip chip-light">Uikit</a>
+                            <a href="vacancies.html" class="chip chip-primary">HTML 5</a>
+                            <a href="vacancies.html" class="chip chip-primary">CSS 3</a>
+                            <a href="vacancies.html" class="chip chip-primary">SCSS</a>
+                            <a href="vacancies.html" class="chip chip-primary">JAVASCRIPT</a>
+                            <a href="vacancies.html" class="chip chip-primary">JQuery</a>
+                            <a href="vacancies.html" class="chip chip-primary">Bootstrap 5</a>
+                            <a href="vacancies.html" class="chip chip-primary">Uikit</a>
                         </div>
                     </div>
                     <div class="card-foot">
-                        <div class="breadcrumb">
-                            <b class="b-item">Full-time</b>
-                            <b class="b-item">Remote</b>
-                            <b class="b-item">Lahore, Pakistan</b>
+                        <div class="card-items">
+                            <b class="item">Full-time</b>
+                            <b class="item">Remote</b>
+                            <b class="item">Lahore, Pakistan</b>
                         </div>
                     </div>
                 </article>
@@ -378,79 +392,75 @@
         </section>
         <!-- PAGINATION -->
         <section class="pagination">
-            <button class="b-item bx bx-left-arrow-alt"></button>
-            <button class="b-item">1</button>
-            <button class="b-item active">2</button>
-            <button class="b-item">3</button>
-            <button class="b-item bx bx-right-arrow-alt"></button>
+            <button class="btn btn-dark btn-pill">Load more</button>
         </section>
         <!-- PAGINATION -->
     </main>
     <!-- CONTENT -->
 
     <!-- FOOTER -->
-<footer class="footer boxed">
-    <div class="footer-top-menus">
-        <a href="index.html" class="logo" role="img" aria-label="chaintusker">
-            <img src="./assets/images/logo.png" width="120" class="image" alt="chaintusker Logo" />
-        </a>
-        <ul class="footer-list">
-            <li class="list-item" role="listitem">
-                <a href="about-us.html" class="list-link">About</a>
-            </li>
-            <li class="list-item" role="listitem">
-                <a href="contact-us.html" class="list-link">Contact</a>
-            </li>
-            <li class="list-item" role="listitem">
-                <a href="freelancers.html" class="list-link">Freelancers</a>
-            </li>
-            <li class="list-item" role="listitem">
-                <a href="skills.html" class="list-link">Skills</a>
-            </li>
-            <li class="list-item" role="listitem">
-                <a href="blogs.html" class="list-link">Blog</a>
-            </li>
-            <li class="list-item" role="listitem">
-                <a href="faqs.html" class="list-link">FAQs</a>
-            </li>
-            <li class="list-item" role="listitem">
-                <a href="jobs.html" class="list-link">Jobs</a>
-            </li>
-            <li class="list-item" role="listitem">
-                <a href="vacancies.html" class="list-link">Vacancies</a>
-            </li>
-        </ul>
-        <div class="social-group">
-            <a href="#" class="bx bxl-facebook-circle social-icon"></a>
-            <a href="#" class="bx bxl-twitter social-icon"></a>
-            <a href="#" class="bx bxl-instagram social-icon"></a>
-            <a href="#" class="bx bxl-pinterest social-icon"></a>
+    <footer class="footer boxed">
+        <div class="footer-top-menus">
+            <a href="index.html" class="logo" role="img" aria-label="chaintusker">
+                <img src="./assets/images/logo.png" width="120" class="image" alt="chaintusker Logo" />
+            </a>
+            <ul class="footer-list">
+                <li class="list-item" role="listitem">
+                    <a href="about-us.html" class="list-link">About</a>
+                </li>
+                <li class="list-item" role="listitem">
+                    <a href="contact-us.html" class="list-link">Contact</a>
+                </li>
+                <li class="list-item" role="listitem">
+                    <a href="freelancers.html" class="list-link">Freelancers</a>
+                </li>
+                <li class="list-item" role="listitem">
+                    <a href="skills.html" class="list-link">Skills</a>
+                </li>
+                <li class="list-item" role="listitem">
+                    <a href="blogs.html" class="list-link">Blog</a>
+                </li>
+                <li class="list-item" role="listitem">
+                    <a href="faqs.html" class="list-link">FAQs</a>
+                </li>
+                <li class="list-item" role="listitem">
+                    <a href="jobs.html" class="list-link">Jobs</a>
+                </li>
+                <li class="list-item" role="listitem">
+                    <a href="vacancies.html" class="list-link">Vacancies</a>
+                </li>
+            </ul>
+            <div class="social-group">
+                <a href="#" class="bx bxl-facebook-circle social-link"></a>
+                <a href="#" class="bx bxl-twitter social-link"></a>
+                <a href="#" class="bx bxl-instagram social-link"></a>
+                <a href="#" class="bx bxl-pinterest social-link"></a>
+            </div>
         </div>
-    </div>
-    <div class="footer-bottom-menus">
-        <p>
-            &copy; 2024
-            <a href="index.html" class="link link-primary">ChainTusker</a>
-        </p>
-        <ul class="footer-list">
-            <li class="list-item" role="listitem">
-                <a href="terms-of-use.html" class="list-link">Terms of use</a>
-            </li>
-            <li class="list-item" role="listitem">
-                <a href="privacy-policy.html" class="list-link">Privacy</a>
-            </li>
-            <li class="list-item" role="listitem">
-                <a href="cookies-policy.html" class="list-link">Cookies</a>
-            </li>
-            <li class="list-item" role="listitem">
-                <a href="agreement.html" class="list-link">Agreement</a>
-            </li>
-            <li class="list-item" role="listitem">
-                <a href="refunds-policy.html" class="list-link">Refunds</a>
-            </li>
-        </ul>
-    </div>
-</footer>
+        <div class="footer-bottom-menus">
+            <p>
+                &copy; 2024
+                <a href="index.html" class="link link-primary">ChainTusker</a>
+            </p>
+            <ul class="footer-list">
+                <li class="list-item" role="listitem">
+                    <a href="terms-of-use.html" class="list-link">Terms of use</a>
+                </li>
+                <li class="list-item" role="listitem">
+                    <a href="privacy-policy.html" class="list-link">Privacy</a>
+                </li>
+                <li class="list-item" role="listitem">
+                    <a href="cookies-policy.html" class="list-link">Cookies</a>
+                </li>
+                <li class="list-item" role="listitem">
+                    <a href="agreement.html" class="list-link">Agreement</a>
+                </li>
+                <li class="list-item" role="listitem">
+                    <a href="refunds-policy.html" class="list-link">Refunds</a>
+                </li>
+            </ul>
+        </div>
+    </footer>
     <!-- FOOTER -->
     <!-- SCRIPTS -->
     <script src="assets/js/main.js"></script>

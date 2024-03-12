@@ -1,0 +1,72 @@
+.inbox {
+    display: flex;
+    border-radius: var(--rounded);
+    border: 1px solid var(--border);
+  
+    .col-left {
+      height: 85vh;
+      width: 25vw;
+      border-right: 1px solid var(--border);
+  
+      .card {
+        --c-border: none;
+        .c-head {
+          border-bottom: 1px solid var(--border);
+          height: 70px;
+        }
+        .c-body {
+          --c-body-padding: 0px;
+          overflow: auto;
+          .media {
+            padding: 1rem;
+            border-bottom: 1px solid var(--border);
+            &:hover {
+              background-color: var(--light);
+            }
+            &.active {
+              background-color: var(--light);
+            }
+          }
+        }
+      }
+    }
+    .col-right {
+      width: 75vw;
+      .card {
+        --c-border: none;
+        .c-head {
+          height: 70px;
+          border-bottom: 1px solid var(--border);
+        }
+        .c-body {
+          overflow: auto;
+          .messages {
+            .media {
+              .media-title {
+                  font-family: 500;
+              }
+              .media-desc {
+                font-size: 1rem;
+              }
+            }
+          }
+        }
+        .c-foot {
+          position: relative;
+          border-top: 1px solid var(--border);
+  
+          .form-field {
+            width: 100%;
+          }
+          .btn-send {
+            position: absolute;
+            right: 0;
+            top: 0;
+            margin-top: 2rem;
+            margin-right: 2rem;
+          }
+        }
+      }
+    }
+  }
+  

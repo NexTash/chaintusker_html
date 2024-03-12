@@ -25,16 +25,3 @@
   --link-color: var(--primary);
   --link-color-hover: var(--primary-hover);
 }
-
-.suggestions {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  span {
-    color: var(--primary);
-  }
-  a {
-    margin: 0.2rem 0.5rem;
-    font-weight: 400;
-  }
-}

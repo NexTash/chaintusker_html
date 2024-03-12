@@ -1,32 +1,7 @@
 .skill-card {
-  margin: 4rem 0;
-
-  .title {
-    font-weight: bold;
-    font-size: 2rem;
-    text-transform: capitalize;
-    margin-bottom: 1rem;
-    position: sticky;
-    top: 5rem;
-  }
-
-  .list {
-    list-style: none;
-    display: block;
-    .l-item {
-      width: 33.33333%;
-      float: left;
-      padding: 0;
-      .l-link {
-        display: block;
-        font-size: 1rem;
-        padding: 0.3rem;
-        font-weight: 500;
-
-        &:hover {
-          color: var(--primary);
-        }
-      }
-    }
-  }
+  --card-height: auto;
+  --card-border: transparent;
+  --card-image-height: 200px;
+  --card-title-size: clamp(14px, 50vw, 16px);
+  --card-image-rounded: var(--rounded) var(--rounded) 0 0;
 }

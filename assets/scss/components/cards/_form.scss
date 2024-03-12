@@ -1,4 +1,5 @@
 .form-card {
   --card-shadow: transparent;
   --card-border: transparent;
+  width: clamp(300px, 90vw, 560px);
 }

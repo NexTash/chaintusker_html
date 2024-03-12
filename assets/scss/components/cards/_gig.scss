@@ -1,10 +1,10 @@
 .gig-card {
-
+  --card-border: transparent;
+  --card-image-rounded: var(--rounded) var(--rounded) 0 0;
+  --card-height: auto;
+  --card-title-size: clamp(14px, 50vw, 16px);
   .card-foot {
     display: flex;
-    align-items: center;
-    .ratings {
-      margin-left: auto;
-    }
+   justify-content: space-between;
   }
 }

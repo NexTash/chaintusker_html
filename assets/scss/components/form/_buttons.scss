@@ -1,5 +1,5 @@
 .btn {
-  --btn-padding: 0.9rem 1.5rem;
+  --btn-padding: 14px 20px;
   --btn-rounded: var(--rounded);
   --btn-bg: transparent;
   --btn-bg-hover: var(--light);
@@ -90,7 +90,8 @@
 }
 
 .btn-sm {
-  --btn-padding: 0.5rem 1rem;
+  --btn-padding: 8px 16px;
+  --btn-size: 12px;
 }
 .btn-lg {
   --btn-padding: 1rem 1.8rem;

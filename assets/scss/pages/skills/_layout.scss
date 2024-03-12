@@ -1,0 +1,45 @@
+.skills-layout {
+  padding-top: 40px;
+  padding-bottom: 40px;
+
+  .skills-row {
+    display: flex;
+    align-items: center;
+    .col-left {
+      width: 30%;
+      .skill-title {
+        font-weight: bold;
+        font-size: 2rem;
+        text-transform: capitalize;
+        margin-bottom: 1rem;
+        position: sticky;
+        top: 5rem;
+      }
+    }
+    .col-right {
+      width: 60%;
+      .skills-list {
+        list-style: none;
+        display: block;
+        .list-item {
+          width: 33.33333%;
+          float: left;
+          padding: 0;
+          .list-link {
+            display: block;
+            font-size: 1rem;
+            padding: 0.3rem;
+            font-weight: 500;
+            color: var(--text);
+            text-decoration: none;
+
+            &:hover {
+              text-decoration: underline;
+              color: var(--primary);
+            }
+          }
+        }
+      }
+    }
+  }
+}

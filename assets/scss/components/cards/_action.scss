@@ -1,0 +1,9 @@
+.action-card {
+  --card-border: transparent;
+  --card-shadow: transparent;
+  --card-height: auto;
+  --card-title-size: clamp(22px, 80vw, 28px);
+  --card-title-space: 10px 0;
+  --card-subtitle-space: 8px auto 20px auto;
+  text-align: center;
+}

@@ -133,155 +133,152 @@
     <!-- SIDEBAR -->
 
     <!-- CONTENT -->
-    <main class="boxed flex-center">
-        <div class="col-12 col-sm-12 col-md-5 col-lg-6 col-xl-6 col-xxl-5">
-            <form method="POST" class="card form-card">
-                <div class="card-head">
-                    <h1 class="card-title">Signup</h1>
-                    <p class="card-desc">
-                        Already have an account?
-                        <a href="login.html" class="card-link">Login</a>
-                    </p>
-                </div>
-                <div class="card-body">
-                    <div class="row">
-                        <div class="col-sm-6">
-                            <div class="form-group">
-                                <label for="first_name" class="form-label"><b>First Name</b></label>
-                                <input type="text" class="form-field" id="first_name" name="first_name"
-                                    placeholder="E.g. John" />
-                            </div>
+    <main class="boxed">
+        <form method="POST" class="card form-card">
+            <div class="card-head">
+                <h1 class="card-title">Signup</h1>
+                <p class="card-desc">
+                    Already have an account?
+                    <a href="login.html" class="card-link">Login</a>
+                </p>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="first_name" class="form-label">First Name</label>
+                            <input type="text" class="form-field" id="first_name" name="first_name"
+                                placeholder="E.g. John" />
                         </div>
-                        <div class="col-sm-6">
-                            <div class="form-group">
-                                <label for="last_name" class="form-label"><b>Last name</b></label>
-                                <input type="text" class="form-field" id="last_name" name="last_name"
-                                    placeholder="E.g. Doe" />
-                            </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="last_name" class="form-label">Last name</label>
+                            <input type="text" class="form-field" id="last_name" name="last_name"
+                                placeholder="E.g. Doe" />
                         </div>
-                        <div class="col-sm-12">
-                            <div class="form-group">
-                                <label for="email" class="form-label"><b>Email address</b></label>
-                                <input type="email" class="form-field" id="email" name="email"
-                                    placeholder="E.g. johndoe@example.com" />
-                            </div>
+                    </div>
+                    <div class="col-sm-12">
+                        <div class="form-group">
+                            <label for="email" class="form-label">Email address</label>
+                            <input type="email" class="form-field" id="email" name="email"
+                                placeholder="E.g. johndoe@example.com" />
                         </div>
-                        <div class="col-sm-6">
-                            <div class="form-group">
-                                <label for="create_password" class="form-label"><b>Create Password</b></label>
-                                <input type="password" class="form-field" id="create_password" name="create_password" />
-                            </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="create_password" class="form-label">Create Password</label>
+                            <input type="password" class="form-field" id="create_password" name="create_password" />
                         </div>
-                        <div class="col-sm-6">
-                            <div class="form-group">
-                                <label for="confirm_password" class="form-label"><b>Confirm Password</b></label>
-                                <input type="password" class="form-field" id="confirm_password"
-                                    name="confirm_password" />
-                            </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="confirm_password" class="form-label">Confirm Password</label>
+                            <input type="password" class="form-field" id="confirm_password" name="confirm_password" />
                         </div>
-                        <div class="col-sm-12">
-                            <div class="input-group flex-center mb-2">
-                                <label class="checkbox mx-1 radio">
-                                    <input type="radio" id="atype" name="atype" />
-                                    <span class="checkmark"></span>
-                                    <span class="text">For Hire</span>
-                                </label>
-                                <label class="checkbox mx-1 radio">
-                                    <input type="radio" id="atype" name="atype" />
-                                    <span class="checkmark"></span>
-                                    <span class="text">For Work</span>
-                                </label>
-                            </div>
-                        </div>
-                        <div class="col-sm-12">
-                            <hr />
-                            <label class="checkbox">
-                                <input type="checkbox" id="agreement" name="agreement" />
+                    </div>
+                    <div class="col-sm-12">
+                        <div class="input-group flex-center mb-2">
+                            <label class="checkbox mx-1 radio">
+                                <input type="radio" id="atype" name="atype" />
                                 <span class="checkmark"></span>
-                                <span class="text">I agree to the
-                                    <a href="terms-of-use.html" class="card-link">Terms and conditions</a>
-                                    and
-                                    <a href="privacy-policy.html" class="card-link">Privacy policy</a></span>
+                                <span class="text">For Hire</span>
+                            </label>
+                            <label class="checkbox mx-1 radio">
+                                <input type="radio" id="atype" name="atype" />
+                                <span class="checkmark"></span>
+                                <span class="text">For Work</span>
                             </label>
                         </div>
                     </div>
+                    <div class="col-sm-12">
+                        <hr />
+                        <label class="checkbox">
+                            <input type="checkbox" id="agreement" name="agreement" />
+                            <span class="checkmark"></span>
+                            <span class="text">I agree to the
+                                <a href="terms-of-use.html" class="card-link">Terms and conditions</a>
+                                and
+                                <a href="privacy-policy.html" class="card-link">Privacy policy</a></span>
+                        </label>
+                    </div>
                 </div>
-                <div class="card-foot">
-                    <button type="submit" class="btn btn-dark btn-block">Signup</button>
-                    <div class="divider">OR</div>
-                    <button class="btn btn-light btn-block">
-                        <img src="./assets/images/google.png" alt="" />
-                        Signup With Google
-                    </button>
-                </div>
-            </form>
-        </div>
+            </div>
+            <div class="card-foot">
+                <button type="submit" class="btn btn-dark btn-block">Signup</button>
+                <div class="divider">OR</div>
+                <button class="btn btn-light btn-block">
+                    <img src="./assets/images/google.png" alt="" />
+                    Signup With Google
+                </button>
+            </div>
+        </form>
     </main>
     <!-- CONTENT -->
 
     <!-- FOOTER -->
-<footer class="footer boxed">
-    <div class="footer-top-menus">
-        <a href="index.html" class="logo" role="img" aria-label="chaintusker">
-            <img src="./assets/images/logo.png" width="120" class="image" alt="chaintusker Logo" />
-        </a>
-        <ul class="footer-list">
-            <li class="list-item" role="listitem">
-                <a href="about-us.html" class="list-link">About</a>
-            </li>
-            <li class="list-item" role="listitem">
-                <a href="contact-us.html" class="list-link">Contact</a>
-            </li>
-            <li class="list-item" role="listitem">
-                <a href="freelancers.html" class="list-link">Freelancers</a>
-            </li>
-            <li class="list-item" role="listitem">
-                <a href="skills.html" class="list-link">Skills</a>
-            </li>
-            <li class="list-item" role="listitem">
-                <a href="blogs.html" class="list-link">Blog</a>
-            </li>
-            <li class="list-item" role="listitem">
-                <a href="faqs.html" class="list-link">FAQs</a>
-            </li>
-            <li class="list-item" role="listitem">
-                <a href="jobs.html" class="list-link">Jobs</a>
-            </li>
-            <li class="list-item" role="listitem">
-                <a href="vacancies.html" class="list-link">Vacancies</a>
-            </li>
-        </ul>
-        <div class="social-group">
-            <a href="#" class="bx bxl-facebook-circle social-icon"></a>
-            <a href="#" class="bx bxl-twitter social-icon"></a>
-            <a href="#" class="bx bxl-instagram social-icon"></a>
-            <a href="#" class="bx bxl-pinterest social-icon"></a>
+    <footer class="footer boxed">
+        <div class="footer-top-menus">
+            <a href="index.html" class="logo" role="img" aria-label="chaintusker">
+                <img src="./assets/images/logo.png" width="120" class="image" alt="chaintusker Logo" />
+            </a>
+            <ul class="footer-list">
+                <li class="list-item" role="listitem">
+                    <a href="about-us.html" class="list-link">About</a>
+                </li>
+                <li class="list-item" role="listitem">
+                    <a href="contact-us.html" class="list-link">Contact</a>
+                </li>
+                <li class="list-item" role="listitem">
+                    <a href="freelancers.html" class="list-link">Freelancers</a>
+                </li>
+                <li class="list-item" role="listitem">
+                    <a href="skills.html" class="list-link">Skills</a>
+                </li>
+                <li class="list-item" role="listitem">
+                    <a href="blogs.html" class="list-link">Blog</a>
+                </li>
+                <li class="list-item" role="listitem">
+                    <a href="faqs.html" class="list-link">FAQs</a>
+                </li>
+                <li class="list-item" role="listitem">
+                    <a href="jobs.html" class="list-link">Jobs</a>
+                </li>
+                <li class="list-item" role="listitem">
+                    <a href="vacancies.html" class="list-link">Vacancies</a>
+                </li>
+            </ul>
+            <div class="social-group">
+                <a href="#" class="bx bxl-facebook-circle social-link"></a>
+                <a href="#" class="bx bxl-twitter social-link"></a>
+                <a href="#" class="bx bxl-instagram social-link"></a>
+                <a href="#" class="bx bxl-pinterest social-link"></a>
+            </div>
         </div>
-    </div>
-    <div class="footer-bottom-menus">
-        <p>
-            &copy; 2024
-            <a href="index.html" class="link link-primary">ChainTusker</a>
-        </p>
-        <ul class="footer-list">
-            <li class="list-item" role="listitem">
-                <a href="terms-of-use.html" class="list-link">Terms of use</a>
-            </li>
-            <li class="list-item" role="listitem">
-                <a href="privacy-policy.html" class="list-link">Privacy</a>
-            </li>
-            <li class="list-item" role="listitem">
-                <a href="cookies-policy.html" class="list-link">Cookies</a>
-            </li>
-            <li class="list-item" role="listitem">
-                <a href="agreement.html" class="list-link">Agreement</a>
-            </li>
-            <li class="list-item" role="listitem">
-                <a href="refunds-policy.html" class="list-link">Refunds</a>
-            </li>
-        </ul>
-    </div>
-</footer>
+        <div class="footer-bottom-menus">
+            <p>
+                &copy; 2024
+                <a href="index.html" class="link link-primary">ChainTusker</a>
+            </p>
+            <ul class="footer-list">
+                <li class="list-item" role="listitem">
+                    <a href="terms-of-use.html" class="list-link">Terms of use</a>
+                </li>
+                <li class="list-item" role="listitem">
+                    <a href="privacy-policy.html" class="list-link">Privacy</a>
+                </li>
+                <li class="list-item" role="listitem">
+                    <a href="cookies-policy.html" class="list-link">Cookies</a>
+                </li>
+                <li class="list-item" role="listitem">
+                    <a href="agreement.html" class="list-link">Agreement</a>
+                </li>
+                <li class="list-item" role="listitem">
+                    <a href="refunds-policy.html" class="list-link">Refunds</a>
+                </li>
+            </ul>
+        </div>
+    </footer>
     <!-- FOOTER -->
 
     <!-- SCRIPTS -->

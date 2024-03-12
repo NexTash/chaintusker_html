@@ -1,0 +1,47 @@
+.section-title,
+.section-subtitle,
+.section-desc,
+.section-badge {
+  margin-bottom: 15px;
+}
+
+.section-title {
+  font-weight: 600;
+  font-size: clamp(1.6rem, -0.875rem + 8.333vw, 2rem);
+  color: var(--text);
+}
+
+.section-subtitle {
+  font-weight: 500;
+  font-size: 1.2rem;
+  color: var(--text);
+}
+
+.section-desc {
+  font-weight: 400;
+  font-size: 1rem;
+  color: var(--muted);
+}
+
+.section-badge {
+  display: inline-block;
+  background-color: var(--primary-subtle);
+  color: var(--primary);
+  padding: 5px 10px;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.section-see-more {
+  float: right;
+  margin-top: 50px;
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 600;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}

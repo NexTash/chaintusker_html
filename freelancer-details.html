@@ -138,34 +138,35 @@
     <!-- HEAD -->
     <section class="page-head boxed">
         <ul class="breadcrumb">
-            <li class="b-item">
+            <li class="page-item">
                 <a href="javascript:void(0)" onclick="window.history.back()" class="page-link">
                     <span class=" bx bx-arrow-back"></span> Back
                 </a>
             </li>
-            <li class="b-item active">Profile</li>
+            <li class="page-item active">Profile</li>
         </ul>
-        <h1 class="p-title">Profile</h1>
+        <h1 class="page-title">Profile</h1>
     </section>
     <!-- HEAD -->
 
     <!-- CONTENT -->
-    <main class="boxed">
-        <div class="card">
-            <div class="card-body my-1">
-                <div class="row">
-                    <div class="col-sm-12 mb-2">
-                        <div class="media">
-                            <a class="media-image" href="freelancer-details.html">
-                                <img src="./assets/images/man.png" class="image" alt="" />
-                            </a>
-                            <div class="media-body">
-                                <a class="media-title" href="freelancer-details.html">Abdul Hannan
-                                    <span class="bx bxs-badge-check v-badge"></span></a>
-                                <p class="media-desc">Reviews(0)</p>
-                            </div>
-                        </div>
+    <main>
+        <div class="card profile-card boxed">
+            <div class="card-head">
+                <div class="media">
+                    <a class="media-image" href="freelancer-details.html">
+                        <img src="./assets/images/man.png" class="image" alt="" />
+                    </a>
+                    <div class="media-body">
+                        <a class="media-title" href="freelancer-details.html">Abdul Hannan
+                            <span class="bx bxs-badge-check v-badge"></span></a>
+                        <p class="media-desc">Reviews(0)</p>
                     </div>
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="row">
+
                     <div class="col-sm-4 mb-2">
                         <h3 class="detail-title">Average ratings </h3>
                         <p class="detail-desc">
@@ -216,10 +217,10 @@
                     <div class="col-sm-4 mb-2">
                         <h3 class="detail-title">Follow on</h3>
                         <div class="social-group">
-                            <a href="#" class="bx bxl-facebook-circle social-icon"></a>
-                            <a href="#" class="bx bxl-twitter social-icon"></a>
-                            <a href="#" class="bx bxl-instagram social-icon"></a>
-                            <a href="#" class="bx bxl-pinterest social-icon"></a>
+                            <a href="#" class="bx bxl-facebook-circle social-link"></a>
+                            <a href="#" class="bx bxl-twitter social-link"></a>
+                            <a href="#" class="bx bxl-instagram social-link"></a>
+                            <a href="#" class="bx bxl-pinterest social-link"></a>
                         </div>
                     </div>
                     <div class="col-sm-12 mb-2">
@@ -230,7 +231,8 @@
             </div>
         </div>
 
-        <div class="tabs">
+
+        <div class="tabs boxed">
             <div class="t-items t-pills m-auto">
                 <button class="t-item active" data-toggle="tab" data-target="#gigstab">
                     Gigs
@@ -257,37 +259,34 @@
                                                 <img src="./assets/images/man.png" class="image" alt="" />
                                             </a>
                                             <div class="media-body">
-                                                <a class="media-title" href="freelancer-details.html">Abdul
-                                                    Hannan <span class="bx bxs-badge-check v-badge"></span></a>
-                                            </div>
-                                            <div class="media-ctrl">
-                                                <span class="bx bx-check-circle icon"></span> 5
+                                                <a class="media-title" href="freelancer-details.html">Abdul Hannan <span
+                                                        class="bx bxs-badge-check v-badge"></span></a>
+                                                <p class="media-desc">
+                                                <div class="ratings">
+                                                    <span class="bx bxs-star icon active"></span>
+                                                    <span>4.3</span>
+                                                </div>
+                                                </p>
                                             </div>
                                         </div>
-                                        <a href="gig-details.html" class="card-title">
-                                            i will proffessionaly deign, create a cutome website,website
-                                        </a>
+                                        <h3 class="card-title text-ellipsis text-ellipsis-2">
+                                            <a href="blog-details.html">
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                                Exercitationem possimus voluptatum adipisci.
+                                            </a>
+                                        </h3>
                                         <div class="chips">
-                                            
-                                            <a href="" class="chip chip-light">HTML 5</a>
-                                            <a href="" class="chip chip-light">CSS 3</a>
-                                            <a href="" class="chip chip-light">SCSS</a>
-                                            <a href="" class="chip chip-light">JAVASCRIPT</a>
-                                            <a href="" class="chip chip-light">JQuery</a>
-                                            <a href="" class="chip chip-light">Bootstrap 5</a>
-                                            <a href="" class="chip chip-light">Uikit</a>
+                                            <a href="gigs.html" class="chip chip-primary">HTML 5</a>
+                                            <a href="gigs.html" class="chip chip-primary">CSS 3</a>
+                                            <a href="gigs.html" class="chip chip-primary">SCSS</a>
+                                            <a href="gigs.html" class="chip chip-primary">JAVASCRIPT</a>
+                                            <a href="gigs.html" class="chip chip-primary">JQuery</a>
+                                            <a href="gigs.html" class="chip chip-primary">Bootstrap 5</a>
+                                            <a href="gigs.html" class="chip chip-primary">Uikit</a>
                                         </div>
                                     </div>
-                                    <div class="card-foot c-foot-flex">
-                                        <b class="card-title">5/hr</b>
-                                        <div class="ratings">
-                                            <span class="bx bxs-star icon active"></span>
-                                            <span class="bx bxs-star icon active"></span>
-                                            <span class="bx bxs-star icon active"></span>
-                                            <span class="bx bx-star icon"></span>
-                                            <span class="bx bx-star icon"></span>
-                                            <b class="text">4.3</b>
-                                        </div>
+                                    <div class="card-foot">
+                                        <b class="card-subtitle">From 5/hr</b>
                                     </div>
                                 </article>
                             </div>
@@ -298,7 +297,7 @@
                 </div>
                 <div class="t-pane" id="reviewstab">
                     <div class="mt-2">
-                        <div class="card bg-light mb-2">
+                        <div class="card review-card">
                             <div class="card-head">
                                 <div class="media">
                                     <a href="customer-details.html" class="media-image">
@@ -316,12 +315,13 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="card-body mb-2 section-desc">
-                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut labore voluptates
-                                optio eaque!
-                                Praesentium ducimus tenetur laborum aliquid deleniti ipsa error, culpa molestias
-                                suscipit
-                                quas, quia inventore laudantium tempora blanditiis?
+                            <div class="card-body">
+                                <p class="card-desc"> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut
+                                    labore voluptates
+                                    optio eaque!
+                                    Praesentium ducimus tenetur laborum aliquid deleniti ipsa error, culpa molestias
+                                    suscipit
+                                    quas, quia inventore laudantium tempora blanditiis?</p>
                             </div>
                         </div>
                         <div class="card bg-light mb-2">
@@ -360,68 +360,68 @@
     <!-- CONTENT -->
 
     <!-- FOOTER -->
-<footer class="footer boxed">
-    <div class="footer-top-menus">
-        <a href="index.html" class="logo" role="img" aria-label="chaintusker">
-            <img src="./assets/images/logo.png" width="120" class="image" alt="chaintusker Logo" />
-        </a>
-        <ul class="footer-list">
-            <li class="list-item" role="listitem">
-                <a href="about-us.html" class="list-link">About</a>
-            </li>
-            <li class="list-item" role="listitem">
-                <a href="contact-us.html" class="list-link">Contact</a>
-            </li>
-            <li class="list-item" role="listitem">
-                <a href="freelancers.html" class="list-link">Freelancers</a>
-            </li>
-            <li class="list-item" role="listitem">
-                <a href="skills.html" class="list-link">Skills</a>
-            </li>
-            <li class="list-item" role="listitem">
-                <a href="blogs.html" class="list-link">Blog</a>
-            </li>
-            <li class="list-item" role="listitem">
-                <a href="faqs.html" class="list-link">FAQs</a>
-            </li>
-            <li class="list-item" role="listitem">
-                <a href="jobs.html" class="list-link">Jobs</a>
-            </li>
-            <li class="list-item" role="listitem">
-                <a href="vacancies.html" class="list-link">Vacancies</a>
-            </li>
-        </ul>
-        <div class="social-group">
-            <a href="#" class="bx bxl-facebook-circle social-icon"></a>
-            <a href="#" class="bx bxl-twitter social-icon"></a>
-            <a href="#" class="bx bxl-instagram social-icon"></a>
-            <a href="#" class="bx bxl-pinterest social-icon"></a>
+    <footer class="footer boxed">
+        <div class="footer-top-menus">
+            <a href="index.html" class="logo" role="img" aria-label="chaintusker">
+                <img src="./assets/images/logo.png" width="120" class="image" alt="chaintusker Logo" />
+            </a>
+            <ul class="footer-list">
+                <li class="list-item" role="listitem">
+                    <a href="about-us.html" class="list-link">About</a>
+                </li>
+                <li class="list-item" role="listitem">
+                    <a href="contact-us.html" class="list-link">Contact</a>
+                </li>
+                <li class="list-item" role="listitem">
+                    <a href="freelancers.html" class="list-link">Freelancers</a>
+                </li>
+                <li class="list-item" role="listitem">
+                    <a href="skills.html" class="list-link">Skills</a>
+                </li>
+                <li class="list-item" role="listitem">
+                    <a href="blogs.html" class="list-link">Blog</a>
+                </li>
+                <li class="list-item" role="listitem">
+                    <a href="faqs.html" class="list-link">FAQs</a>
+                </li>
+                <li class="list-item" role="listitem">
+                    <a href="jobs.html" class="list-link">Jobs</a>
+                </li>
+                <li class="list-item" role="listitem">
+                    <a href="vacancies.html" class="list-link">Vacancies</a>
+                </li>
+            </ul>
+            <div class="social-group">
+                <a href="#" class="bx bxl-facebook-circle social-link"></a>
+                <a href="#" class="bx bxl-twitter social-link"></a>
+                <a href="#" class="bx bxl-instagram social-link"></a>
+                <a href="#" class="bx bxl-pinterest social-link"></a>
+            </div>
         </div>
-    </div>
-    <div class="footer-bottom-menus">
-        <p>
-            &copy; 2024
-            <a href="index.html" class="link link-primary">ChainTusker</a>
-        </p>
-        <ul class="footer-list">
-            <li class="list-item" role="listitem">
-                <a href="terms-of-use.html" class="list-link">Terms of use</a>
-            </li>
-            <li class="list-item" role="listitem">
-                <a href="privacy-policy.html" class="list-link">Privacy</a>
-            </li>
-            <li class="list-item" role="listitem">
-                <a href="cookies-policy.html" class="list-link">Cookies</a>
-            </li>
-            <li class="list-item" role="listitem">
-                <a href="agreement.html" class="list-link">Agreement</a>
-            </li>
-            <li class="list-item" role="listitem">
-                <a href="refunds-policy.html" class="list-link">Refunds</a>
-            </li>
-        </ul>
-    </div>
-</footer>
+        <div class="footer-bottom-menus">
+            <p>
+                &copy; 2024
+                <a href="index.html" class="link link-primary">ChainTusker</a>
+            </p>
+            <ul class="footer-list">
+                <li class="list-item" role="listitem">
+                    <a href="terms-of-use.html" class="list-link">Terms of use</a>
+                </li>
+                <li class="list-item" role="listitem">
+                    <a href="privacy-policy.html" class="list-link">Privacy</a>
+                </li>
+                <li class="list-item" role="listitem">
+                    <a href="cookies-policy.html" class="list-link">Cookies</a>
+                </li>
+                <li class="list-item" role="listitem">
+                    <a href="agreement.html" class="list-link">Agreement</a>
+                </li>
+                <li class="list-item" role="listitem">
+                    <a href="refunds-policy.html" class="list-link">Refunds</a>
+                </li>
+            </ul>
+        </div>
+    </footer>
     <!-- FOOTER -->
     <!-- SCRIPTS -->
     <script src="assets/js/main.js"></script>

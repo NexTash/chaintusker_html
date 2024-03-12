@@ -1,64 +1,18 @@
 .error-card {
+  --card-border: transparent;
+  --card-shadow: 0px 0px;
+  --card-margin: 100px auto 150px auto;
+  --card-title-size: clamp(40px, 80vw, 150px);
+  --card-title-wgt: normal;
+  --card-subtitle-size: clamp(24px, 80vw, 30px);
+  --card-subtitle-wgt: 500;
+  --card-desc-margin: 25px;
   text-align: center;
-  margin-top: 2rem;
-  margin-bottom: 4rem;
+  align-items: center;
+  width: clamp(270px, 80vw, 560px);
 
-  .error-code {
-    color: var(--text);
-    z-index: 9;
-    text-transform: uppercase;
-    font-size: 10rem;
+  .card-title {
     color: transparent;
     -webkit-text-stroke: 3px var(--primary);
-    @media (max-width: screen-size(sm)) {
-      font-size: 8rem;
-    }
-  }
-  .error-title {
-    font-weight: bold;
-    margin: 0;
-    margin-bottom: 1.2rem;
-    font-size: 5rem;
-
-    @media (max-width: screen-size(xl)) {
-      font-size: 3rem;
-    }
-
-    @media (max-width: screen-size(lg)) {
-      margin-bottom: 1rem;
-      font-size: 4.5rem;
-    }
-
-    @media (max-width: screen-size(sm)) {
-      margin-bottom: 1rem;
-      font-size: 2rem;
-    }
-  }
-  .error-description {
-    color: var(--muted);
-    font-size: 1.2rem;
-    line-height: 1.8rem;
-    margin-bottom: 2rem;
-
-    @media (max-width: screen-size(sm)) {
-      font-size: 1.1rem;
-      margin-bottom: 2rem;
-    }
-  }
-
-  @media (max-width: screen-size(xl)) {
-    padding: 0;
-  }
-
-  @media (max-width: screen-size(lg)) {
-    padding: 1rem;
-  }
-
-  @media (max-width: screen-size(md)) {
-    padding: 4rem;
-  }
-
-  @media (max-width: screen-size(sm)) {
-    padding: 6rem 0;
   }
 }

@@ -1,16 +1,17 @@
 .page-head {
   padding-top: 40px;
-  padding-bottom: 40px;
+  padding-bottom: 20px;
   .page-title {
     color: var(--text);
-    font-size: clamp(20px, 50vw, 30px);
+    font-size: clamp(30px, 50vw, 50px);
     font-weight: 600;
     margin: 20px 0;
   }
   .page-subtitle {
     color: var(--text);
-    margin-bottom: 1.2rem;
-    font-size: 1.1rem;
+    margin-bottom: 20px;
+    font-size: 18px;
+    font-weight: 500;
   }
   .page-desc {
     color: var(--muted);
@@ -45,6 +46,65 @@
       border-radius: inherit;
       object-fit: cover;
       object-position: top;
+    }
+  }
+  .page-search {
+    display: flex;
+    align-items: center;
+    background-color: var(--light);
+    border-radius: calc(var(--rounded) * 5);
+    padding: 5px;
+    width: clamp(270px, 50vw, 400px);
+    margin-bottom: 20px;
+    .field {
+      width: 100%;
+      background-color: transparent;
+      border: none;
+      outline: none;
+      padding: 10px 20px;
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--text);
+      &::placeholder {
+        color: inherit;
+      }
+    }
+    .btn-search {
+      border: none;
+      outline: none;
+      background-color: transparent;
+      color: var(--primary);
+      font-size: 1.5rem;
+      padding: 0.5rem;
+      margin-right: 1rem;
+      cursor: pointer;
+    }
+  }
+  .page-suggestions {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    font-size: clamp(14px, 50vw, 16px);
+
+    span {
+      color: var(--primary);
+      font-size: clamp(12px, 50vw, 14px);
+    }
+    a {
+      margin: 0.2rem 0.5rem;
+      font-weight: 500;
+    }
+  }
+  .page-filters {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: flex-start;
+    .to-apply {
+      margin-bottom: 20px;
+    }
+    .applied {
     }
   }
 }

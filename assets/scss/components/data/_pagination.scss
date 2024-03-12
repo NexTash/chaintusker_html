@@ -1,24 +1,4 @@
 .pagination {
-  display: flex;
-  justify-content: center;
-  padding-top: 2rem;
-  padding-bottom: 3rem;
-  .b-item {
-    background-color: transparent;
-    color: var(--text);
-    border-radius: var(--rounded);
-    padding: 0.7rem;
-    border: none;
-    outline: none;
-    font-size: 1rem;
-    font-weight: 500;
-    cursor: pointer;
-    text-decoration: none;
-    &:hover {
-      background-color: var(--light);
-    }
-    &.active {
-      color: var(--primary);
-    }
-  }
+  text-align: center;
+  margin-bottom: 60px;
 }

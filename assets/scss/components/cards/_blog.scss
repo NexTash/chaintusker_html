@@ -1,6 +1,10 @@
 .blog-card {
+  --card-border: transparent;
   --card-image-height: 200px;
-  --card-title-space: 10px;
-  --card-shadow: 0px 0px;
-  --card-border: none;
+  --card-height: auto;
+  --card-badge-space: 8px 0;
+  --card-title-size: clamp(14px, 50vw, 16px);
+  --card-shadow: transparent;
+  --card-body-space: 20px 0;
+  
 }
